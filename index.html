@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stay &amp; Shape | Vienna 2026 Conference</title>
+    <meta
+      name="description"
+      content="Stay & Shape brings together young trade unionists, researchers, and policy experts in Vienna to discuss migration, youth employment, and the digital transformation of work."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"
+    ></script>
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <div class="page-noise" aria-hidden="true"></div>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="brand" href="#top" aria-label="Stay & Shape">
+          <span class="brand__mark" aria-hidden="true"></span>
+          <span class="brand__text">Stay &amp; Shape</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="#overview" data-i18n="nav.overview">Overview</a>
+          <a href="#context" data-i18n="nav.context">Context</a>
+          <a href="#programme" data-i18n="nav.programme">Programme</a>
+          <a href="#audience" data-i18n="nav.audience">Audience</a>
+          <a href="#register" data-i18n="nav.register">Register</a>
+        </nav>
+        <div
+          class="language-toggle"
+          role="group"
+          aria-label="Language switcher"
+        >
+          <button
+            class="language-toggle__button is-active"
+            type="button"
+            data-lang-button="en"
+            aria-pressed="true"
+          >
+            EN
+          </button>
+          <button
+            class="language-toggle__button"
+            type="button"
+            data-lang-button="de"
+            aria-pressed="false"
+          >
+            DE
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero section" id="hero">
+        <div class="shell hero__layout">
+          <div class="hero__copy reveal">
+            <p class="eyebrow" data-i18n="hero.eyebrow">
+              Conference in Vienna | 17-19 June 2026
+            </p>
+            <h1 data-i18n="hero.title">
+              Stay &amp; Shape: Youth, Migration and the Digital Transformation of
+              Work in Southeast Europe
+            </h1>
+            <p class="hero__lead" data-i18n="hero.lead">
+              A Vienna gathering for young trade unionists, researchers and policy
+              voices working on migration, youth representation and the future of
+              work.
+            </p>
+            <div class="hero__actions">
+              <a class="button button--primary" href="#register" data-i18n="hero.ctaPrimary"
+                >Register interest</a
+              >
+              <a class="button button--secondary" href="#programme" data-i18n="hero.ctaSecondary"
+                >See programme highlights</a
+              >
+            </div>
+          </div>
+
+          <aside class="hero__panel reveal" aria-label="Conference summary">
+            <div class="hero__card-stack" id="hero-facts"></div>
+            <div class="hero__panel-note">
+              <p class="hero__panel-note-label" data-i18n="hero.panelLabel">
+                Vienna focus
+              </p>
+              <p data-i18n="hero.panelNote">
+                This first release focuses only on the Vienna event.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="overview">
+        <div class="shell section-grid">
+          <div class="section-heading reveal">
+            <p class="eyebrow" data-i18n="overview.eyebrow">Conference overview</p>
+            <h2 data-i18n="overview.title">A working meeting about staying power</h2>
+          </div>
+          <div class="section-grid__content">
+            <div class="section-copy reveal">
+              <p data-i18n="overview.copy">
+                Stay &amp; Shape brings together 70 participants from Austria,
+                Albania, Bosnia and Herzegovina, Moldova, Montenegro, Serbia and
+                other EU countries to examine youth migration and the digital
+                reshaping of labour.
+              </p>
+            </div>
+            <div class="detail-panel reveal" id="overview-points"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--contrast" id="context">
+        <div class="shell context-layout">
+          <div class="context-layout__primary reveal">
+            <p class="eyebrow" data-i18n="context.eyebrow">Political context</p>
+            <h2 data-i18n="context.title">
+              Migration pressure and digital change are colliding
+            </h2>
+            <p data-i18n="context.copy">
+              Across Southeastern Europe, young people are leaving in growing
+              numbers, driven by low wages and unstable employment. Meanwhile,
+              AI, automation and digital management are reshaping the quality of
+              work for those who stay.
+            </p>
+            <div class="context-callout">
+              <p class="eyebrow eyebrow--muted" data-i18n="context.alignmentEyebrow">
+                Why this matters now
+              </p>
+              <p data-i18n="context.alignmentCopy">
+                The conference links traditional organising questions with the
+                future of work agenda, so that digital transformation strengthens
+                workers rather than deepening precarity.
+              </p>
+            </div>
+          </div>
+
+          <div class="context-layout__secondary reveal">
+            <p class="eyebrow" data-i18n="objectives.eyebrow">Objectives</p>
+            <h3 data-i18n="objectives.title">What the Vienna event is designed to do</h3>
+            <div class="objective-list" id="objectives-list"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="programme">
+        <div class="shell programme-layout">
+          <div class="section-heading reveal">
+            <p class="eyebrow" data-i18n="programme.eyebrow">Vienna highlights</p>
+            <h2 data-i18n="programme.title">A political evening and a content-driven day</h2>
+            <p class="section-heading__lead" data-i18n="programme.intro">
+              The Vienna gathering is presented as a flexible set of programme
+              highlights rather than a locked timetable, so the structure can grow
+              as details are confirmed.
+            </p>
+          </div>
+          <div class="programme-grid" id="programme-highlights"></div>
+        </div>
+      </section>
+
+      <section class="section section--offset" id="audience">
+        <div class="shell audience-layout">
+          <div class="section-heading reveal">
+            <p class="eyebrow" data-i18n="audience.eyebrow">Who should attend</p>
+            <h2 data-i18n="audience.title">Built for organisers, researchers and policy voices</h2>
+          </div>
+          <div class="audience-layout__grid">
+            <div class="audience-card reveal">
+              <div id="audience-list"></div>
+            </div>
+            <div class="facts-card reveal">
+              <p class="eyebrow eyebrow--muted" data-i18n="facts.eyebrow">Key facts</p>
+              <div class="facts-grid" id="facts-grid"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--contrast" id="register">
+        <div class="shell register-layout">
+          <div class="register-layout__copy reveal">
+            <p class="eyebrow" data-i18n="register.eyebrow">Registration</p>
+            <h2 data-i18n="register.title">Register your interest for Vienna</h2>
+            <p data-i18n="register.copy">
+              Share your name and email to receive confirmation and further event
+              updates. The participation target is 70 people; registrations are
+              reviewed in order of arrival.
+            </p>
+            <div class="register-notes" id="register-notes"></div>
+          </div>
+
+          <div class="register-layout__panel reveal">
+            <form class="registration-form" id="registration-form" novalidate>
+              <div class="field">
+                <label for="name" data-i18n="form.nameLabel">Full name</label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  required
+                  data-i18n-placeholder="form.namePlaceholder"
+                  placeholder="Your full name"
+                />
+                <p class="field__error" id="name-error" aria-live="polite"></p>
+              </div>
+
+              <div class="field">
+                <label for="email" data-i18n="form.emailLabel">Email address</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  required
+                  data-i18n-placeholder="form.emailPlaceholder"
+                  placeholder="you@example.org"
+                />
+                <p class="field__error" id="email-error" aria-live="polite"></p>
+              </div>
+
+              <div class="field field--hidden" aria-hidden="true">
+                <label for="website">Website</label>
+                <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+              </div>
+
+              <div class="field field--checkbox">
+                <label class="checkbox">
+                  <input id="consent" name="consent" type="checkbox" required />
+                  <span data-i18n="form.consentLabel">
+                    I agree that my name and email may be stored for conference
+                    registration and related updates about this event.
+                  </span>
+                </label>
+                <p class="field__hint" data-i18n="form.consentHint">
+                  Your data is used only for organising this event and related
+                  communication.
+                </p>
+                <p class="field__error" id="consent-error" aria-live="polite"></p>
+              </div>
+
+              <button class="button button--primary button--block" type="submit" id="submit-button">
+                <span data-i18n="form.submit">Submit registration</span>
+              </button>
+
+              <div class="form-status" id="form-status" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-layout">
+        <div class="footer-layout__main reveal">
+          <p class="eyebrow" data-i18n="faq.eyebrow">FAQ</p>
+          <div class="faq-list" id="faq-list"></div>
+        </div>
+        <div class="footer-layout__side reveal">
+          <p class="eyebrow eyebrow--muted" data-i18n="footer.eyebrow">Partner organisation</p>
+          <h2 data-i18n="footer.partner">
+            Austrian Trade Union Federation (OeGB), International Department
+          </h2>
+          <p data-i18n="footer.copy">
+            This landing page covers the Vienna event only. Additional programme
+            details will be shared with registered participants.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
