@@ -46,17 +46,24 @@ module.exports = async function handler(req, res) {
     return res.status(500).json({ error: "storage_failed" });
   }
 
-  const emailResults = await Promise.allSettled([
-    sendAttendeeEmail({ name, email, language }),
-    sendAdminEmail({ name, email, language, consentTimestamp }),
-  ]);
+  // A saved registration is still valid even if confirmation delivery is delayed.
+  const attendeeEmailSent = await sendAttendeeEmail({ name, email, language })
+    .then(() => true)
+    .catch((error) => {
+      console.error("Failed to send attendee email", error);
+      return false;
+    });
 
-  emailResults.forEach((result, index) => {
-    if (result.status === "rejected") {
-      const label = index === 0 ? "attendee" : "admin";
-      console.error(`Failed to send ${label} email`, result.reason);
-    }
+  await sendAdminEmail({ name, email, language, consentTimestamp }).catch((error) => {
+    console.error("Failed to send admin email", error);
   });
+
+  if (!attendeeEmailSent) {
+    return res.status(202).json({
+      ok: true,
+      warning: "attendee_email_failed",
+    });
+  }
 
   return res.status(201).json({ ok: true });
 };

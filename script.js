@@ -221,6 +221,8 @@ const content = {
       messages: {
         success:
           "Registration received. Please check your inbox for the confirmation email.",
+        successPendingEmail:
+          "Registration received. We could not send the confirmation email right now, but your details were saved and the organisers will follow up.",
         duplicate:
           "This email is already registered for the Vienna event.",
         error:
@@ -481,6 +483,8 @@ const content = {
       messages: {
         success:
           "Ihre Anmeldung wurde erfasst. Bitte pruefen Sie Ihr Postfach auf die Bestaetigungs-E-Mail.",
+        successPendingEmail:
+          "Ihre Anmeldung wurde erfasst. Die Bestaetigungs-E-Mail konnte gerade nicht gesendet werden, aber Ihre Daten wurden gespeichert und das Organisationsteam meldet sich bei Bedarf.",
         duplicate:
           "Diese E-Mail-Adresse ist bereits fuer die Wiener Veranstaltung registriert.",
         error:
@@ -776,6 +780,12 @@ function bindRegistrationForm() {
       if (response.status === 201) {
         elements.form.reset();
         showStatus("success", getContent("form.messages.success"));
+        return;
+      }
+
+      if (response.status === 202) {
+        elements.form.reset();
+        showStatus("info", getContent("form.messages.successPendingEmail"));
         return;
       }
 

@@ -11,5 +11,7 @@ create table if not exists public.registrations (
   created_at timestamptz not null default now()
 );
 
-create unique index if not exists registrations_email_unique
-  on public.registrations (email);
+drop index if exists registrations_email_unique;
+
+create unique index if not exists registrations_event_email_unique
+  on public.registrations (source_event, lower(email));
