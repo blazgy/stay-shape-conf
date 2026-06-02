@@ -1,9 +1,9 @@
-const ADMIN_EMAIL = "blaz.gyoha@oegb.at";
+const DEFAULT_ADMIN_EMAIL = "blaz.gyoha@oegb.at";
 const EVENT_SLUG = "stay-shape-vienna-2026";
 const EVENT_TITLE =
   "Stay & Shape: Youth, Migration and the Digital Transformation of Work in Southeast Europe";
 const EVENT_LOCATION = "Vienna, Austria";
-const EVENT_DATES = "17-19 June 2026";
+const EVENT_DATES = "18-19 June 2026";
 
 module.exports = async function handler(req, res) {
   if (req.method !== "POST") {
@@ -21,10 +21,11 @@ module.exports = async function handler(req, res) {
     });
   }
 
-  const language = body.language === "de" ? "de" : "en";
+  const language = body.language;
   const name = normalizeName(body.name);
   const email = String(body.email).trim().toLowerCase();
-  const consentTimestamp = new Date().toISOString();
+  const organisation = normalizeOptionalText(body.organisation);
+  const submittedAt = new Date().toISOString();
 
   if (!process.env.SUPABASE_URL || !process.env.SUPABASE_SERVICE_ROLE_KEY) {
     console.error("Missing Supabase configuration");
@@ -34,8 +35,10 @@ module.exports = async function handler(req, res) {
   const insertResult = await insertRegistration({
     name,
     email,
+    organisation,
     language,
-    consentTimestamp,
+    consentTimestamp: submittedAt,
+    submittedAt,
   });
 
   if (insertResult.duplicate) {
@@ -48,7 +51,7 @@ module.exports = async function handler(req, res) {
 
   const emailResults = await Promise.allSettled([
     sendAttendeeEmail({ name, email, language }),
-    sendAdminEmail({ name, email, language, consentTimestamp }),
+    sendAdminEmail({ name, email, organisation, language, submittedAt }),
   ]);
 
   emailResults.forEach((result, index) => {
@@ -98,6 +101,10 @@ function validatePayload(body) {
     fieldErrors.consent = "consent_required";
   }
 
+  if (!["en", "de"].includes(body.language)) {
+    fieldErrors.language = "invalid_language";
+  }
+
   return {
     ok: Object.keys(fieldErrors).length === 0,
     fieldErrors,
@@ -110,7 +117,21 @@ function normalizeName(value) {
     .replace(/\s+/g, " ");
 }
 
-async function insertRegistration({ name, email, language, consentTimestamp }) {
+function normalizeOptionalText(value) {
+  const normalized = String(value || "")
+    .trim()
+    .replace(/\s+/g, " ");
+  return normalized || null;
+}
+
+async function insertRegistration({
+  name,
+  email,
+  organisation,
+  language,
+  consentTimestamp,
+  submittedAt,
+}) {
   try {
     const response = await fetch(
       `${process.env.SUPABASE_URL}/rest/v1/registrations`,
@@ -125,9 +146,11 @@ async function insertRegistration({ name, email, language, consentTimestamp }) {
         body: JSON.stringify({
           name,
           email,
+          organisation,
           language,
           consent_given: true,
           consent_timestamp: consentTimestamp,
+          submitted_at: submittedAt,
           source_event: EVENT_SLUG,
         }),
       }
@@ -169,9 +192,9 @@ async function sendAttendeeEmail({ name, email, language }) {
   });
 }
 
-async function sendAdminEmail({ name, email, language, consentTimestamp }) {
+async function sendAdminEmail({ name, email, organisation, language, submittedAt }) {
   return sendEmail({
-    to: ADMIN_EMAIL,
+    to: process.env.ADMIN_EMAIL || DEFAULT_ADMIN_EMAIL,
     subject: `New registration: ${name}`,
     html: `
       <div style="font-family:Arial,sans-serif;color:#1f1713;line-height:1.6">
@@ -179,8 +202,9 @@ async function sendAdminEmail({ name, email, language, consentTimestamp }) {
         <ul>
           <li><strong>Name:</strong> ${escapeHtml(name)}</li>
           <li><strong>Email:</strong> ${escapeHtml(email)}</li>
+          <li><strong>Organisation:</strong> ${escapeHtml(organisation || "Not provided")}</li>
           <li><strong>Language:</strong> ${escapeHtml(language)}</li>
-          <li><strong>Consent timestamp:</strong> ${escapeHtml(consentTimestamp)}</li>
+          <li><strong>Registration timestamp:</strong> ${escapeHtml(submittedAt)}</li>
         </ul>
       </div>
     `,
@@ -190,10 +214,10 @@ async function sendAdminEmail({ name, email, language, consentTimestamp }) {
 function getAttendeeEmailCopy(language) {
   if (language === "de") {
     return {
-      subject: "Bestaetigung Ihrer Registrierung fuer Stay & Shape",
+      subject: "Bestätigung Ihrer Registrierung für Stay & Shape",
       greeting: (name) => `Hallo ${name},`,
       body:
-        "vielen Dank fuer Ihre Registrierung fuer die Wiener Veranstaltung von Stay & Shape. Ihre Anmeldung ist bei uns eingegangen.",
+        "vielen Dank für Ihre Registrierung für die Wiener Veranstaltung von Stay & Shape. Ihre Anmeldung ist bei uns eingegangen.",
       footer:
         "Weitere praktische Informationen und Programmdetails senden wir Ihnen rechtzeitig vor der Veranstaltung.",
     };
@@ -222,6 +246,7 @@ async function sendEmail({ to, subject, html }) {
     },
     body: JSON.stringify({
       from: process.env.EMAIL_FROM,
+      ...(process.env.EMAIL_REPLY_TO ? { reply_to: process.env.EMAIL_REPLY_TO } : {}),
       to,
       subject,
       html,

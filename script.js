@@ -8,69 +8,76 @@ const content = {
         "Stay & Shape is a Vienna conference on youth migration, trade union renewal and the digital transformation of work in Southeast Europe.",
     },
     nav: {
-      overview: "Overview",
-      context: "Context",
+      overview: "Challenge",
+      context: "Strategy",
       programme: "Programme",
-      audience: "Audience",
       register: "Register",
     },
     hero: {
-      eyebrow: "Conference in Vienna | 17-19 June 2026",
+      eyebrow: "Stay & Shape Conference 2026",
+      kicker: "Conference 2026",
       title:
-        "Stay & Shape: Youth, Migration and the Digital Transformation of Work in Southeast Europe",
+        "Stay & Shape: Youth, Migration, and the Digital Transformation of Work in Southeast Europe",
       lead:
-        "A one-page invitation to the Vienna event, bringing together young trade unionists, labour researchers and policy voices to discuss migration, institutional strength and the future of work.",
-      ctaPrimary: "Register interest",
-      ctaSecondary: "See programme highlights",
-      panelLabel: "Vienna focus",
+        "Empowering young workers. Regulating the digital future. Building reasons to stay.",
+      ctaPrimary: "Get involved",
+      ctaSecondary: "View programme",
+      panelLabel: "Shape progress",
       panelNote:
-        "This first release focuses only on the Vienna event. Detailed programme updates will follow for registered participants.",
+        "Organised in partnership with the Austrian Trade Union Federation (ÖGB), International Department & Friedrich-Ebert-Stiftung (FES).",
       facts: [
         {
-          label: "Venue",
-          value: "Vienna, Austria",
+          label: "Part 1",
+          value: "Vienna, Austria | June 18-19, 2026",
         },
         {
-          label: "Format",
-          value: "Two days and two nights, with a political evening and a content-focused day",
-        },
-        {
-          label: "Participants",
-          value:
-            "70 participants from Austria, Albania, Bosnia and Herzegovina, Moldova, Montenegro, Serbia and other EU countries",
+          label: "Part 2",
+          value: "Sarajevo, Bosnia and Herzegovina | October 22-23, 2026",
         },
       ],
     },
     overview: {
-      eyebrow: "Conference overview",
-      title: "A working meeting about staying power",
-      copy:
-        "Stay & Shape examines what it takes to give young people reasons to stay, organise and build decent work across borders. The Vienna event combines high-level political discussion with workshops and analysis aimed at union renewal, youth representation and worker-centred approaches to digital change.",
-      points: [
-        {
-          title: "Partner organisation",
-          copy: "Austrian Trade Union Federation (OEGB), International Department",
-        },
-        {
-          title: "Focus of the Vienna event",
-          copy:
-            "Youth recruitment, strong institutional structures, practical organising tools and the changing conditions created by AI and automation.",
-        },
-        {
-          title: "Why now",
-          copy:
-            "Traditional sectors no longer guarantee security, while digitalisation is reshaping wages, surveillance and job quality.",
-        },
-      ],
+      eyebrow: "The Challenge",
+      titleLine1: "A Changing Landscape",
+      titleLine2: "For Young Workers",
+      copyA:
+        "Across Southeastern Europe, young people are leaving their home countries in growing numbers, driven by low wages and unstable employment.",
+      copyB:
+        "While traditional industries struggle to provide the security they once did, the rapid rise of digitalization - from artificial intelligence to algorithmic management - is fundamentally reshaping work for those who remain.",
+      bridge: "This dual transformation poses complex challenges:",
+      threatTitle: "The Threat",
+      threatCopy:
+        "Job automation, increased workplace surveillance, and widening economic gaps.",
+      opportunityTitle: "The Opportunity",
+      opportunityCopy:
+        "Leveraging new technologies to create better, safer, and more flexible work environments.",
+      bottomLine:
+        "To ensure a fair future, we must tackle the economic drivers pushing people to emigrate while managing the digital transformation so that it actively benefits workers.",
+      mediaLabel: "System analysis",
     },
     context: {
-      eyebrow: "Political context",
-      title: "Migration pressure and digital change are colliding",
-      copy:
-        "Across Southeastern Europe, many young people leave because wages are low and employment is unstable. At the same time, AI, automation and algorithmic management are reshaping the work that remains. This creates a double pressure on unions: they must respond to the economic drivers behind migration while also shaping digital transformation so that it improves working lives instead of deepening precarity and surveillance.",
-      alignmentEyebrow: "Future of work",
-      alignmentCopy:
-        "The conference treats migration and digitalisation as one shared labour question. Participants will compare organising strategies, digital-rights concerns and policy tools that can keep work fair, visible and worth staying for.",
+      eyebrow: "Strategy",
+      objectiveLabel: "Our Objective",
+      titleLine1: "Build Power.",
+      titleLine2: "Shape Systems.",
+      titleLine3: "Create Reasons To Stay.",
+      copyA:
+        "The Stay & Shape conference series is designed to strengthen trade unions' capacity to respond to both traditional and digital labour market transformations.",
+      copyB:
+        "Bringing together 70 participants from Austria, Albania, Bosnia and Herzegovina, Moldova, Montenegro, Serbia, and across the EU, we focus on actionable strategies, institutional power, and future-ready policy.",
+      mediaLabel: "Action framework",
+      mediaNote: "Systems.\nPeople.\nPower.",
+      shareTitle: "Share",
+      shareCopy:
+        "Practical strategies for youth recruitment and institutional empowerment.",
+      developTitle: "Develop",
+      developCopy:
+        "Concrete initiatives that give young people compelling economic reasons to stay in their home countries.",
+      formulateTitle: "Formulate",
+      formulateCopy:
+        "Policies that uphold fair labour standards across borders and ensure technology serves workers - not just algorithms.",
+      bottomLineA: "From analysis",
+      bottomLineB: "to action.",
     },
     objectives: {
       eyebrow: "Objectives",
@@ -79,7 +86,7 @@ const content = {
         {
           title: "Strengthen youth structures",
           copy:
-            "Share practical approaches to youth recruitment and institutional youth structures together with the Austrian Trade Union Youth (OEGJ).",
+            "Share practical approaches to youth recruitment and institutional youth structures together with the Austrian Trade Union Youth (ÖGJ).",
         },
         {
           title: "Connect labour and technology",
@@ -94,57 +101,79 @@ const content = {
       ],
     },
     programme: {
-      eyebrow: "Vienna highlights",
-      title: "A political evening and a content-driven day",
-      intro:
-        "The Vienna event is intentionally shown as a flexible set of highlights. The structure is ready for updates, while the current page focuses on the confirmed core format.",
-      cards: [
-        {
-          label: "Evening format",
-          meta: "Political opening",
-          title: "Power & Participation",
-          copy:
-            "The first evening is built as a political format that opens the conference with a broad discussion on youth employment, AI, automation and workers' rights.",
-          bullets: [
-            "30-minute keynote input on AI, robotics and labour-market change",
-            "High-level political panel with balanced representation",
-            "Focus on what technological change means for youth employment and job quality",
-          ],
-          speakers: [
-            "Tea Jarc, ETUC",
-            "Knut Dethlefsen, FES Future of Work",
-            "Amelie Muthsam, Austrian Federal Council",
-            "Additional panel guest to be announced",
-            "Moderator to be announced",
-          ],
-        },
-        {
-          label: "Workshops",
-          meta: "Institutional practice",
-          title: "The Austrian model and youth organising",
-          copy:
-            "Hands-on sessions will explore vocational training, Young Workers Councils and how trade union recruitment can adapt to digital-age working lives.",
-          bullets: [
-            "Institutional youth structures and participation pathways",
-            "Recruitment methods for digitally mediated work realities",
-            "Exchange with Austrian union youth structures",
-          ],
-          speakers: [],
-        },
-        {
-          label: "Analysis",
-          meta: "Comparative lens",
-          title: "The precarity trap",
-          copy:
-            "Comparative analysis will look at youth unemployment, the role of dual education systems and the conditions that push young people to leave.",
-          bullets: [
-            "Comparative regional data on youth labour-market insecurity",
-            "Discussion of dual education systems and institutional resilience",
-            "Connection between precarious work and migration pressure",
-          ],
-          speakers: [],
-        },
-      ],
+      eyebrow: "Vienna",
+      series: "Stay & Shape Conference Series 2026",
+      city: "Vienna",
+      title: "\"Power & Participation\"",
+      date: "June 18-19, 2026",
+      location: "Vienna, Austria",
+      introA:
+        "The first leg of our series focuses on establishing robust structures to protect young workers in an evolving economy.",
+      introB:
+        "Alongside the Austrian Trade Union Youth (ÖGJ), participants will explore practical solutions to prevent the \"brain drain\" and ensure digital rights are integrated into collective bargaining.",
+      focusLabel: "Focus:",
+      focus: "Securing decent work through strong institutions",
+      workshopTitle: "Expert Workshops",
+      workshopPointA: "The Austrian Model",
+      workshopPointB: "Vocational training",
+      workshopPointC: "Young Workers Councils",
+      organisingTitle: "Organising the Future",
+      organisingCopy:
+        "Adapting trade union recruitment strategies for the digital age.",
+      analysisTitle: "Data & Analysis",
+      analysisPointA: "The \"Precarity Trap\"",
+      analysisPointB: "Youth unemployment",
+      analysisPointC: "Dual education systems",
+      keynotesTitle: "Keynotes",
+      keynotesCopy:
+        "Expert insights on the tech revolution, AI, robotics, and the future labour market.",
+      stamp: "Action through solidarity",
+      panelRail: "High Level Panel",
+      panelTitle: "The Algorithmic Boss?",
+      panelCopy:
+        "How AI and automation are reshaping youth employment, job quality, and workers' rights.",
+      panelFormat:
+        "Format: 30-minute expert keynote followed by a high-level panel discussion.",
+      panelistsLabel: "Confirmed panelists:",
+      panelistTea: "Tea Jarc",
+      panelistTeaRole:
+        "Confederal Secretary, European Trade Union Confederation (ETUC)",
+      panelistKnut: "Martin Gruber-Risak",
+      panelistKnutRole:
+        "Head of Section VIII Labour Law and Employee Protection in the Ministry of Social Affairs",
+      panelistAmelie: "Amelie Muthsam",
+      panelistAmelieRole:
+        "Federal Council, Lower Austrian State Parliament, Deputy Chairwoman of SPÖ Lower Austria",
+      panelistTba: "To be announced",
+      panelistTbaRole: "Fourth panelist & moderator",
+    },
+    sarajevo: {
+      eyebrow: "Looking Ahead",
+      series: "Part 2 Spotlight",
+      city: "Sarajevo",
+      title: "\"Migration & Mobility\"",
+      date: "October 22-23, 2026",
+      location: "Sarajevo, Bosnia and Herzegovina",
+      introA:
+        "The conversation continues in the autumn! Following our foundational work in Vienna, Part 2 will shift focus to the direct intersection of digitalization and migration.",
+      introB:
+        "We will explore how digital labour markets influence migration trends (remote work vs. emigration) and strategize on how to regulate algorithmic management to provide viable, local economic alternatives to leaving.",
+      focusLabel: "Focus:",
+      focus: "Migration & Mobility",
+      tileOneTitle: "Digital Labour Markets",
+      tileOneCopy: "How remote work changes mobility choices.",
+      tileTwoTitle: "Migration Trends",
+      tileTwoCopy: "Remote work vs. emigration.",
+      tileThreeTitle: "Algorithmic Management",
+      tileThreeCopy: "Regulation that keeps work fair.",
+      tileFourTitle: "Local Alternatives",
+      tileFourCopy: "Viable economic reasons to stay.",
+      stamp: "Action through solidarity",
+      panelRail: "Part 2",
+      panelTitle: "The Future Is Local",
+      panelCopy:
+        "Youth, unions, and partners developing strategies for mobility without forced departure.",
+      panelTag: "Stronger unions. Fairer futures.",
     },
     audience: {
       eyebrow: "Who should attend",
@@ -173,7 +202,7 @@ const content = {
       items: [
         {
           title: "Date",
-          copy: "17-19 June 2026",
+          copy: "18-19 June 2026",
         },
         {
           title: "Location",
@@ -192,6 +221,7 @@ const content = {
     register: {
       eyebrow: "Registration",
       title: "Register your interest for Vienna",
+      formLabel: "Vienna intake",
       copy:
         "Share your details to receive a confirmation email and future updates about the Vienna event. Registrations are stored securely for this event only.",
       notes: [
@@ -200,11 +230,6 @@ const content = {
           copy:
             "After submitting, you will receive a confirmation email. Further practical information and programme updates will follow later.",
         },
-        {
-          title: "Participation target",
-          copy:
-            "The page communicates a target of 70 participants, but submissions remain open while organisers review registrations.",
-        },
       ],
     },
     form: {
@@ -212,8 +237,10 @@ const content = {
       namePlaceholder: "Your full name",
       emailLabel: "Email address",
       emailPlaceholder: "you@example.org",
+      organisationLabel: "Organisation",
+      organisationPlaceholder: "Your organisation (optional)",
       consentLabel:
-        "I agree that my name and email may be stored for conference registration and related updates about this event.",
+        "I agree that my registration details may be stored for conference registration and related updates about this event.",
       consentHint:
         "Your data is used only for organising this event and related communication.",
       submit: "Submit registration",
@@ -230,7 +257,7 @@ const content = {
         nameRequired: "Please enter your full name.",
         emailRequired: "Please enter your email address.",
         emailInvalid: "Please enter a valid email address.",
-        consentRequired: "Please confirm the privacy notice to continue.",
+        consentRequired: "Please confirm the data protection notice to continue.",
         spamDetected: "Your submission could not be processed.",
       },
     },
@@ -255,91 +282,109 @@ const content = {
       ],
     },
     footer: {
-      eyebrow: "Partner organisation",
-      partner: "Austrian Trade Union Federation (OEGB), International Department",
+      eyebrow: "Stay & Shape Conference Series 2026",
+      titleLineA: "Stronger unions.",
+      titleLineB: "Fairer futures.",
       copy:
-        "This landing page covers the Vienna event only. Additional programme details will be shared with registered participants.",
+        "Uniting young workers, trade unions, and partners across Southeast Europe and the EU to build power, shape systems, and create reasons to stay.",
+      sideText: "Together, we shape a future worth staying for.",
+      join: "Join the movement",
+      action: "Stay informed. Get involved. Shape the future of work.",
+      actionLink: "Register for updates",
+      logoIntro: "Partner logos",
+      logoOne: "Logo placeholder 01",
+      logoTwo: "Logo placeholder 02",
+      logoThree: "Logo placeholder 03",
+      metaLeft: "Stay & Shape Conference Series 2026",
+      metaCenter: "Power. Participation. Opportunity.",
     },
   },
   de: {
     meta: {
       title: "Stay & Shape | Wien 2026 Konferenz",
       description:
-        "Stay & Shape ist eine Konferenz in Wien zu Jugendmigration, gewerkschaftlicher Erneuerung und der digitalen Transformation der Arbeit in Suedosteuropa.",
+        "Stay & Shape ist eine Konferenz in Wien zu Jugendmigration, gewerkschaftlicher Erneuerung und der digitalen Transformation der Arbeit in Südosteuropa.",
     },
     nav: {
-      overview: "Ueberblick",
-      context: "Kontext",
+      overview: "Challenge",
+      context: "Strategie",
       programme: "Programm",
-      audience: "Zielgruppe",
       register: "Anmeldung",
     },
     hero: {
-      eyebrow: "Konferenz in Wien | 17.-19. Juni 2026",
+      eyebrow: "Stay & Shape Conference 2026",
+      kicker: "Conference 2026",
       title:
-        "Stay & Shape: Jugend, Migration und die digitale Transformation der Arbeit in Suedosteuropa",
+        "Stay & Shape: Youth, Migration, and the Digital Transformation of Work in Southeast Europe",
       lead:
-        "Eine Einladung zur Wiener Veranstaltung, die junge Gewerkschafter:innen, Arbeitsmarktforscher:innen und politische Stimmen zusammenbringt, um ueber Migration, institutionelle Staerke und die Zukunft der Arbeit zu diskutieren.",
-      ctaPrimary: "Interesse anmelden",
-      ctaSecondary: "Programm-Hoehepunkte ansehen",
-      panelLabel: "Fokus Wien",
+        "Empowering young workers. Regulating the digital future. Building reasons to stay.",
+      ctaPrimary: "Get involved",
+      ctaSecondary: "View programme",
+      panelLabel: "Shape progress",
       panelNote:
-        "Diese erste Version konzentriert sich nur auf die Wiener Veranstaltung. Detaillierte Programm-Updates folgen fuer registrierte Teilnehmende.",
+        "Organised in partnership with the Austrian Trade Union Federation (ÖGB), International Department & Friedrich-Ebert-Stiftung (FES).",
       facts: [
         {
-          label: "Ort",
-          value: "Wien, Oesterreich",
+          label: "Part 1",
+          value: "Vienna, Austria | June 18-19, 2026",
         },
         {
-          label: "Format",
-          value: "Zwei Tage und zwei Naechte mit einem politischen Abend und einem inhaltlichen Arbeitstag",
-        },
-        {
-          label: "Teilnehmende",
-          value:
-            "70 Teilnehmende aus Oesterreich, Albanien, Bosnien und Herzegowina, Moldau, Montenegro, Serbien und weiteren EU-Laendern",
+          label: "Part 2",
+          value: "Sarajevo, Bosnia and Herzegovina | October 22-23, 2026",
         },
       ],
     },
     overview: {
-      eyebrow: "Konferenzueberblick",
-      title: "Ein Arbeitstreffen ueber Bleibeperspektiven",
-      copy:
-        "Stay & Shape fragt danach, was jungen Menschen Gruende gibt zu bleiben, sich zu organisieren und grenzueberschreitend gute Arbeit zu gestalten. Die Wiener Veranstaltung verbindet politische Diskussionen auf hoher Ebene mit Workshops und Analysen zu gewerkschaftlicher Erneuerung, Jugendvertretung und arbeitnehmerorientierter Digitalisierung.",
-      points: [
-        {
-          title: "Partnerorganisation",
-          copy: "Oesterreichischer Gewerkschaftsbund (OEGB), Internationale Abteilung",
-        },
-        {
-          title: "Schwerpunkt in Wien",
-          copy:
-            "Jugendansprache, starke institutionelle Strukturen, praktische Organisierungsansaetze und veraenderte Arbeitsbedingungen durch KI und Automatisierung.",
-        },
-        {
-          title: "Warum jetzt",
-          copy:
-            "Traditionelle Branchen bieten immer seltener Sicherheit, waehrend Digitalisierung Lohnniveau, Ueberwachung und Arbeitsqualitaet neu formt.",
-        },
-      ],
+      eyebrow: "The Challenge",
+      titleLine1: "A Changing Landscape",
+      titleLine2: "For Young Workers",
+      copyA:
+        "Across Southeastern Europe, young people are leaving their home countries in growing numbers, driven by low wages and unstable employment.",
+      copyB:
+        "While traditional industries struggle to provide the security they once did, the rapid rise of digitalization - from artificial intelligence to algorithmic management - is fundamentally reshaping work for those who remain.",
+      bridge: "This dual transformation poses complex challenges:",
+      threatTitle: "The Threat",
+      threatCopy:
+        "Job automation, increased workplace surveillance, and widening economic gaps.",
+      opportunityTitle: "The Opportunity",
+      opportunityCopy:
+        "Leveraging new technologies to create better, safer, and more flexible work environments.",
+      bottomLine:
+        "To ensure a fair future, we must tackle the economic drivers pushing people to emigrate while managing the digital transformation so that it actively benefits workers.",
+      mediaLabel: "System analysis",
     },
     context: {
-      eyebrow: "Politischer Kontext",
-      title: "Migrationsdruck und digitaler Wandel treffen gleichzeitig aufeinander",
-      copy:
-        "In Suedosteuropa verlassen viele junge Menschen ihre Heimat wegen niedriger Loehne und unsicherer Beschaeftigung. Gleichzeitig veraendern KI, Automatisierung und algorithmisches Management die Arbeit, die bleibt. Fuer Gewerkschaften entsteht dadurch doppelter Druck: Sie muessen auf die wirtschaftlichen Ursachen von Migration reagieren und zugleich den digitalen Wandel so gestalten, dass er Arbeit verbessert statt Prekaritaet und Ueberwachung zu vertiefen.",
-      alignmentEyebrow: "Zukunft der Arbeit",
-      alignmentCopy:
-        "Die Konferenz behandelt Migration und Digitalisierung als eine gemeinsame arbeitsmarktpolitische Frage. Teilnehmende vergleichen Organisierungsstrategien, digitale Rechte und politische Instrumente, damit Arbeit fair, sichtbar und lebenswert bleibt.",
+      eyebrow: "Strategy",
+      objectiveLabel: "Our Objective",
+      titleLine1: "Build Power.",
+      titleLine2: "Shape Systems.",
+      titleLine3: "Create Reasons To Stay.",
+      copyA:
+        "The Stay & Shape conference series is designed to strengthen trade unions' capacity to respond to both traditional and digital labour market transformations.",
+      copyB:
+        "Bringing together 70 participants from Austria, Albania, Bosnia and Herzegovina, Moldova, Montenegro, Serbia, and across the EU, we focus on actionable strategies, institutional power, and future-ready policy.",
+      mediaLabel: "Action framework",
+      mediaNote: "Systems.\nPeople.\nPower.",
+      shareTitle: "Share",
+      shareCopy:
+        "Practical strategies for youth recruitment and institutional empowerment.",
+      developTitle: "Develop",
+      developCopy:
+        "Concrete initiatives that give young people compelling economic reasons to stay in their home countries.",
+      formulateTitle: "Formulate",
+      formulateCopy:
+        "Policies that uphold fair labour standards across borders and ensure technology serves workers - not just algorithms.",
+      bottomLineA: "From analysis",
+      bottomLineB: "to action.",
     },
     objectives: {
       eyebrow: "Ziele",
       title: "Worauf die Wiener Veranstaltung zielt",
       list: [
         {
-          title: "Jugendstrukturen staerken",
+          title: "Jugendstrukturen stärken",
           copy:
-            "Praktische Zugaenge zu Jugendansprache und institutionellen Jugendstrukturen gemeinsam mit der Oesterreichischen Gewerkschaftsjugend (OEGJ) teilen.",
+            "Praktische Zugänge zu Jugendansprache und institutionellen Jugendstrukturen gemeinsam mit der Österreichischen Gewerkschaftsjugend (ÖGJ) teilen.",
         },
         {
           title: "Arbeit und Technologie verbinden",
@@ -349,70 +394,92 @@ const content = {
         {
           title: "Konkrete Initiativen entwickeln",
           copy:
-            "Von der Analyse zu konkreten Schritten kommen, die jungen Menschen Gruende zum Bleiben, Organisieren und Mitgestalten besserer Arbeit geben.",
+            "Von der Analyse zu konkreten Schritten kommen, die jungen Menschen Gründe zum Bleiben, Organisieren und Mitgestalten besserer Arbeit geben.",
         },
       ],
     },
     programme: {
-      eyebrow: "Hoehepunkte in Wien",
-      title: "Ein politischer Abend und ein inhaltlicher Arbeitstag",
-      intro:
-        "Die Wiener Veranstaltung wird bewusst als flexibles Set von Programm-Hoehepunkten gezeigt. Die Struktur ist bereit fuer Updates, waehrend die aktuelle Seite das bestaetigte Kernformat sichtbar macht.",
-      cards: [
-        {
-          label: "Abendformat",
-          meta: "Politische Eroeffnung",
-          title: "Power & Participation",
-          copy:
-            "Der erste Abend ist als politisches Format angelegt und eroefnet die Konferenz mit einer breiten Diskussion zu Jugendbeschaeftigung, KI, Automatisierung und Arbeitnehmerrechten.",
-          bullets: [
-            "30-minuetiger Keynote-Input zu KI, Robotik und Veraenderungen am Arbeitsmarkt",
-            "Hochrangiges politisches Panel mit ausgewogener Besetzung",
-            "Fokus auf die Bedeutung technologischer Veraenderung fuer Jugendbeschaeftigung und Arbeitsqualitaet",
-          ],
-          speakers: [
-            "Tea Jarc, EGB",
-            "Knut Dethlefsen, FES Future of Work",
-            "Amelie Muthsam, Bundesrat",
-            "Weiterer Panelgast wird noch bekanntgegeben",
-            "Moderation wird noch bekanntgegeben",
-          ],
-        },
-        {
-          label: "Workshops",
-          meta: "Institutionelle Praxis",
-          title: "Das oesterreichische Modell und Jugendorganisierung",
-          copy:
-            "Praxisnahe Sessions befassen sich mit Berufsausbildung, Jugendvertrauensstrukturen und der Frage, wie sich gewerkschaftliche Ansprache an digitale Arbeitsrealitaeten anpassen kann.",
-          bullets: [
-            "Institutionelle Jugendstrukturen und Beteiligungswege",
-            "Recruiting-Ansatz fuer digital gepraegte Arbeitswelten",
-            "Austausch mit oesterreichischen Gewerkschaftsjugend-Strukturen",
-          ],
-          speakers: [],
-        },
-        {
-          label: "Analyse",
-          meta: "Vergleichender Blick",
-          title: "Die Prekaritaetsfalle",
-          copy:
-            "Eine vergleichende Analyse betrachtet Jugendarbeitslosigkeit, die Rolle dualer Ausbildungssysteme und jene Bedingungen, die junge Menschen zum Weggehen bewegen.",
-          bullets: [
-            "Vergleichsdaten zu jugendlicher Arbeitsmarktunsicherheit in der Region",
-            "Diskussion ueber duale Ausbildungssysteme und institutionelle Resilienz",
-            "Verbindung zwischen prekärer Arbeit und Migrationsdruck",
-          ],
-          speakers: [],
-        },
-      ],
+      eyebrow: "Wien",
+      series: "Stay & Shape Conference Series 2026",
+      city: "Wien",
+      title: "\"Power & Participation\"",
+      date: "18.-19. Juni 2026",
+      location: "Wien, Österreich",
+      introA:
+        "Der erste Teil der Reihe konzentriert sich auf robuste Strukturen zum Schutz junger Arbeitnehmer:innen in einer sich wandelnden Wirtschaft.",
+      introB:
+        "Gemeinsam mit der Österreichischen Gewerkschaftsjugend (ÖGJ) erkunden die Teilnehmenden praktische Lösungen gegen Brain Drain und für digitale Rechte in der Kollektivvertragspolitik.",
+      focusLabel: "Fokus:",
+      focus: "Gute Arbeit durch starke Institutionen sichern",
+      workshopTitle: "Expert Workshops",
+      workshopPointA: "Das österreichische Modell",
+      workshopPointB: "Berufsausbildung",
+      workshopPointC: "Jugendvertrauensstrukturen",
+      organisingTitle: "Organising the Future",
+      organisingCopy:
+        "Gewerkschaftliche Rekrutierungsstrategien für das digitale Zeitalter anpassen.",
+      analysisTitle: "Data & Analysis",
+      analysisPointA: "Die Prekaritätsfalle",
+      analysisPointB: "Jugendarbeitslosigkeit",
+      analysisPointC: "Duale Ausbildungssysteme",
+      keynotesTitle: "Keynotes",
+      keynotesCopy:
+        "Expert:inneninputs zu technologischer Revolution, KI, Robotik und Arbeitsmarkt der Zukunft.",
+      stamp: "Action through solidarity",
+      panelRail: "High Level Panel",
+      panelTitle: "The Algorithmic Boss?",
+      panelCopy:
+        "Wie KI und Automatisierung Jugendbeschäftigung, Arbeitsqualität und Arbeitnehmer:innenrechte verändern.",
+      panelFormat:
+        "Format: 30-minütige Expert Keynote gefolgt von einer hochrangigen Paneldiskussion.",
+      panelistsLabel: "Bestätigte Panelist:innen:",
+      panelistTea: "Tea Jarc",
+      panelistTeaRole:
+        "Konföderale Sekretärin, Europäischer Gewerkschaftsbund (ETUC)",
+      panelistKnut: "Martin Gruber-Risak",
+      panelistKnutRole:
+        "Head of Section VIII Labour Law and Employee Protection in the Ministry of Social Affairs",
+      panelistAmelie: "Amelie Muthsam",
+      panelistAmelieRole:
+        "Bundesrat, Niederösterreichischer Landtag, stellvertretende Vorsitzende der SPÖ Niederösterreich",
+      panelistTba: "Wird noch bekanntgegeben",
+      panelistTbaRole: "Vierter Panelgast & Moderation",
+    },
+    sarajevo: {
+      eyebrow: "Ausblick",
+      series: "Part 2 Spotlight",
+      city: "Sarajevo",
+      title: "\"Migration & Mobility\"",
+      date: "22.-23. Oktober 2026",
+      location: "Sarajevo, Bosnien und Herzegowina",
+      introA:
+        "Das Gespräch wird im Herbst fortgesetzt. Nach der Grundlagenarbeit in Wien richtet Teil 2 den Blick auf die direkte Schnittstelle von Digitalisierung und Migration.",
+      introB:
+        "Wir untersuchen, wie digitale Arbeitsmärkte Migrationstrends beeinflussen (Remote Work vs. Auswanderung), und entwickeln Strategien, um algorithmisches Management so zu regulieren, dass lokale wirtschaftliche Alternativen zum Weggehen entstehen.",
+      focusLabel: "Fokus:",
+      focus: "Migration & Mobility",
+      tileOneTitle: "Digitale Arbeitsmärkte",
+      tileOneCopy: "Wie Remote Work Mobilitätsentscheidungen verändert.",
+      tileTwoTitle: "Migrationstrends",
+      tileTwoCopy: "Remote Work vs. Auswanderung.",
+      tileThreeTitle: "Algorithmisches Management",
+      tileThreeCopy: "Regulierung, die Arbeit fair hält.",
+      tileFourTitle: "Lokale Alternativen",
+      tileFourCopy: "Tragfähige wirtschaftliche Gründe zum Bleiben.",
+      stamp: "Action through solidarity",
+      panelRail: "Part 2",
+      panelTitle: "The Future Is Local",
+      panelCopy:
+        "Jugend, Gewerkschaften und Partner entwickeln Strategien für Mobilität ohne erzwungenen Wegzug.",
+      panelTag: "Stronger unions. Fairer futures.",
     },
     audience: {
       eyebrow: "Zielgruppe",
-      title: "Gedacht fuer Organisierende, Forschung und Politik",
+      title: "Gedacht für Organisierende, Forschung und Politik",
       list: [
         {
           title: "Junge Gewerkschafter:innen",
-          copy: "Teilnehmende unter 40, die Jugendvertretung und Ansprache in ihren Organisationen staerken wollen.",
+          copy: "Teilnehmende unter 40, die Jugendvertretung und Ansprache in ihren Organisationen stärken wollen.",
         },
         {
           title: "Jugendgremien und Vertretungen",
@@ -424,7 +491,7 @@ const content = {
         },
         {
           title: "Dialogpartner",
-          copy: "Junge Arbeitgebervertreter:innen und politische Stakeholder, die ueber faire Arbeitsstandards mitdiskutieren.",
+          copy: "Junge Arbeitgebervertreter:innen und politische Stakeholder, die über faire Arbeitsstandards mitdiskutieren.",
         },
       ],
     },
@@ -433,64 +500,62 @@ const content = {
       items: [
         {
           title: "Datum",
-          copy: "17.-19. Juni 2026",
+          copy: "18.-19. Juni 2026",
         },
         {
           title: "Ort",
-          copy: "Wien, Oesterreich",
+          copy: "Wien, Österreich",
         },
         {
-          title: "Zielgroesse",
+          title: "Zielgröße",
           copy: "70 Personen",
         },
         {
-          title: "Vertretene Laender",
-          copy: "Oesterreich, Albanien, Bosnien und Herzegowina, Moldau, Montenegro, Serbien und weitere EU-Laender",
+          title: "Vertretene Länder",
+          copy: "Österreich, Albanien, Bosnien und Herzegowina, Moldau, Montenegro, Serbien und weitere EU-Länder",
         },
       ],
     },
     register: {
       eyebrow: "Anmeldung",
-      title: "Interesse fuer Wien anmelden",
+      title: "Interesse für Wien anmelden",
+      formLabel: "Wien Anmeldung",
       copy:
-        "Teilen Sie Ihre Daten, um eine Bestaetigungs-E-Mail und weitere Informationen zur Wiener Veranstaltung zu erhalten. Die Daten werden ausschliesslich fuer dieses Event gespeichert.",
+        "Teilen Sie Ihre Daten, um eine Bestätigungs-E-Mail und weitere Informationen zur Wiener Veranstaltung zu erhalten. Die Daten werden ausschließlich für dieses Event gespeichert.",
       notes: [
         {
           title: "Wie es weitergeht",
           copy:
-            "Nach dem Absenden erhalten Sie eine Bestaetigungs-E-Mail. Weitere praktische Informationen und Programm-Updates folgen spaeter.",
-        },
-        {
-          title: "Teilnahmeziel",
-          copy:
-            "Die Seite kommuniziert ein Ziel von 70 Teilnehmenden, die Anmeldungen bleiben jedoch offen, waehrend das Organisationsteam sie bearbeitet.",
+            "Nach dem Absenden erhalten Sie eine Bestätigungs-E-Mail. Weitere praktische Informationen und Programm-Updates folgen später.",
         },
       ],
     },
     form: {
-      nameLabel: "Vollstaendiger Name",
-      namePlaceholder: "Ihr vollstaendiger Name",
+      nameLabel: "Vollständiger Name",
+      namePlaceholder: "Ihr vollständiger Name",
       emailLabel: "E-Mail-Adresse",
       emailPlaceholder: "sie@example.org",
+      organisationLabel: "Organisation",
+      organisationPlaceholder: "Ihre Organisation (optional)",
       consentLabel:
-        "Ich bin damit einverstanden, dass mein Name und meine E-Mail fuer die Konferenzanmeldung und fuer Informationen zu dieser Veranstaltung gespeichert werden.",
+        "Ich bin damit einverstanden, dass meine Registrierungsdaten für die Konferenzanmeldung und für Informationen zu dieser Veranstaltung gespeichert werden.",
       consentHint:
-        "Ihre Daten werden nur fuer die Organisation dieser Veranstaltung und fuer damit verbundene Kommunikation verwendet.",
+        "Ihre Daten werden nur für die Organisation dieser Veranstaltung und für damit verbundene Kommunikation verwendet.",
       submit: "Anmeldung absenden",
       submitting: "Wird gesendet...",
       messages: {
         success:
-          "Ihre Anmeldung wurde erfasst. Bitte pruefen Sie Ihr Postfach auf die Bestaetigungs-E-Mail.",
+          "Ihre Anmeldung wurde erfasst. Bitte prüfen Sie Ihr Postfach auf die Bestätigungs-E-Mail.",
         duplicate:
-          "Diese E-Mail-Adresse ist bereits fuer die Wiener Veranstaltung registriert.",
+          "Diese E-Mail-Adresse ist bereits für die Wiener Veranstaltung registriert.",
         error:
           "Beim Senden Ihrer Anmeldung ist ein Fehler aufgetreten. Bitte versuchen Sie es gleich noch einmal.",
       },
       errors: {
-        nameRequired: "Bitte geben Sie Ihren vollstaendigen Namen ein.",
+        nameRequired: "Bitte geben Sie Ihren vollständigen Namen ein.",
         emailRequired: "Bitte geben Sie Ihre E-Mail-Adresse ein.",
-        emailInvalid: "Bitte geben Sie eine gueltige E-Mail-Adresse ein.",
-        consentRequired: "Bitte bestaetigen Sie den Datenschutzhinweis, um fortzufahren.",
+        emailInvalid: "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+        consentRequired: "Bitte bestätigen Sie den Datenschutzhinweis, um fortzufahren.",
         spamDetected: "Ihre Eingabe konnte nicht verarbeitet werden.",
       },
     },
@@ -498,27 +563,38 @@ const content = {
       eyebrow: "FAQ",
       items: [
         {
-          question: "Ist das bereits das vollstaendige Programm?",
+          question: "Ist das bereits das vollständige Programm?",
           answer:
-            "Nein. Diese erste Version zeigt die bestaetigte Struktur und die Hoehepunkte fuer Wien. Eine genauere Taktung folgt spaeter.",
+            "Nein. Diese erste Version zeigt die bestätigte Struktur und die Höhepunkte für Wien. Eine genauere Taktung folgt später.",
         },
         {
           question: "Wird das Programm noch aktualisiert?",
           answer:
-            "Ja. Diese erste Version zeigt die bestaetigte Struktur und die wichtigsten Formate. Weitere praktische Details werden spaeter geteilt.",
+            "Ja. Diese erste Version zeigt die bestätigte Struktur und die wichtigsten Formate. Weitere praktische Details werden später geteilt.",
         },
         {
           question: "Was passiert mit meinen Registrierungsdaten?",
           answer:
-            "Ihr Name und Ihre E-Mail werden fuer die Organisation dieser Veranstaltung und fuer damit verbundene Updates gespeichert. Es gibt keine oeffentliche Teilnehmendenliste auf der Seite.",
+            "Ihr Name und Ihre E-Mail werden für die Organisation dieser Veranstaltung und für damit verbundene Updates gespeichert. Es gibt keine öffentliche Teilnehmendenliste auf der Seite.",
         },
       ],
     },
     footer: {
-      eyebrow: "Partnerorganisation",
-      partner: "Oesterreichischer Gewerkschaftsbund (OEGB), Internationale Abteilung",
+      eyebrow: "Stay & Shape Konferenzreihe 2026",
+      titleLineA: "Stärkere Gewerkschaften.",
+      titleLineB: "Fairere Zukunft.",
       copy:
-        "Diese Landingpage behandelt nur die Wiener Veranstaltung. Weitere Programmdetails werden mit registrierten Teilnehmenden geteilt.",
+        "Wir bringen junge Arbeitnehmer:innen, Gewerkschaften und Partner aus Südosteuropa und der EU zusammen, um Macht aufzubauen, Systeme zu gestalten und Gründe zum Bleiben zu schaffen.",
+      sideText: "Gemeinsam gestalten wir eine Zukunft, für die es sich zu bleiben lohnt.",
+      join: "Bewegung stärken",
+      action: "Informiert bleiben. Mitwirken. Die Zukunft der Arbeit gestalten.",
+      actionLink: "Updates erhalten",
+      logoIntro: "Partnerlogos",
+      logoOne: "Logo Platzhalter 01",
+      logoTwo: "Logo Platzhalter 02",
+      logoThree: "Logo Platzhalter 03",
+      metaLeft: "Stay & Shape Konferenzreihe 2026",
+      metaCenter: "Macht. Beteiligung. Perspektive.",
     },
   },
 };
@@ -537,13 +613,19 @@ document.addEventListener("DOMContentLoaded", () => {
   renderLanguage(currentLanguage);
   bindLanguageSwitch();
   bindRegistrationForm();
+  bindHeaderScrollState();
+  initBrandEnigma();
   initMotion();
 });
 
 function getInitialLanguage() {
-  const stored = window.localStorage.getItem(STORAGE_KEY);
-  if (stored === "en" || stored === "de") {
-    return stored;
+  try {
+    const stored = window.localStorage.getItem(STORAGE_KEY);
+    if (stored === "en" || stored === "de") {
+      return stored;
+    }
+  } catch (error) {
+    console.warn("Language preference storage is unavailable in this preview.", error);
   }
   return "en";
 }
@@ -555,7 +637,11 @@ function getContent(path, language = currentLanguage) {
 function renderLanguage(language) {
   currentLanguage = language;
   document.documentElement.lang = language;
-  window.localStorage.setItem(STORAGE_KEY, language);
+  try {
+    window.localStorage.setItem(STORAGE_KEY, language);
+  } catch (error) {
+    console.warn("Unable to persist language preference in this preview.", error);
+  }
   document.title = getContent("meta.title", language);
   if (elements.metaDescription) {
     elements.metaDescription.setAttribute("content", getContent("meta.description", language));
@@ -576,21 +662,7 @@ function renderLanguage(language) {
   });
 
   renderHeroFacts(language);
-  renderList(
-    document.getElementById("overview-points"),
-    getContent("overview.points", language),
-    "detail-item"
-  );
-  renderList(
-    document.getElementById("objectives-list"),
-    getContent("objectives.list", language),
-    "objective-item"
-  );
-  renderProgramme(language);
-  renderAudience(language);
-  renderFacts(language);
   renderRegisterNotes(language);
-  renderFaq(language);
   clearFormFeedback();
   syncLanguageButtons();
 }
@@ -611,6 +683,9 @@ function renderHeroFacts(language) {
 }
 
 function renderList(container, items, itemClass) {
+  if (!container || !Array.isArray(items)) {
+    return;
+  }
   if (container.id === "overview-points") {
     container.className = "detail-panel detail-list reveal";
   }
@@ -626,37 +701,11 @@ function renderList(container, items, itemClass) {
     .join("");
 }
 
-function renderProgramme(language) {
-  const container = document.getElementById("programme-highlights");
-  const cards = getContent("programme.cards", language);
-  container.innerHTML = cards
-    .map(
-      (card) => `
-        <article class="programme-card">
-          <div class="programme-card__meta">
-            <span>${escapeHtml(card.label)}</span>
-            <span>${escapeHtml(card.meta)}</span>
-          </div>
-          <h3 class="programme-card__title">${escapeHtml(card.title)}</h3>
-          <p>${escapeHtml(card.copy)}</p>
-          <ul class="programme-list">
-            ${card.bullets.map((bullet) => `<li>${escapeHtml(bullet)}</li>`).join("")}
-          </ul>
-          ${
-            card.speakers.length
-              ? `<div class="programme-speakers">${card.speakers
-                  .map((speaker) => `<span>${escapeHtml(speaker)}</span>`)
-                  .join("")}</div>`
-              : ""
-          }
-        </article>
-      `
-    )
-    .join("");
-}
-
 function renderAudience(language) {
   const container = document.getElementById("audience-list");
+  if (!container) {
+    return;
+  }
   const items = getContent("audience.list", language);
   container.className = "audience-list";
   container.innerHTML = items
@@ -673,6 +722,9 @@ function renderAudience(language) {
 
 function renderFacts(language) {
   const container = document.getElementById("facts-grid");
+  if (!container) {
+    return;
+  }
   const items = getContent("facts.items", language);
   container.innerHTML = items
     .map(
@@ -688,6 +740,9 @@ function renderFacts(language) {
 
 function renderRegisterNotes(language) {
   const container = document.getElementById("register-notes");
+  if (!container) {
+    return;
+  }
   const items = getContent("register.notes", language);
   container.innerHTML = items
     .map(
@@ -703,6 +758,9 @@ function renderRegisterNotes(language) {
 
 function renderFaq(language) {
   const container = document.getElementById("faq-list");
+  if (!container) {
+    return;
+  }
   const items = getContent("faq.items", language);
   container.innerHTML = items
     .map(
@@ -735,6 +793,20 @@ function syncLanguageButtons() {
   });
 }
 
+function bindHeaderScrollState() {
+  const header = document.querySelector(".site-header");
+  if (!header) {
+    return;
+  }
+
+  const update = () => {
+    header.classList.toggle("is-scrolled", window.scrollY > 24);
+  };
+
+  update();
+  window.addEventListener("scroll", update, { passive: true });
+}
+
 function bindRegistrationForm() {
   if (!elements.form) {
     return;
@@ -748,6 +820,7 @@ function bindRegistrationForm() {
     const payload = {
       name: String(formData.get("name") || "").trim(),
       email: String(formData.get("email") || "").trim().toLowerCase(),
+      organisation: String(formData.get("organisation") || "").trim(),
       consent: elements.form.querySelector("#consent").checked,
       website: String(formData.get("website") || "").trim(),
       language: currentLanguage,
@@ -879,6 +952,72 @@ function setSubmitting(isSubmitting) {
       ? getContent("form.submitting")
       : getContent("form.submit");
   }
+}
+
+function initBrandEnigma() {
+  const brand = document.querySelector("[data-enigma-brand]");
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!brand || reduceMotion) {
+    return;
+  }
+
+  const target = brand.textContent;
+  const glyphs = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+  const frameMs = 42;
+  const durationMs = 1800;
+  const firstRunDelayMs = 5000;
+  const intervalMs = 60000;
+  let frameHandle = null;
+  let isRunning = false;
+
+  const run = () => {
+    if (isRunning) {
+      return;
+    }
+
+    isRunning = true;
+    brand.classList.add("is-enigma-running");
+    const start = performance.now();
+
+    const tick = (now) => {
+      const progress = Math.min((now - start) / durationMs, 1);
+      const revealed = Math.floor(progress * (target.length + 1));
+
+      brand.textContent = [...target]
+        .map((char, index) => {
+          if (char === " " || char === "&") {
+            return char;
+          }
+          if (index < revealed || progress === 1) {
+            return char;
+          }
+          return glyphs[Math.floor(Math.random() * glyphs.length)];
+        })
+        .join("");
+
+      if (progress < 1) {
+        frameHandle = window.setTimeout(() => {
+          window.requestAnimationFrame(tick);
+        }, frameMs);
+        return;
+      }
+
+      brand.textContent = target;
+      brand.classList.remove("is-enigma-running");
+      isRunning = false;
+    };
+
+    window.requestAnimationFrame(tick);
+  };
+
+  window.setTimeout(run, firstRunDelayMs);
+  window.setInterval(run, intervalMs);
+
+  window.addEventListener("pagehide", () => {
+    if (frameHandle) {
+      window.clearTimeout(frameHandle);
+    }
+  });
 }
 
 function initMotion() {

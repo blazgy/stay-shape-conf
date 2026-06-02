@@ -1,0 +1,13 @@
+{
+  "name": "stay-shape-conf",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "node dev-server.js",
+    "dev:vercel": "vercel dev --listen 3000",
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "vercel": "^49.0.1"
+  }
+}
