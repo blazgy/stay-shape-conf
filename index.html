@@ -23,6 +23,7 @@
       defer
       src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"
     ></script>
+    <script type="module" src="./card-three.mjs"></script>
     <script type="module" src="./footer-three.mjs"></script>
     <script defer src="./script.js"></script>
   </head>
@@ -127,7 +128,9 @@
             </div>
             <div class="challenge-cards">
               <article class="challenge-card challenge-card--threat">
-                <div class="challenge-card__icon" aria-hidden="true">!</div>
+                <div class="challenge-card__icon challenge-card__icon--threat" aria-hidden="true">
+                  <canvas class="card-three" data-card-three="threat"></canvas>
+                </div>
                 <div>
                   <h3 data-i18n="overview.threatTitle">The Threat</h3>
                   <p data-i18n="overview.threatCopy">
@@ -137,7 +140,9 @@
                 </div>
               </article>
               <article class="challenge-card challenge-card--opportunity">
-                <div class="challenge-card__icon" aria-hidden="true">↗</div>
+                <div class="challenge-card__icon challenge-card__icon--opportunity" aria-hidden="true">
+                  <canvas class="card-three" data-card-three="opportunity"></canvas>
+                </div>
                 <div>
                   <h3 data-i18n="overview.opportunityTitle">The Opportunity</h3>
                   <p data-i18n="overview.opportunityCopy">
@@ -226,8 +231,8 @@
           <div class="strategy-action-rail reveal">
             <article class="strategy-card strategy-card--share">
               <span class="strategy-card__number">01</span>
-              <div class="strategy-card__icon strategy-card__icon--people" aria-hidden="true">
-                <span></span><span></span><span></span>
+              <div class="strategy-card__icon strategy-card__icon--share" aria-hidden="true">
+                <canvas class="card-three" data-card-three="share"></canvas>
               </div>
               <div>
                 <h3 data-i18n="context.shareTitle">Share</h3>
@@ -239,8 +244,8 @@
             </article>
             <article class="strategy-card strategy-card--develop">
               <span class="strategy-card__number">02</span>
-              <div class="strategy-card__icon strategy-card__icon--blocks" aria-hidden="true">
-                <span></span><span></span><span></span><span></span>
+              <div class="strategy-card__icon strategy-card__icon--develop" aria-hidden="true">
+                <canvas class="card-three" data-card-three="develop"></canvas>
               </div>
               <div>
                 <h3 data-i18n="context.developTitle">Develop</h3>
@@ -252,8 +257,8 @@
             </article>
             <article class="strategy-card strategy-card--formulate">
               <span class="strategy-card__number">03</span>
-              <div class="strategy-card__icon strategy-card__icon--document" aria-hidden="true">
-                <span></span>
+              <div class="strategy-card__icon strategy-card__icon--formulate" aria-hidden="true">
+                <canvas class="card-three" data-card-three="formulate"></canvas>
               </div>
               <div>
                 <h3 data-i18n="context.formulateTitle">Formulate</h3>
@@ -665,9 +670,6 @@
 
           <div class="footer-poster__visual" aria-hidden="true">
             <canvas class="footer-three" data-footer-three></canvas>
-            <div class="footer-three-fallback">
-              <span></span>
-            </div>
             <p class="footer-side-text" data-i18n="footer.sideText">
               Together, we shape a future worth staying for.
             </p>
@@ -700,6 +702,9 @@
               <div class="footer-logo-placeholder">
                 <img src="./assets/logo-lrdr.png" alt="Labor Relations in the Danube Region" />
               </div>
+              <div class="footer-logo-placeholder">
+                <img src="./assets/logo-bmasgpk.png" alt="Bundesministerium Arbeit, Soziales, Gesundheit, Pflege und Konsumentenschutz" />
+              </div>
             </div>
           </div>
         </div>
@@ -707,6 +712,10 @@
         <div class="footer-poster__meta">
           <span data-i18n="footer.metaLeft">Stay &amp; Shape Conference Series 2026</span>
           <span data-i18n="footer.metaCenter">Power. Participation. Opportunity.</span>
+          <span class="footer-legal-links">
+            <a href="https://www.oegb.at/impressum">Impressum</a>
+            <a href="https://www.oegb.at/datenschutz">Datenschutz</a>
+          </span>
         </div>
       </div>
     </footer>

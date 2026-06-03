@@ -233,7 +233,7 @@ button {
 .site-nav {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-end;
   gap: clamp(1rem, 3vw, 3.2rem);
   font-family: var(--font-mono);
   font-size: 16px;
@@ -276,7 +276,7 @@ button {
 .site-nav a[href="#register"] {
   padding: 0.48rem 0.85rem;
   border: var(--line-thin) solid var(--color-ink);
-  background: var(--color-red);
+  background: var(--color-yellow);
   color: var(--color-ink);
   box-shadow: 0.35rem 0.35rem 0 var(--color-ink);
   transform: translateY(-0.08rem);
@@ -306,7 +306,7 @@ button {
 
 .site-nav a[href="#register"]:hover,
 .site-nav a[href="#register"]:focus-visible {
-  background: var(--color-yellow);
+  background: var(--color-white);
   color: var(--color-ink);
   box-shadow: 0.18rem 0.18rem 0 var(--color-ink);
   transform: translate(0.14rem, 0.06rem);
@@ -583,6 +583,7 @@ button {
   position: absolute;
   right: clamp(0rem, 2vw, 2rem);
   top: 33%;
+  z-index: 4;
   margin: 0;
   font-family: var(--font-mono);
   font-size: 1rem;
@@ -825,12 +826,20 @@ button {
 
 .challenge-card {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  gap: clamp(1rem, 1.6vw, 1.35rem);
-  min-height: clamp(8.5rem, 12vw, 11.5rem);
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  align-content: start;
+  gap: clamp(1.2rem, 1.9vw, 1.7rem);
+  min-height: clamp(14rem, 21vw, 18.5rem);
   padding: clamp(1rem, 1.5vw, 1.45rem);
   border: var(--line-thin) solid rgba(5, 5, 5, 0.08);
   font-family: var(--font-mono);
+}
+
+.challenge-card > div:not(.challenge-card__icon) {
+  display: grid;
+  align-content: start;
+  gap: clamp(0.75rem, 1.2vw, 1rem);
 }
 
 .challenge-card--threat {
@@ -843,30 +852,55 @@ button {
 }
 
 .challenge-card__icon {
-  display: grid;
-  place-items: center;
-  width: clamp(3.6rem, 6vw, 6.2rem);
-  height: clamp(3.6rem, 6vw, 6.2rem);
-  border: 0.18rem solid var(--color-ink);
-  font-size: clamp(2rem, 3vw, 3.2rem);
-  font-weight: 700;
-  line-height: 1;
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: clamp(6.2rem, 8.6vw, 8.4rem);
+  height: clamp(6.2rem, 9vw, 8.3rem);
+  overflow: hidden;
+  border: var(--line-thin) solid rgba(5, 5, 5, 0.34);
+  background:
+    linear-gradient(rgba(5, 5, 5, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(5, 5, 5, 0.07) 1px, transparent 1px),
+    rgba(255, 251, 247, 0.3);
+  background-size: 1rem 1rem;
 }
 
 .challenge-card--threat .challenge-card__icon {
-  clip-path: polygon(50% 0, 100% 90%, 0 90%);
-  padding-top: 0.5rem;
+  border-color: rgba(5, 5, 5, 0.42);
 }
 
 .challenge-card--opportunity .challenge-card__icon {
-  border: 0;
-  font-size: clamp(3rem, 5vw, 5.2rem);
-  color: var(--color-white);
+  border-color: rgba(255, 255, 255, 0.5);
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    rgba(5, 5, 5, 0.1);
+  background-size: 1rem 1rem;
+}
+
+.card-three {
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.45s var(--ease);
+}
+
+.card-three.is-ready {
+  opacity: 1;
+}
+
+.card-three.is-unavailable {
+  opacity: 0;
 }
 
 .challenge-card h3 {
   display: inline-flex;
-  margin: 0 0 0.65rem;
+  width: max-content;
+  max-width: 100%;
+  margin: 0;
   padding: 0.22rem 0.55rem;
   background: var(--color-ink);
   color: var(--color-white);
@@ -877,6 +911,7 @@ button {
 
 .challenge-card p {
   margin: 0;
+  max-width: 17ch;
   font-size: 1rem;
   line-height: 1.34;
 }
@@ -1284,13 +1319,23 @@ button {
 .strategy-card {
   position: relative;
   display: grid;
-  grid-template-columns: clamp(5rem, 9vw, 9rem) minmax(0, 1fr);
-  gap: clamp(1rem, 2vw, 2rem);
-  min-height: clamp(10.5rem, 15vw, 14.5rem);
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  align-content: start;
+  gap: clamp(1.15rem, 1.8vw, 1.65rem);
+  min-height: clamp(17rem, 24vw, 22rem);
   padding: clamp(1.25rem, 1.8vw, 1.75rem);
   border-right: var(--line-thin) solid var(--color-ink);
   overflow: hidden;
   font-family: var(--font-mono);
+}
+
+.strategy-card > div:not(.strategy-card__icon) {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  align-content: start;
+  gap: clamp(0.75rem, 1.2vw, 1rem);
 }
 
 .strategy-card:last-child {
@@ -1342,89 +1387,34 @@ button {
 .strategy-card__icon {
   position: relative;
   z-index: 2;
-  align-self: end;
-  display: grid;
-  place-items: center;
-  min-height: 6.5rem;
+  align-self: start;
+  justify-self: start;
+  display: block;
+  width: clamp(7rem, 10vw, 9.4rem);
+  height: clamp(6.5rem, 9.5vw, 8.8rem);
   margin-top: 2.2rem;
-}
-
-.strategy-card__icon--people {
-  grid-template-columns: repeat(3, 2.3rem);
-  justify-content: center;
-  align-items: end;
-  gap: 0.25rem;
-}
-
-.strategy-card__icon--people span {
-  position: relative;
-  width: 2.2rem;
-  height: 2.2rem;
-  border: 0.18rem solid var(--color-ink);
-  border-radius: 50%;
-}
-
-.strategy-card__icon--people span::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 100%;
-  width: 3.2rem;
-  height: 2.3rem;
-  border: 0.18rem solid var(--color-ink);
-  border-bottom: 0;
-  border-radius: 3rem 3rem 0 0;
-  transform: translateX(-50%);
-}
-
-.strategy-card__icon--blocks {
-  grid-template-columns: repeat(3, 2.2rem);
-  grid-template-rows: repeat(3, 1.6rem);
-  gap: 0.2rem;
-  justify-content: center;
-}
-
-.strategy-card__icon--blocks span {
-  border: 0.17rem solid var(--color-ink);
-}
-
-.strategy-card__icon--blocks span:nth-child(1) {
-  grid-column: 1;
-  grid-row: 2;
-}
-
-.strategy-card__icon--blocks span:nth-child(2) {
-  grid-column: 2;
-  grid-row: 1 / span 2;
-}
-
-.strategy-card__icon--blocks span:nth-child(3) {
-  grid-column: 3;
-  grid-row: 1 / span 3;
-}
-
-.strategy-card__icon--blocks span:nth-child(4) {
-  grid-column: 2 / span 2;
-  grid-row: 3;
-  border-style: dashed;
-}
-
-.strategy-card__icon--document span {
-  width: 5.2rem;
-  height: 6.4rem;
-  border: 0.18rem solid var(--color-ink);
+  overflow: hidden;
+  border: var(--line-thin) solid rgba(5, 5, 5, 0.38);
   background:
-    linear-gradient(var(--color-ink), var(--color-ink)) 1rem 1.8rem / 3rem 0.15rem no-repeat,
-    linear-gradient(var(--color-ink), var(--color-ink)) 1rem 2.8rem / 3rem 0.15rem no-repeat,
-    linear-gradient(var(--color-ink), var(--color-ink)) 1rem 3.8rem / 3rem 0.15rem no-repeat;
-  clip-path: polygon(0 0, 72% 0, 100% 24%, 100% 100%, 0 100%);
+    linear-gradient(rgba(5, 5, 5, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(5, 5, 5, 0.07) 1px, transparent 1px),
+    rgba(255, 251, 247, 0.25);
+  background-size: 1rem 1rem;
+}
+
+.strategy-card__icon--develop {
+  border-color: rgba(6, 66, 217, 0.44);
+}
+
+.strategy-card__icon--formulate {
+  border-color: rgba(255, 210, 26, 0.72);
 }
 
 .strategy-card h3 {
   position: relative;
   z-index: 2;
   width: min-content;
-  margin: 2.3rem 0 0.45rem;
+  margin: 0;
   padding-bottom: 0.25rem;
   border-bottom: 0.28rem solid var(--color-red);
   font-family: var(--font-display);
@@ -2323,11 +2313,6 @@ button {
   object-fit: cover;
   object-position: center;
   filter: contrast(1.04) saturate(1.03);
-  transition: transform 900ms var(--ease);
-}
-
-.sarajevo-visual:hover .sarajevo-visual__image {
-  transform: scale(1.035);
 }
 
 .sarajevo-visual__plus {
@@ -2888,20 +2873,6 @@ button {
   color: var(--color-white);
 }
 
-.register-layout__copy::after {
-  content: "";
-  justify-self: end;
-  width: min(22rem, 48vw);
-  aspect-ratio: 1;
-  margin-top: clamp(1rem, 4vw, 4rem);
-  border: 0.72rem solid var(--color-yellow);
-  border-radius: 50%;
-  box-shadow:
-    inset 0 0 0 0.72rem var(--color-blue),
-    inset 0 0 0 0.92rem var(--color-yellow);
-  opacity: 0.94;
-}
-
 .register-ribbon {
   display: flex;
   align-items: center;
@@ -3308,8 +3279,7 @@ button {
   min-height: clamp(22rem, 38vw, 36rem);
 }
 
-.footer-three,
-.footer-three-fallback {
+.footer-three {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -3325,23 +3295,6 @@ button {
 
 .footer-three.is-ready {
   opacity: 1;
-}
-
-.footer-three-fallback {
-  z-index: 1;
-  display: grid;
-  place-items: center;
-}
-
-.footer-three-fallback span {
-  width: clamp(11rem, 18vw, 19rem);
-  aspect-ratio: 1;
-  border: 0.46rem solid var(--color-yellow);
-  border-radius: 50%;
-  box-shadow:
-    inset 0 0 0 0.3rem rgba(5, 5, 5, 0.8),
-    inset 0 0 0 0.46rem var(--color-yellow);
-  opacity: 0.9;
 }
 
 .footer-side-text {
@@ -3444,7 +3397,7 @@ button {
 
 .footer-logo-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: clamp(1rem, 2.2vw, 2.5rem);
   align-items: stretch;
 }
@@ -3456,15 +3409,14 @@ button {
   height: clamp(8rem, 11vw, 11rem);
   min-width: 0;
   border: var(--line-thin) solid rgba(255, 255, 255, 0.5);
-  background:
-    repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0 1px, transparent 1px 0.55rem),
-    rgba(255, 255, 255, 0.035);
-  color: var(--color-white);
+  background: var(--color-white);
+  color: var(--color-ink);
 }
 
 .footer-logo-placeholder::before {
   content: "";
   position: absolute;
+  z-index: 3;
   left: 0.7rem;
   top: 0.7rem;
   width: 1.1rem;
@@ -3476,6 +3428,7 @@ button {
 .footer-logo-placeholder::after {
   content: "";
   position: absolute;
+  z-index: 3;
   right: 0.7rem;
   bottom: 0.7rem;
   width: 1.1rem;
@@ -3512,6 +3465,23 @@ button {
   justify-self: end;
 }
 
+.footer-legal-links {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  justify-content: end;
+}
+
+.footer-legal-links a {
+  color: var(--color-white);
+  transition: color 0.25s var(--ease);
+}
+
+.footer-legal-links a:hover,
+.footer-legal-links a:focus-visible {
+  color: var(--color-red);
+}
+
 .reveal {
   opacity: 1;
   transform: none;
@@ -3519,13 +3489,15 @@ button {
 
 @media (max-width: 960px) {
   .site-header__inner {
-    grid-template-columns: 1fr;
-    justify-items: start;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    justify-items: stretch;
+    gap: clamp(0.45rem, 1.8vw, 0.8rem);
     border-radius: 1.4rem;
   }
 
   .site-nav {
-    justify-content: start;
+    justify-content: end;
+    white-space: nowrap;
   }
 
   .hero,
@@ -3780,24 +3752,45 @@ button {
 
   .site-header__inner {
     min-height: auto;
-    padding: 0.85rem;
+    padding: 0.65rem;
   }
 
   .brand__text {
-    font-size: 2rem;
+    font-size: clamp(1.18rem, 5.2vw, 1.55rem);
+    min-width: 0;
   }
 
   .hero__copy h1 {
     max-width: 100%;
   }
 
-  .hero__actions,
-  .site-nav {
+  .hero__actions {
     width: 100%;
   }
 
+  .site-nav {
+    width: auto;
+    font-size: clamp(0.72rem, 3vw, 0.9rem);
+  }
+
   .site-nav a {
-    font-size: 16px;
+    min-height: 2.2rem;
+    padding-inline: 0.55rem;
+    font-size: inherit;
+  }
+
+  .site-nav a[href="#register"]::before {
+    margin-left: 0.42rem;
+  }
+
+  .language-toggle {
+    gap: 0;
+    padding: 0.16rem;
+  }
+
+  .language-toggle__button {
+    padding: 0.42rem 0.55rem;
+    font-size: 0.85rem;
   }
 
   .button {
@@ -3982,11 +3975,6 @@ button {
 
   .register-layout__copy h2 {
     font-size: var(--type-poster-lg);
-  }
-
-  .register-layout__copy::after {
-    width: min(16rem, 62vw);
-    border-width: 0.48rem;
   }
 
   .register-form-header {
