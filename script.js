@@ -146,6 +146,8 @@ const content = {
         "Federal Council, Lower Austrian State Parliament, Deputy Chairwoman of SPÖ Lower Austria",
       panelistTba: "Eugenia Stamboliev",
       panelistTbaRole: "Philosopher and researcher of media and technology",
+      panelistGwendolin: "Gwendolin Barnard",
+      panelistGwendolinRole: "Moderation, University of Graz",
     },
     sarajevo: {
       eyebrow: "Looking Ahead",
@@ -297,6 +299,8 @@ const content = {
       logoThree: "Logo placeholder 03",
       metaLeft: "Stay & Shape Conference Series 2026",
       metaCenter: "Power. Participation. Opportunity.",
+      imprint: "Legal notice",
+      privacy: "Privacy policy",
     },
   },
   de: {
@@ -444,6 +448,8 @@ const content = {
         "Bundesrat, Niederösterreichischer Landtag, stellvertretende Vorsitzende der SPÖ Niederösterreich",
       panelistTba: "Eugenia Stamboliev",
       panelistTbaRole: "Philosophin und Forscherin für Medien und Technologie",
+      panelistGwendolin: "Gwendolin Barnard",
+      panelistGwendolinRole: "Moderation, Universität Graz",
     },
     sarajevo: {
       eyebrow: "Ausblick",
@@ -595,6 +601,8 @@ const content = {
       logoThree: "Logo Platzhalter 03",
       metaLeft: "Stay & Shape Konferenzreihe 2026",
       metaCenter: "Macht. Beteiligung. Perspektive.",
+      imprint: "Impressum",
+      privacy: "Datenschutz",
     },
   },
 };
