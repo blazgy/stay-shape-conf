@@ -64,7 +64,7 @@ const content = {
       copyA:
         "The Stay & Shape conference series is designed to strengthen trade unions' capacity to respond to both traditional and digital labour market transformations.",
       copyB:
-        "Bringing together 70 participants from Austria, Albania, Bosnia and Herzegovina, Moldova, Montenegro, Serbia, and across the EU, we focus on actionable strategies, institutional power, and future-ready policy.",
+        "Bringing together 70 participants from Austria, Albania, Bosnia and Herzegovina, Georgia, Moldova, Montenegro, Serbia, and across the EU, we focus on actionable strategies, institutional power, and future-ready policy.",
       mediaLabel: "Action framework",
       mediaNote: "Systems.\nPeople.\nPower.",
       shareTitle: "Share",
@@ -366,7 +366,7 @@ const content = {
       copyA:
         "Die Konferenzreihe Stay & Shape stärkt die Fähigkeit von Gewerkschaften, auf traditionelle und digitale Transformationen des Arbeitsmarkts zu reagieren.",
       copyB:
-        "Mit 70 Teilnehmenden aus Österreich, Albanien, Bosnien und Herzegowina, Moldau, Montenegro, Serbien und weiteren EU-Ländern konzentrieren wir uns auf umsetzbare Strategien, institutionelle Stärke und zukunftsfähige Politik.",
+        "Mit 70 Teilnehmenden aus Österreich, Albanien, Bosnien und Herzegowina, Georgien, Moldau, Montenegro, Serbien und der gesamten EU konzentrieren wir uns auf umsetzbare Strategien, institutionelle Handlungsmacht und zukunftsfähige Politik.",
       mediaLabel: "Handlungsrahmen",
       mediaNote: "Systeme.\nMenschen.\nMacht.",
       shareTitle: "Teilen",
