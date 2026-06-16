@@ -1449,7 +1449,10 @@ button {
   min-width: 0;
   padding-top: 0.2rem;
 }
-.vienna-meta { grid-template-columns: repeat(2, max-content); }
+.vienna-meta {
+  grid-template-columns: max-content minmax(0, 1fr);
+  width: 100%;
+}
 .sarajevo-meta { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .vienna-meta article,
 .sarajevo-meta article {
@@ -1462,14 +1465,28 @@ button {
   font-weight: 700;
   line-height: 1.12;
   text-transform: uppercase;
+  min-width: 0;
 }
 .vienna-meta p,
 .sarajevo-meta p {
   margin: 0;
   max-width: none;
 }
-.vienna-meta p { white-space: nowrap; }
+.vienna-meta p { white-space: normal; }
+.vienna-meta article:first-child p { white-space: nowrap; }
 .sarajevo-meta p { white-space: normal; }
+.vienna-location {
+  display: grid;
+  gap: 0.18rem;
+}
+.vienna-location__detail {
+  display: block;
+  max-width: 100%;
+  font-size: 0.74em;
+  letter-spacing: 0.02em;
+  line-height: 1.08;
+  opacity: 0.82;
+}
 .vienna-meta__icon,
 .sarajevo-meta__icon {
   position: relative;

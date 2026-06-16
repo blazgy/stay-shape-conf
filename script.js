@@ -107,6 +107,7 @@ const content = {
       title: "\"Power & Participation\"",
       date: "June 18-19, 2026",
       location: "Vienna, Austria",
+      locationDetail: "RIVERBOX, 10th Floor",
       introA:
         "The first leg of our series focuses on establishing robust structures to protect young workers in an evolving economy.",
       introB:
@@ -409,6 +410,7 @@ const content = {
       title: "\"Power & Participation\"",
       date: "18.-19. Juni 2026",
       location: "Wien, Österreich",
+      locationDetail: "RIVERBOX im 10. Stock",
       introA:
         "Der erste Teil der Reihe konzentriert sich auf robuste Strukturen zum Schutz junger Arbeitnehmer:innen in einer sich wandelnden Wirtschaft.",
       introB:
