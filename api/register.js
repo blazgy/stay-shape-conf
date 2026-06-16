@@ -186,7 +186,6 @@ async function sendAttendeeEmail({ name, email, language }) {
         <p>${escapeHtml(localized.greeting(name))}</p>
         <p>${escapeHtml(localized.body)}</p>
         <p><strong>${escapeHtml(EVENT_TITLE)}</strong><br />${escapeHtml(EVENT_DATES)}<br />${escapeHtml(EVENT_LOCATION)}</p>
-        <p>${escapeHtml(localized.footer)}</p>
       </div>
     `,
   });
@@ -218,8 +217,6 @@ function getAttendeeEmailCopy(language) {
       greeting: (name) => `Hallo ${name},`,
       body:
         "vielen Dank für Ihre Registrierung für die Wiener Veranstaltung von Stay & Shape. Ihre Anmeldung ist bei uns eingegangen.",
-      footer:
-        "Weitere praktische Informationen und Programmdetails senden wir Ihnen rechtzeitig vor der Veranstaltung.",
     };
   }
 
@@ -228,8 +225,6 @@ function getAttendeeEmailCopy(language) {
     greeting: (name) => `Hello ${name},`,
     body:
       "Thank you for registering for the Vienna event of Stay & Shape. Your submission has been received successfully.",
-    footer:
-      "Further practical information and detailed programme updates will be shared with you closer to the event.",
   };
 }
 

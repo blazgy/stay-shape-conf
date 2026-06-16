@@ -214,6 +214,8 @@ test("stores a registration and sends attendee/admin emails on success", async (
   assert.equal(JSON.parse(calls[1].options.body).to, "blaz@example.org");
   assert.equal(JSON.parse(calls[1].options.body).reply_to, "blaz.gyoha@oegb.at");
   assert.match(JSON.parse(calls[1].options.body).html, /18-19 June 2026/);
+  assert.doesNotMatch(JSON.parse(calls[1].options.body).html, /Further practical information/);
+  assert.doesNotMatch(JSON.parse(calls[1].options.body).html, /Programmdetails/);
   assert.equal(JSON.parse(calls[2].options.body).to, "admin@example.org");
   assert.equal(JSON.parse(calls[2].options.body).reply_to, "blaz.gyoha@oegb.at");
   assert.equal(res.statusCode, 201);
