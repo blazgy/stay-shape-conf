@@ -1,732 +1,525 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stay &amp; Shape | Vienna 2026 Conference</title>
-    <meta
-      name="description"
-      content="Stay & Shape brings together young trade unionists, researchers, and policy experts in Vienna to discuss migration, youth employment, and the digital transformation of work."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./styles.css" />
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"
-    ></script>
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"
-    ></script>
-    <script type="module" src="./card-three.mjs"></script>
-    <script type="module" src="./footer-three.mjs"></script>
-    <script defer src="./script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stay &amp; Shape | Sarajevo · 22–23 October 2026</title>
+    <meta name="description" content="Work, Migration and Technology: Who Shapes the Future of Work in the Balkans? Join Stay & Shape in Sarajevo, 22–23 October 2026. Explore the draft programme and register with FES.">
+    <meta name="theme-color" content="#0642d9">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <script defer src="./script.js">
+    </script>
   </head>
   <body>
-    <div class="page-noise" aria-hidden="true"></div>
+    <a class="skip-link" href="#main">
+      <span data-en="Skip to content" data-bhs="Pređi na sadržaj" data-de="Zum Inhalt">Skip to content</span>
+    </a>
     <header class="site-header">
-      <div class="site-header__inner">
-        <a class="brand" href="#top" aria-label="Stay & Shape">
-          <span class="brand__mark" aria-hidden="true"></span>
-          <span class="brand__text" data-enigma-brand aria-hidden="true">Stay &amp; Shape</span>
+      <div class="shell header-inner">
+        <a class="brand" href="#top" aria-label="Stay & Shape"><span class="brand__text" data-enigma-brand aria-hidden="true">Stay &amp; Shape</span><span class="brand-dot" aria-hidden="true">.</span>
         </a>
-        <nav class="site-nav" aria-label="Primary">
-          <a href="#register" data-i18n="nav.register">Register</a>
+        <nav class="site-nav" aria-label="Primary" data-aria-en="Primary" data-aria-de="Hauptnavigation" data-aria-bhs="Glavna navigacija">
+          <a href="#programme">
+            <span data-en="Programme" data-bhs="Program" data-de="Programm">Programme</span>
+          </a>
+          <a href="#practical">
+            <span data-en="Practical info" data-bhs="Informacije" data-de="Informationen">Practical info</span>
+          </a>
+          <a class="nav-register" href="https://futureofwork.fes.de/event-registration-work-migration-and-technology-sarajevo-22-23-oct-2026.html">
+            <span data-en="Register" data-bhs="Prijava" data-de="Anmelden">Register</span>
+            <span aria-hidden="true">↗</span>
+          </a>
         </nav>
-        <div
-          class="language-toggle"
-          role="group"
-          aria-label="Language switcher"
-        >
-          <button
-            class="language-toggle__button is-active"
-            type="button"
-            data-lang-button="en"
-            aria-pressed="true"
-          >
-            EN
-          </button>
-          <button
-            class="language-toggle__button"
-            type="button"
-            data-lang-button="de"
-            aria-pressed="false"
-          >
-            DE
-          </button>
+        <div class="language-toggle" role="group" aria-label="Language / Sprache / Jezik">
+          <button type="button" data-lang-button="en" aria-pressed="true" aria-label="English">EN</button>
+          <button type="button" data-lang-button="de" aria-pressed="false" aria-label="Deutsch">DE</button>
+          <button type="button" data-lang-button="bhs" aria-pressed="false" aria-label="Bosanski / Hrvatski / Srpski">BHS</button>
         </div>
       </div>
     </header>
-
-    <main id="top">
-      <section class="hero section" id="hero">
-        <div class="shell hero__layout">
-          <div class="hero__copy reveal">
-            <p class="hero__kicker" data-i18n="hero.kicker">Conference 2026</p>
-            <h1 data-i18n="hero.title">
-              Stay &amp; Shape: Youth, Migration and the Digital Transformation of
-              Work in Southeast Europe
+    <div id="top">
+    </div>
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="shell hero-layout">
+          <div class="hero-copy">
+            <p class="eyebrow hero-eyebrow">
+              <span data-en="Stay &amp; Shape / Conference series 2026" data-bhs="Stay &amp; Shape / Ciklus konferencija 2026." data-de="Stay &amp; Shape / Konferenzreihe 2026">Stay &amp; Shape / Conference series 2026</span>
+            </p>
+            <p class="hero-location">Sarajevo <span>22—23.10.2026</span>
+            </p>
+            <h1 id="hero-title">
+              <span data-en="Who shapes" data-bhs="Ko oblikuje" data-de="Wer gestaltet">Who shapes</span>
+              <br>
+              <span data-en="the future" data-bhs="budućnost" data-de="die Zukunft">the future</span>
+              <br>
+              <span data-en="of work?" data-bhs="rada?" data-de="der Arbeit?">of work?</span>
             </h1>
-            <p class="hero__lead" data-i18n="hero.lead">
-              A Vienna gathering for young trade unionists, researchers and policy
-              voices working on migration, youth representation and the future of
-              work.
+            <p class="hero-subtitle">
+              <span data-en="Work, Migration and Technology" data-bhs="Rad, migracije i tehnologija" data-de="Arbeit, Migration und Technologie">Work, Migration and Technology</span>
+              <br>
+              <span>
+                <span data-en="The Balkans in focus." data-bhs="Balkan u fokusu." data-de="Der Balkan im Fokus.">The Balkans in focus.</span>
+              </span>
+            </p>
+            <p class="hero-description">
+              <span data-en="Two days to explore how technology and migration are changing work — and who gets to shape what comes next." data-bhs="Dva dana razgovora o tome kako tehnologija i migracije mijenjaju rad — i ko oblikuje njegovu budućnost." data-de="Zwei Tage über den Wandel der Arbeit durch Technologie und Migration — und darüber, wer ihre Zukunft gestaltet.">Two days to explore how technology and migration are changing work — and who gets to shape what comes next.</span>
+            </p>
+            <div class="hero-actions">
+              <a class="button" href="https://futureofwork.fes.de/event-registration-work-migration-and-technology-sarajevo-22-23-oct-2026.html">
+                <span data-en="Register for Sarajevo" data-bhs="Prijavite se za Sarajevo" data-de="Für Sarajevo anmelden">Register for Sarajevo</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+              <a class="text-link" href="#programme">
+                <span data-en="Explore the programme" data-bhs="Pogledajte program" data-de="Programm entdecken">Explore the programme</span>
+                <span aria-hidden="true">↓</span>
+              </a>
+            </div>
+            <p class="host-note">
+              <span data-en="Registration hosted by Friedrich-Ebert-Stiftung" data-bhs="Prijava putem stranice Friedrich-Ebert-Stiftung" data-de="Anmeldung über die Friedrich-Ebert-Stiftung">Registration hosted by Friedrich-Ebert-Stiftung</span>
             </p>
           </div>
-
-          <aside class="hero__panel reveal" aria-label="Conference summary">
-            <div class="hero__corner hero__corner--top" aria-hidden="true"></div>
-            <div class="hero__media" aria-hidden="true">
-              <img
-                class="hero__media-photo"
-                src="./assets/sh-hero4.avif"
-                alt=""
-                loading="eager"
-                decoding="async"
-              />
-              <img class="hero__globe" src="./assets/globe-line.svg" alt="" loading="eager" />
-              <p class="hero__side-slogan">Shape progress.<br />Design possible.</p>
+          <div class="hero-art" aria-hidden="true">
+            <img class="hero-photo" src="./assets/sh-hero4.avif" alt="" fetchpriority="high" decoding="async">
+            <img class="hero-globe" src="./assets/globe-line.svg" alt="">
+            <span class="art-caption">
+              <span data-en="The future is ours to shape." data-bhs="Budućnost oblikujemo zajedno." data-de="Die Zukunft gestalten wir.">The future is ours to shape.</span>
+            </span>
+            <span class="edition-mark">02 / SARAJEVO</span>
+          </div>
+        </div>
+        <div class="hero-facts">
+          <div class="shell facts-inner">
+            <div>
+              <span class="fact-label">
+                <span data-en="When" data-bhs="Kada" data-de="Wann">When</span>
+              </span>
+              <strong>
+                <span data-en="22–23 October 2026" data-bhs="22–23. oktobar 2026." data-de="22.–23. Oktober 2026">22–23 October 2026</span>
+              </strong>
             </div>
-            <div class="hero__card-stack" id="hero-facts"></div>
-          </aside>
+            <div>
+              <span class="fact-label">
+                <span data-en="Where" data-bhs="Gdje" data-de="Wo">Where</span>
+              </span>
+              <strong>
+                <span data-en="Sarajevo, Bosnia and Herzegovina" data-bhs="Sarajevo, Bosna i Hercegovina" data-de="Sarajevo, Bosnien und Herzegowina">Sarajevo, Bosnia and Herzegovina</span>
+              </strong>
+            </div>
+            <div>
+              <span class="fact-label">
+                <span data-en="Format &amp; language" data-bhs="Format i jezik" data-de="Format &amp; Sprache">Format &amp; language</span>
+              </span>
+              <strong>
+                <span data-en="In person · English" data-bhs="Uživo · engleski" data-de="Vor Ort · Englisch">In person · English</span>
+              </strong>
+              <span>
+                <span data-en="BCMS interpretation available" data-bhs="Dostupno prevođenje na BCMS" data-de="Dolmetschung in BCMS verfügbar">BCMS interpretation available</span>
+              </span>
+            </div>
+          </div>
         </div>
       </section>
-
-      <section class="challenge-section section" id="challenge" data-section="challenge">
-        <div class="challenge-corner challenge-corner--top" aria-hidden="true"></div>
-        <div class="challenge-corner challenge-corner--bottom" aria-hidden="true"></div>
-        <div class="shell challenge-layout">
-          <div class="challenge-copy reveal">
-            <div class="challenge-ribbon">
-              <span>02</span>
-              <span data-i18n="overview.eyebrow">The Challenge</span>
-            </div>
+      <section class="intro section">
+        <div class="shell intro-grid">
+          <div>
+            <p class="eyebrow">01 / <span data-en="The conversation" data-bhs="Razgovor" data-de="Der Austausch">The conversation</span>
+            </p>
             <h2>
-              <span data-i18n="overview.titleLine1">A Changing Landscape</span>
-              <span data-i18n="overview.titleLine2">For Young Workers</span>
+              <span data-en="Work is changing." data-bhs="Rad se mijenja." data-de="Arbeit verändert sich.">Work is changing.</span>
+              <br>
+              <span class="blue-text">
+                <span data-en="Have a say in how." data-bhs="Učestvujte u promjenama." data-de="Gestalten wir sie mit.">Have a say in how.</span>
+              </span>
             </h2>
-            <div class="challenge-text">
-              <p data-i18n="overview.copyA">
-                Across Southeastern Europe, young people are leaving their home
-                countries in growing numbers, driven by low wages and unstable
-                employment.
-              </p>
-              <p data-i18n="overview.copyB">
-                While traditional industries struggle to provide the security
-                they once did, the rapid rise of digitalization - from artificial
-                intelligence to algorithmic management - is fundamentally
-                reshaping work for those who remain.
-              </p>
-              <p class="challenge-bridge" data-i18n="overview.bridge">
-                This dual transformation poses complex challenges:
-              </p>
-            </div>
-            <div class="challenge-cards">
-              <article class="challenge-card challenge-card--threat">
-                <div class="challenge-card__icon challenge-card__icon--threat" aria-hidden="true">
-                  <canvas class="card-three" data-card-three="threat"></canvas>
-                </div>
-                <div>
-                  <h3 data-i18n="overview.threatTitle">The Threat</h3>
-                  <p data-i18n="overview.threatCopy">
-                    Job automation, increased workplace surveillance, and
-                    widening economic gaps.
-                  </p>
-                </div>
-              </article>
-              <article class="challenge-card challenge-card--opportunity">
-                <div class="challenge-card__icon challenge-card__icon--opportunity" aria-hidden="true">
-                  <canvas class="card-three" data-card-three="opportunity"></canvas>
-                </div>
-                <div>
-                  <h3 data-i18n="overview.opportunityTitle">The Opportunity</h3>
-                  <p data-i18n="overview.opportunityCopy">
-                    Leveraging new technologies to create better, safer, and
-                    more flexible work environments.
-                  </p>
-                </div>
-              </article>
-            </div>
-            <p class="challenge-bottom-line" data-i18n="overview.bottomLine">
-              To ensure a fair future, we must act on both.
-            </p>
           </div>
-
-          <figure class="challenge-visual reveal" aria-label="System analysis visual">
-            <span class="challenge-visual__label" data-i18n="overview.mediaLabel">
-              System analysis
-            </span>
-            <img
-              class="challenge-visual__image"
-              src="./assets/challenge-eye.avif"
-              alt=""
-              loading="lazy"
-              decoding="async"
-            />
-            <img class="challenge-visual__globe" src="./assets/globe-line.svg" alt="" loading="lazy" />
-            <span class="challenge-visual__plus challenge-visual__plus--top" aria-hidden="true">+</span>
-            <span class="challenge-visual__plus challenge-visual__plus--bottom" aria-hidden="true">+</span>
-            <figcaption>Stay &amp; Shape Conference 2026</figcaption>
-          </figure>
+          <div class="intro-copy">
+            <p class="lead" data-en="Technology is changing how we work. Migration is changing who works, where, and under which conditions. In the Balkans, these transformations are happening together." data-bhs="Tehnologija mijenja način na koji radimo. Migracije mijenjaju ko radi, gdje i pod kojim uslovima. Na Balkanu se ove promjene odvijaju istovremeno." data-de="Technologie verändert, wie wir arbeiten. Migration verändert, wer wo und unter welchen Bedingungen arbeitet. Auf dem Balkan finden diese Entwicklungen gleichzeitig statt.">Technology is changing how we work. Migration is changing who works, where, and under which conditions. In the Balkans, these transformations are happening together.</p>
+            <p data-en="This conference brings researchers, trade unions, civil society, technology centres, start-ups, businesses and political actors into the same conversation — connecting regional experiences with European and global perspectives." data-bhs="Konferencija okuplja istraživače, sindikate, civilno društvo, tehnološke centre, start-upove, preduzeća i političke aktere — povezujući regionalna iskustva s evropskim i globalnim perspektivama." data-de="Diese Konferenz bringt Forschung, Gewerkschaften, Zivilgesellschaft, Technologiezentren, Start-ups, Unternehmen und politische Akteur:innen zusammen. Sie verbindet regionale Erfahrungen mit europäischen und globalen Perspektiven.">This conference brings researchers, trade unions, civil society, technology centres, start-ups, businesses and political actors into the same conversation — connecting regional experiences with European and global perspectives.</p>
+          </div>
+        </div>
+        <div class="shell themes">
+          <article>
+            <span class="theme-number">01</span>
+            <h3 data-en="Understand the changes" data-bhs="Razumjeti promjene" data-de="Den Wandel verstehen">Understand the changes</h3>
+            <p data-en="AI, automation, platform work and the changing realities of labour mobility." data-bhs="Vještačka inteligencija, automatizacija, platformski rad i promjene u mobilnosti radne snage." data-de="KI, Automatisierung, Plattformarbeit und die neue Realität der Arbeitsmobilität.">AI, automation, platform work and the changing realities of labour mobility.</p>
+          </article>
+          <article>
+            <span class="theme-number">02</span>
+            <h3 data-en="Meet the innovators" data-bhs="Upoznati inovatore" data-de="Innovation kennenlernen">Meet the innovators</h3>
+            <p data-en="Discover regional research, technologies and start-ups at the interactive innovation bazaar." data-bhs="Upoznajte istraživanja, tehnologije i start-upove iz regije na interaktivnom bazaru inovacija." data-de="Regionale Forschung, Technologien und Start-ups beim interaktiven Innovationsbasar entdecken.">Discover regional research, technologies and start-ups at the interactive innovation bazaar.</p>
+          </article>
+          <article>
+            <span class="theme-number">03</span>
+            <h3 data-en="Debate what comes next" data-bhs="Razgovarati o budućnosti" data-de="Die Zukunft diskutieren">Debate what comes next</h3>
+            <p data-en="Explore power, workers’ rights and the choices shaping the future of the Balkans." data-bhs="Razgovarajte o moći, radničkim pravima i odlukama koje oblikuju budućnost Balkana." data-de="Machtverhältnisse, Arbeitsrechte und die Entscheidungen diskutieren, die den Balkan prägen.">Explore power, workers’ rights and the choices shaping the future of the Balkans.</p>
+          </article>
         </div>
       </section>
-
-      <section class="strategy-section section" id="strategy" data-section="strategy">
-        <div class="strategy-corner strategy-corner--top" aria-hidden="true"></div>
-        <div class="strategy-corner strategy-corner--bottom" aria-hidden="true"></div>
-        <div class="shell strategy-layout">
-          <div class="strategy-copy reveal">
-            <div class="strategy-ribbon">
-              <span>03</span>
-              <span data-i18n="context.eyebrow">Strategy</span>
+      <section class="programme section" id="programme" aria-labelledby="programme-title">
+        <div class="shell">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">02 / <span data-en="The programme" data-bhs="Program" data-de="Das Programm">The programme</span>
+              </p>
+              <h2 id="programme-title">
+                <span data-en="Two days. Big questions." data-bhs="Dva dana. Važna pitanja." data-de="Zwei Tage. Große Fragen.">Two days. Big questions.</span>
+              </h2>
             </div>
-            <p class="strategy-objective" data-i18n="context.objectiveLabel">
-              Our Objective
+            <p class="draft-note">
+              <span class="draft-badge">
+                <span data-en="Draft programme" data-bhs="Nacrt programa" data-de="Programmentwurf">Draft programme</span>
+              </span>
+              <span data-en="Sessions and speakers are subject to change." data-bhs="Moguće su promjene u programu i izboru govornika." data-de="Änderungen bei Sessions und Vortragenden vorbehalten.">Sessions and speakers are subject to change.</span>
             </p>
-            <h2 class="strategy-title">
-              <span data-i18n="context.titleLine1">Build Power.</span>
-              <span data-i18n="context.titleLine2">Shape Systems.</span>
-              <span data-i18n="context.titleLine3">Create Reasons To Stay.</span>
-            </h2>
-            <div class="strategy-text">
-              <p data-i18n="context.copyA">
-                The Stay &amp; Shape conference series is designed to strengthen
-                trade unions' capacity to respond to both traditional and
-                digital labour market transformations.
-              </p>
-              <p data-i18n="context.copyB">
-                Bringing together 70 participants from Austria, Albania, Bosnia
-                and Herzegovina, Georgia, Moldova, Montenegro, Serbia, and
-                across the EU, we focus on actionable strategies, institutional
-                power, and future-ready policy.
-              </p>
+          </div>
+          <div class="programme-tools">
+            <nav class="day-links" aria-label="Programme days" data-aria-en="Programme days" data-aria-de="Programmtage" data-aria-bhs="Dani programa">
+              <a href="#day-1">
+                <span data-en="Day 1 · 22 October" data-bhs="Dan 1 · 22. oktobar" data-de="Tag 1 · 22. Oktober">Day 1 · 22 October</span>
+                <span aria-hidden="true">↓</span>
+              </a>
+              <a href="#day-2">
+                <span data-en="Day 2 · 23 October" data-bhs="Dan 2 · 23. oktobar" data-de="Tag 2 · 23. Oktober">Day 2 · 23 October</span>
+                <span aria-hidden="true">↓</span>
+              </a>
+            </nav>
+            <button class="expand-all" type="button" aria-controls="day-1 day-2" aria-expanded="false" hidden>
+              <span data-en="Expand all sessions" data-bhs="Prikaži sve detalje" data-de="Alle Sessions ausklappen">Expand all sessions</span>
+            </button>
+          </div>
+          <div class="day" id="day-1">
+            <div class="day-header">
+              <span class="day-number">01</span>
+              <div>
+                <p class="eyebrow">
+                  <span data-en="Thursday · 22 October" data-bhs="Četvrtak · 22. oktobar" data-de="Donnerstag · 22. Oktober">Thursday · 22 October</span>
+                </p>
+                <h3>
+                  <span data-en="Changing world of work" data-bhs="Svijet rada u promjeni" data-de="Arbeitswelt im Wandel">Changing world of work</span>
+                </h3>
+                <p>
+                  <span data-en="Technology, mobility and the people driving change." data-bhs="Tehnologija, mobilnost i ljudi koji pokreću promjene." data-de="Technologie, Mobilität und die Menschen hinter dem Wandel.">Technology, mobility and the people driving change.</span>
+                </p>
+              </div>
+              <span class="day-hours">10:00—16:30</span>
+            </div>
+            <div class="schedule">
+              <div class="schedule-break">
+                <span class="session-time">10:00–10:30</span>
+                <span class="session-title" data-en="Welcome and opening" data-bhs="Pozdravne riječi i otvaranje" data-de="Begrüßung und Eröffnung">Welcome and opening</span>
+              </div>
+              <details class="session">
+                <summary>
+                  <span class="session-time">10:30–11:30</span>
+                  <span class="session-heading">
+                    <span class="session-kind" data-en="Keynote · Presentation + Q&amp;A" data-bhs="Uvodno predavanje · Izlaganje i pitanja" data-de="Keynote · Vortrag + Fragen">Keynote · Presentation + Q&amp;A</span>
+                    <span class="session-title" data-en="How is technology changing work in the Balkans?" data-bhs="Kako tehnologija mijenja rad na Balkanu?" data-de="Wie verändert Technologie die Arbeit auf dem Balkan?">How is technology changing work in the Balkans?</span>
+                    <span class="session-speaker">Branimir Jovanovic · wiiw</span>
+                  </span>
+                  <span class="session-toggle" aria-hidden="true">
+                  </span>
+                </summary>
+                <div class="session-body">
+                  <p data-en="Digitalisation, AI, automation, platform work and remote work: what is changing already, and what is still emerging? This keynote explores how Balkan economies and workers are positioned within wider European and global technological transformations." data-bhs="Digitalizacija, vještačka inteligencija, automatizacija, platformski rad i rad na daljinu: šta se već mijenja, a šta se tek razvija? Predavanje razmatra položaj balkanskih ekonomija i radnika u širim evropskim i globalnim tehnološkim promjenama." data-de="Digitalisierung, KI, Automatisierung, Plattformarbeit und Remote-Arbeit: Was verändert sich bereits, was zeichnet sich erst ab? Die Keynote beleuchtet die Position der Volkswirtschaften und Beschäftigten des Balkans im europäischen und globalen technologischen Wandel.">Digitalisation, AI, automation, platform work and remote work: what is changing already, and what is still emerging? This keynote explores how Balkan economies and workers are positioned within wider European and global technological transformations.</p>
+                  <div class="speaker-bio">
+                    <h4 data-en="About the speaker" data-bhs="O govorniku ili govornici" data-de="Zur Person">About the speaker</h4>
+                    <p data-en="Economist at the Vienna Institute for International Economic Studies (wiiw), covering the Western Balkans and serving as country expert for North Macedonia and Serbia. His work spans economic development, inequality, social policy and labour rights. He previously advised North Macedonia’s Minister of Finance and worked at its National Bank." data-bhs="Ekonomista na Bečkom institutu za međunarodne ekonomske studije (wiiw), gdje prati Zapadni Balkan i zadužen je za Sjevernu Makedoniju i Srbiju. Bavi se ekonomskim razvojem, nejednakošću, socijalnom politikom i radničkim pravima. Ranije je bio savjetnik ministra finansija Sjeverne Makedonije i radio u njenoj Narodnoj banci." data-de="Ökonom am Wiener Institut für Internationale Wirtschaftsvergleiche (wiiw) mit Schwerpunkt Westbalkan und Länderexperte für Nordmazedonien und Serbien. Er forscht zu Wirtschaftsentwicklung, Ungleichheit, Sozialpolitik und Arbeitsrechten. Zuvor beriet er den Finanzminister Nordmazedoniens und arbeitete bei der Nationalbank.">Economist at the Vienna Institute for International Economic Studies (wiiw), covering the Western Balkans and serving as country expert for North Macedonia and Serbia. His work spans economic development, inequality, social policy and labour rights. He previously advised North Macedonia’s Minister of Finance and worked at its National Bank.</p>
+                  </div>
+                </div>
+              </details>
+              <details class="session">
+                <summary>
+                  <span class="session-time">11:30–12:30</span>
+                  <span class="session-heading">
+                    <span class="session-kind" data-en="Keynote · Presentation + Q&amp;A" data-bhs="Uvodno predavanje · Izlaganje i pitanja" data-de="Keynote · Vortrag + Fragen">Keynote · Presentation + Q&amp;A</span>
+                    <span class="session-title" data-en="Who moves, who stays, and who works across borders?" data-bhs="Ko odlazi, ko ostaje i ko radi preko granica?" data-de="Wer geht, wer bleibt und wer arbeitet über Grenzen hinweg?">Who moves, who stays, and who works across borders?</span>
+                    <span class="session-speaker">Jelena Šapić</span>
+                  </span>
+                  <span class="session-toggle" aria-hidden="true">
+                  </span>
+                </summary>
+                <div class="session-body">
+                  <p data-en="How are demographic change, emigration, labour shortages and precarious employment connected to technological change? Explore migration for work and cross-border employment made possible by technology, without physical migration." data-bhs="Kako su demografske promjene, iseljavanje, nedostatak radne snage i nesigurno zaposlenje povezani s tehnološkim promjenama? Razgovarat ćemo o odlasku u druge zemlje radi posla i prekograničnom radu koji tehnologija omogućava bez fizičkog preseljenja." data-de="Wie hängen demografischer Wandel, Abwanderung, Arbeitskräftemangel und prekäre Beschäftigung mit technologischem Wandel zusammen? Im Mittelpunkt stehen Arbeitsmigration und grenzüberschreitende Beschäftigung, die Technologie ohne einen Ortswechsel ermöglicht.">How are demographic change, emigration, labour shortages and precarious employment connected to technological change? Explore migration for work and cross-border employment made possible by technology, without physical migration.</p>
+                  <div class="speaker-bio">
+                    <h4 data-en="About the speaker" data-bhs="O govorniku ili govornici" data-de="Zur Person">About the speaker</h4>
+                    <p data-en="Researcher focusing on the social impact of human-computer interactions and digital disruptions. Her interests include how digital technologies and AI shift labour divisions and power dynamics. She created Fusing Futures, a podcast on the digital economy and society, recognised in 2019 among the Western Balkans’ most innovative media content." data-bhs="Istraživačica koja se bavi društvenim uticajem interakcije ljudi i računara te digitalnih promjena. Istražuje kako digitalne tehnologije i vještačka inteligencija mijenjaju podjelu rada i odnose moći. Pokrenula je Fusing Futures, podcast o digitalnoj ekonomiji i društvu, koji je 2019. prepoznat kao jedan od najinovativnijih medijskih sadržaja na Zapadnom Balkanu." data-de="Sie beschäftigt sich mit den gesellschaftlichen Folgen der Mensch-Computer-Interaktion und digitaler Umbrüche. Ihre Interessen umfassen den Einfluss digitaler Technologien und KI auf Arbeitsteilung und Machtverhältnisse. Sie gründete Fusing Futures, einen Podcast über digitale Wirtschaft und Gesellschaft, der 2019 im Westbalkan für innovative Medieninhalte ausgezeichnet wurde.">Researcher focusing on the social impact of human-computer interactions and digital disruptions. Her interests include how digital technologies and AI shift labour divisions and power dynamics. She created Fusing Futures, a podcast on the digital economy and society, recognised in 2019 among the Western Balkans’ most innovative media content.</p>
+                  </div>
+                </div>
+              </details>
+              <div class="schedule-break">
+                <span class="session-time">12:30–13:30</span>
+                <span class="session-title" data-en="Lunch" data-bhs="Ručak" data-de="Mittagspause">Lunch</span>
+              </div>
+              <details class="session">
+                <summary>
+                  <span class="session-time">13:30–15:00</span>
+                  <span class="session-heading">
+                    <span class="session-kind" data-en="Research &amp; innovation bazaar" data-bhs="Bazar istraživanja i inovacija" data-de="Forschungs- &amp; Innovationsbasar">Research &amp; innovation bazaar</span>
+                    <span class="session-title" data-en="What is happening in the Balkans?" data-bhs="Šta se dešava na Balkanu?" data-de="Was passiert auf dem Balkan?">What is happening in the Balkans?</span>
+                  </span>
+                  <span class="session-toggle" aria-hidden="true">
+                  </span>
+                </summary>
+                <div class="session-body">
+                  <p data-en="Meet organisations working at the intersection of technology, migration and labour. The interactive bazaar combines demonstrations of relevant technologies and tools with examples of start-ups and emerging innovation ecosystems from the region." data-bhs="Upoznajte organizacije koje se bave povezanošću tehnologije, migracija i rada. Interaktivni bazar spaja demonstracije relevantnih tehnologija i alata s primjerima start-upova i inovacijskih ekosistema koji se razvijaju u regiji." data-de="Lernen Sie Organisationen an der Schnittstelle von Technologie, Migration und Arbeit kennen. Der interaktive Basar verbindet Vorführungen relevanter Technologien und Werkzeuge mit Beispielen von Start-ups und entstehenden Innovationsökosystemen aus der Region.">Meet organisations working at the intersection of technology, migration and labour. The interactive bazaar combines demonstrations of relevant technologies and tools with examples of start-ups and emerging innovation ecosystems from the region.</p>
+                </div>
+              </details>
+              <details class="session">
+                <summary>
+                  <span class="session-time">15:00–16:30</span>
+                  <span class="session-heading">
+                    <span class="session-kind" data-en="Panel discussion" data-bhs="Panel-diskusija" data-de="Podiumsdiskussion">Panel discussion</span>
+                    <span class="session-title" data-en="Who is shaping the future of work?" data-bhs="Ko oblikuje budućnost rada?" data-de="Wer gestaltet die Zukunft der Arbeit?">Who is shaping the future of work?</span>
+                  </span>
+                  <span class="session-toggle" aria-hidden="true">
+                  </span>
+                </summary>
+                <div class="session-body">
+                  <p data-en="Who is driving digital transformation in the Balkans, who benefits, and who carries the risks? Are governments regulating technology or responding to changes driven by business and investment? And where are workers and trade unions in these processes?" data-bhs="Ko pokreće digitalnu transformaciju na Balkanu, ko od nje ima koristi, a ko snosi rizike? Da li vlade regulišu tehnologiju ili samo odgovaraju na promjene koje pokreću preduzeća i ulaganja? Gdje su u tim procesima radnici i sindikati?" data-de="Wer treibt den digitalen Wandel auf dem Balkan voran, wer profitiert und wer trägt die Risiken? Regulieren Regierungen Technologie oder reagieren sie auf Veränderungen durch Unternehmen und Investitionen? Welche Rolle spielen Beschäftigte und Gewerkschaften?">Who is driving digital transformation in the Balkans, who benefits, and who carries the risks? Are governments regulating technology or responding to changes driven by business and investment? And where are workers and trade unions in these processes?</p>
+                </div>
+              </details>
             </div>
           </div>
-
-          <figure class="strategy-visual reveal" aria-label="Action framework visual">
-            <span class="strategy-visual__label" data-i18n="context.mediaLabel">
-              Action framework
-            </span>
-            <span class="strategy-visual__arrow" aria-hidden="true">→</span>
-            <img
-              class="strategy-visual__image"
-              src="./assets/strategy-building.avif"
-              alt=""
-              loading="lazy"
-              decoding="async"
-            />
-            <img class="strategy-visual__globe" src="./assets/globe-line.svg" alt="" loading="lazy" />
-            <span class="strategy-visual__block strategy-visual__block--blue" aria-hidden="true"></span>
-            <span class="strategy-visual__block strategy-visual__block--red" aria-hidden="true"></span>
-            <span class="strategy-visual__note" data-i18n="context.mediaNote">
-              Systems.<br />People.<br />Power.
-            </span>
-          </figure>
-
-          <div class="strategy-action-rail reveal">
-            <article class="strategy-card strategy-card--share">
-              <span class="strategy-card__number">01</span>
-              <div class="strategy-card__icon strategy-card__icon--share" aria-hidden="true">
-                <canvas class="card-three" data-card-three="share"></canvas>
-              </div>
+          <div class="day" id="day-2">
+            <div class="day-header">
+              <span class="day-number">02</span>
               <div>
-                <h3 data-i18n="context.shareTitle">Share</h3>
-                <p data-i18n="context.shareCopy">
-                  Practical strategies for youth recruitment and institutional
-                  empowerment.
+                <p class="eyebrow">
+                  <span data-en="Friday · 23 October" data-bhs="Petak · 23. oktobar" data-de="Freitag · 23. Oktober">Friday · 23 October</span>
+                </p>
+                <h3>
+                  <span data-en="The future of labour" data-bhs="Budućnost rada" data-de="Die Zukunft der Arbeit">The future of labour</span>
+                </h3>
+                <p>
+                  <span data-en="Future scenarios, social protection and the choices ahead." data-bhs="Scenariji budućnosti, socijalna zaštita i odluke koje nas čekaju." data-de="Zukunftsszenarien, soziale Absicherung und die nächsten Entscheidungen.">Future scenarios, social protection and the choices ahead.</span>
                 </p>
               </div>
-            </article>
-            <article class="strategy-card strategy-card--develop">
-              <span class="strategy-card__number">02</span>
-              <div class="strategy-card__icon strategy-card__icon--develop" aria-hidden="true">
-                <canvas class="card-three" data-card-three="develop"></canvas>
+              <span class="day-hours">10:00—16:00</span>
+            </div>
+            <div class="schedule">
+              <div class="schedule-break">
+                <span class="session-time">10:00–10:30</span>
+                <span class="session-title" data-en="Welcome and introduction" data-bhs="Pozdravne riječi i uvod" data-de="Begrüßung und Einführung">Welcome and introduction</span>
               </div>
-              <div>
-                <h3 data-i18n="context.developTitle">Develop</h3>
-                <p data-i18n="context.developCopy">
-                  Concrete initiatives that give young people real economic
-                  reasons to stay.
-                </p>
+              <details class="session">
+                <summary>
+                  <span class="session-time">10:30–11:30</span>
+                  <span class="session-heading">
+                    <span class="session-kind" data-en="Keynote · Future scenarios · Presentation + Q&amp;A" data-bhs="Uvodno predavanje · Scenariji budućnosti · Izlaganje i pitanja" data-de="Keynote · Zukunftsszenarien · Vortrag + Fragen">Keynote · Future scenarios · Presentation + Q&amp;A</span>
+                    <span class="session-title" data-en="What happens when machines can do your work?" data-bhs="Šta se dešava kada mašine mogu raditi vaš posao?" data-de="Was passiert, wenn Maschinen Ihre Arbeit übernehmen können?">What happens when machines can do your work?</span>
+                    <span class="session-speaker" data-en="Speaker to be announced" data-bhs="Ime govornika ili govornice bit će objavljeno naknadno" data-de="Vortragende Person wird noch bekannt gegeben">Speaker to be announced</span>
+                  </span>
+                  <span class="session-toggle" aria-hidden="true">
+                  </span>
+                </summary>
+                <div class="session-body">
+                  <p data-en="From human augmentation and job transformation to highly automated production, humanoid robots and “dark factories”: explore how emerging technologies are changing the relationship between people and machines. What kind of future are we building, and who gets to shape it? Speaker to be announced." data-bhs="Od proširivanja ljudskih sposobnosti i promjene radnih zadataka do visokoautomatizirane proizvodnje, humanoidnih robota i „mračnih fabrika“: kako nove tehnologije mijenjaju odnos između ljudi i mašina? Kakvu budućnost gradimo i ko je oblikuje? Ime govornika ili govornice bit će objavljeno naknadno." data-de="Von menschlicher Unterstützung und veränderten Tätigkeiten bis zu hochautomatisierter Produktion, humanoiden Robotern und „Dark Factories“: Wie verändern neue Technologien das Verhältnis zwischen Menschen und Maschinen? Welche Zukunft schaffen wir und wer gestaltet sie? Die vortragende Person wird noch bekannt gegeben.">From human augmentation and job transformation to highly automated production, humanoid robots and “dark factories”: explore how emerging technologies are changing the relationship between people and machines. What kind of future are we building, and who gets to shape it? Speaker to be announced.</p>
+                </div>
+              </details>
+              <details class="session">
+                <summary>
+                  <span class="session-time">11:30–12:30</span>
+                  <span class="session-heading">
+                    <span class="session-kind" data-en="Keynote · European perspective · Presentation + Q&amp;A" data-bhs="Uvodno predavanje · Evropska perspektiva · Izlaganje i pitanja" data-de="Keynote · Europäische Perspektive · Vortrag + Fragen">Keynote · European perspective · Presentation + Q&amp;A</span>
+                    <span class="session-title" data-en="What happens to the European social model?" data-bhs="Šta se dešava s evropskim socijalnim modelom?" data-de="Was wird aus dem europäischen Sozialmodell?">What happens to the European social model?</span>
+                    <span class="session-speaker">Mirna Jusić · Charles University</span>
+                  </span>
+                  <span class="session-toggle" aria-hidden="true">
+                  </span>
+                </summary>
+                <div class="session-body">
+                  <p data-en="Ageing populations, labour shortages, migration and technological change are reshaping Europe’s social model. This session considers how women and men are affected differently, which workers are most exposed to automation and precarious employment, and how social protection, skills and lifelong learning can adapt. Who should bear the costs of transition?" data-bhs="Starenje stanovništva, nedostatak radne snage, migracije i tehnološke promjene preoblikuju evropski socijalni model. Razmotrit ćemo različite posljedice za žene i muškarce, koji su radnici najizloženiji automatizaciji i nesigurnom zaposlenju te kako prilagoditi socijalnu zaštitu, razvoj vještina i cjeloživotno učenje. Ko treba snositi troškove tranzicije?" data-de="Alternde Gesellschaften, Arbeitskräftemangel, Migration und technischer Wandel verändern Europas Sozialmodell. Die Session untersucht unterschiedliche Auswirkungen auf Frauen und Männer, Risiken durch Automatisierung und prekäre Beschäftigung sowie Anpassungen bei sozialer Absicherung, Qualifizierung und lebenslangem Lernen. Wer trägt die Kosten des Wandels?">Ageing populations, labour shortages, migration and technological change are reshaping Europe’s social model. This session considers how women and men are affected differently, which workers are most exposed to automation and precarious employment, and how social protection, skills and lifelong learning can adapt. Who should bear the costs of transition?</p>
+                  <div class="speaker-bio">
+                    <h4 data-en="About the speaker" data-bhs="O govorniku ili govornici" data-de="Zur Person">About the speaker</h4>
+                    <p data-en="Assistant Professor in the Department of Public and Social Policy, Faculty of Social Sciences, Charles University in Prague. Previously, she was a researcher at the Center for Social Research Analitika, which she joined in 2009." data-bhs="Docentica na Odsjeku za javnu i socijalnu politiku Fakulteta društvenih nauka Karlovog univerziteta u Pragu. Prethodno je radila kao istraživačica u Centru za društvena istraživanja Analitika, kojem se pridružila 2009. godine." data-de="Assistant Professor am Institut für öffentliche und soziale Politik der Sozialwissenschaftlichen Fakultät der Karls-Universität Prag. Zuvor war sie seit 2009 als Forscherin am Center for Social Research Analitika tätig.">Assistant Professor in the Department of Public and Social Policy, Faculty of Social Sciences, Charles University in Prague. Previously, she was a researcher at the Center for Social Research Analitika, which she joined in 2009.</p>
+                  </div>
+                </div>
+              </details>
+              <div class="schedule-break">
+                <span class="session-time">12:30–13:30</span>
+                <span class="session-title" data-en="Lunch" data-bhs="Ručak" data-de="Mittagspause">Lunch</span>
               </div>
-            </article>
-            <article class="strategy-card strategy-card--formulate">
-              <span class="strategy-card__number">03</span>
-              <div class="strategy-card__icon strategy-card__icon--formulate" aria-hidden="true">
-                <canvas class="card-three" data-card-three="formulate"></canvas>
+              <details class="session">
+                <summary>
+                  <span class="session-time">13:30–15:30</span>
+                  <span class="session-heading">
+                    <span class="session-kind" data-en="Closing panel" data-bhs="Završni panel" data-de="Abschlusspodium">Closing panel</span>
+                    <span class="session-title" data-en="How will migration and technology shape the future of the Balkans?" data-bhs="Kako će migracije i tehnologija oblikovati budućnost Balkana?" data-de="Wie prägen Migration und Technologie die Zukunft des Balkans?">How will migration and technology shape the future of the Balkans?</span>
+                  </span>
+                  <span class="session-toggle" aria-hidden="true">
+                  </span>
+                </summary>
+                <div class="session-body">
+                  <p data-en="Trade unions, political actors and technology-sector representatives bring together the conference’s two central themes. With a political and local focus, they will debate the consequences for workers, economies, social and labour rights, and the future of the region." data-bhs="Sindikati, politički akteri i predstavnici tehnološkog sektora povezat će dvije glavne teme konferencije. Iz političke i lokalne perspektive razgovarat će o posljedicama za radnike, ekonomije, socijalna i radnička prava te budućnost regije." data-de="Gewerkschaften, politische Akteur:innen und Vertreter:innen des Technologiesektors verbinden die beiden Kernthemen der Konferenz. Mit politischem und lokalem Fokus diskutieren sie die Folgen für Beschäftigte, Volkswirtschaften, Sozial- und Arbeitsrechte und die Zukunft der Region.">Trade unions, political actors and technology-sector representatives bring together the conference’s two central themes. With a political and local focus, they will debate the consequences for workers, economies, social and labour rights, and the future of the region.</p>
+                </div>
+              </details>
+              <div class="schedule-break">
+                <span class="session-time">15:30–16:00</span>
+                <span class="session-title" data-en="Closing" data-bhs="Zatvaranje" data-de="Abschluss">Closing</span>
               </div>
-              <div>
-                <h3 data-i18n="context.formulateTitle">Formulate</h3>
-                <p data-i18n="context.formulateCopy">
-                  Policies that uphold fair labour standards and ensure
-                  technology serves workers.
-                </p>
-              </div>
-            </article>
+            </div>
           </div>
-
-          <p class="strategy-bottom-line reveal">
-            <span aria-hidden="true">→</span>
-            <span data-i18n="context.bottomLineA">From analysis</span>
-            <strong data-i18n="context.bottomLineB">to action.</strong>
+          <p class="programme-footnote">
+            <span data-en="All times are local to Sarajevo. Open a session for its description and available speaker biography." data-bhs="Sve satnice navedene su prema lokalnom vremenu u Sarajevu. Otvorite sesiju za opis i dostupnu biografiju govornika ili govornice." data-de="Alle Zeiten sind Ortszeit Sarajevo. Öffnen Sie eine Session für die Beschreibung und verfügbare Informationen zur Person.">All times are local to Sarajevo. Open a session for its description and available speaker biography.</span>
           </p>
         </div>
       </section>
-
-      <section class="vienna-section section" id="programme" data-section="vienna">
-        <div class="vienna-corner vienna-corner--top-left" aria-hidden="true"></div>
-        <div class="vienna-corner vienna-corner--top-right" aria-hidden="true"></div>
-        <div class="vienna-corner vienna-corner--bottom-right" aria-hidden="true"></div>
-        <div class="shell vienna-layout">
-          <div class="vienna-copy">
-            <div class="vienna-ribbon">
-              <span>04</span>
-              <span data-i18n="programme.eyebrow">Vienna</span>
-            </div>
-            <p class="vienna-series" data-i18n="programme.series">
-              Stay &amp; Shape Conference Series 2026
+      <section class="practical section" id="practical">
+        <div class="shell practical-grid">
+          <div class="practical-copy">
+            <p class="eyebrow">03 / <span data-en="Plan your visit" data-bhs="Planirajte posjetu" data-de="Besuch planen">Plan your visit</span>
             </p>
-            <h2 class="vienna-title">
-              <span data-i18n="programme.city">Vienna</span>
-              <span data-i18n="programme.title">"Power &amp; Participation"</span>
+            <h2>
+              <span data-en="See you" data-bhs="Vidimo se" data-de="Wir sehen uns">See you</span>
+              <br>
+              <span data-en="in Sarajevo." data-bhs="u Sarajevu." data-de="in Sarajevo.">in Sarajevo.</span>
             </h2>
-            <div class="vienna-meta">
-              <article>
-                <span class="vienna-meta__icon vienna-meta__icon--date" aria-hidden="true"></span>
-                <p data-i18n="programme.date">June 18-19, 2026</p>
-              </article>
-              <article>
-                <span class="vienna-meta__icon vienna-meta__icon--place" aria-hidden="true"></span>
-                <p class="vienna-location">
-                  <span data-i18n="programme.location">Vienna, Austria</span>
-                  <span class="vienna-location__detail" data-i18n="programme.locationDetail">
-                    RIVERBOX, 10th Floor
-                  </span>
-                </p>
-              </article>
-            </div>
-            <div class="vienna-intro">
-              <p data-i18n="programme.introA">
-                The first leg of our series focuses on establishing robust
-                structures to protect young workers in an evolving economy.
-              </p>
-              <p data-i18n="programme.introB">
-                Alongside the Austrian Trade Union Youth (ÖGJ), participants
-                will explore practical solutions to prevent the "brain drain"
-                and ensure digital rights are integrated into collective
-                bargaining.
-              </p>
-            </div>
+            <p>
+              <span data-en="Two days, in person. Here are the essentials." data-bhs="Dva dana uživo. Ovo su osnovne informacije." data-de="Zwei Tage vor Ort. Das Wichtigste für Ihren Besuch.">Two days, in person. Here are the essentials.</span>
+            </p>
+            <a class="text-link" href="mailto:futureofwork@fes.de">
+              <span data-en="Questions? Contact FES" data-bhs="Imate pitanja? Kontaktirajte FES" data-de="Fragen? FES kontaktieren">Questions? Contact FES</span>
+              <span aria-hidden="true">↗</span>
+            </a>
           </div>
-
-          <figure class="vienna-visual" aria-label="Vienna participation visual">
-            <span class="vienna-visual__plus vienna-visual__plus--top" aria-hidden="true">+</span>
-            <span class="vienna-visual__coordinates" aria-hidden="true">
-              48.2082 N, 16.3738 E
+          <dl class="practical-list">
+            <div>
+              <dt>
+                <span data-en="Dates" data-bhs="Datum" data-de="Datum">Dates</span>
+              </dt>
+              <dd>
+                <span data-en="22–23 October 2026" data-bhs="22–23. oktobar 2026." data-de="22.–23. Oktober 2026">22–23 October 2026</span>
+              </dd>
+            </div>
+            <div>
+              <dt>
+                <span data-en="Location" data-bhs="Lokacija" data-de="Ort">Location</span>
+              </dt>
+              <dd>
+                <span data-en="Sarajevo, Bosnia and Herzegovina" data-bhs="Sarajevo, Bosna i Hercegovina" data-de="Sarajevo, Bosnien und Herzegowina">Sarajevo, Bosnia and Herzegovina</span>
+                <small>
+                  <span data-en="Exact venue to be announced." data-bhs="Tačna lokacija bit će objavljena naknadno." data-de="Der genaue Veranstaltungsort wird noch bekannt gegeben.">Exact venue to be announced.</span>
+                </small>
+              </dd>
+            </div>
+            <div>
+              <dt>
+                <span data-en="Language" data-bhs="Jezik" data-de="Sprache">Language</span>
+              </dt>
+              <dd>
+                <span data-en="English" data-bhs="Engleski" data-de="Englisch">English</span>
+                <small>
+                  <span data-en="Interpretation into Bosnian, Croatian, Montenegrin and Serbian (BCMS) available." data-bhs="Dostupno je prevođenje na bosanski, hrvatski, crnogorski i srpski (BCMS)." data-de="Dolmetschung ins Bosnische, Kroatische, Montenegrinische und Serbische (BCMS) verfügbar.">Interpretation into Bosnian, Croatian, Montenegrin and Serbian (BCMS) available.</span>
+                </small>
+              </dd>
+            </div>
+            <div>
+              <dt>
+                <span data-en="Attendance" data-bhs="Učešće" data-de="Teilnahme">Attendance</span>
+              </dt>
+              <dd>
+                <span data-en="In-person conference" data-bhs="Konferencija uživo" data-de="Präsenzkonferenz">In-person conference</span>
+                <small>
+                  <span data-en="Select one or both days on the FES registration form." data-bhs="U FES-ovom obrascu za prijavu odaberite jedan ili oba dana." data-de="Wählen Sie einen oder beide Tage im FES-Anmeldeformular.">Select one or both days on the FES registration form.</span>
+                </small>
+              </dd>
+            </div>
+          </dl>
+          <figure class="practical-visual" aria-hidden="true">
+            <img src="./assets/part-sarajevo.avif" alt="" loading="lazy" decoding="async">
+          </figure>
+        </div>
+      </section>
+      <section class="vienna-recap section" id="vienna">
+        <div class="shell recap-grid">
+          <div class="recap-image">
+            <img src="./assets/part-vienna.avif" alt="" loading="lazy">
+            <span>
+              <span data-en="The series continues" data-bhs="Ciklus se nastavlja" data-de="Die Reihe geht weiter">The series continues</span>
             </span>
-            <img
-              class="vienna-visual__image"
-              src="./assets/part-vienna.avif"
-              alt=""
-              loading="lazy"
-              decoding="async"
-            />
-          </figure>
-
-          <div class="vienna-focus">
-            <div class="vienna-focus__label">
-              <span data-i18n="programme.focusLabel">Focus:</span>
-              <span aria-hidden="true">→</span>
-            </div>
-            <p data-i18n="programme.focus">
-              Securing decent work through strong institutions
-            </p>
           </div>
-
-          <div class="vienna-agenda">
-            <article class="vienna-agenda-card">
-              <span class="vienna-agenda-card__number">01</span>
-              <div class="vienna-agenda-card__copy">
-                <h3 data-i18n="programme.workshopTitle">Expert Workshops</h3>
-                <ul>
-                  <li data-i18n="programme.workshopPointA">The Austrian Model</li>
-                  <li data-i18n="programme.workshopPointB">Vocational training</li>
-                  <li data-i18n="programme.workshopPointC">Young Workers Councils</li>
-                </ul>
-              </div>
-            </article>
-            <article class="vienna-agenda-card">
-              <span class="vienna-agenda-card__number vienna-agenda-card__number--blue">02</span>
-              <div class="vienna-agenda-card__copy">
-                <h3 data-i18n="programme.organisingTitle">Organising the Future</h3>
-                <p data-i18n="programme.organisingCopy">
-                  Adapting trade union recruitment strategies for the digital age.
-                </p>
-              </div>
-            </article>
-            <article class="vienna-agenda-card">
-              <span class="vienna-agenda-card__number">03</span>
-              <div class="vienna-agenda-card__copy">
-                <h3 data-i18n="programme.analysisTitle">Data &amp; Analysis</h3>
-                <ul>
-                  <li data-i18n="programme.analysisPointA">The "Precarity Trap"</li>
-                  <li data-i18n="programme.analysisPointB">Youth unemployment</li>
-                  <li data-i18n="programme.analysisPointC">Dual education</li>
-                </ul>
-              </div>
-            </article>
-            <article class="vienna-agenda-card">
-              <span class="vienna-agenda-card__number">04</span>
-              <div class="vienna-agenda-card__copy">
-                <h3 data-i18n="programme.keynotesTitle">Keynotes</h3>
-                <p data-i18n="programme.keynotesCopy">
-                  AI, robotics, and the future labour market.
-                </p>
-              </div>
-            </article>
-            <aside class="vienna-stamp" aria-label="Programme motto">
-              <span data-i18n="programme.stamp">Action through solidarity</span>
-            </aside>
-          </div>
-
-          <div class="vienna-panel">
-            <p class="vienna-panel__rail" data-i18n="programme.panelRail">
-              High Level Panel
+          <div class="recap-copy">
+            <p class="eyebrow">04 / <span data-en="Previously in the series" data-bhs="Prethodno u ciklusu" data-de="Zuvor in der Reihe">Previously in the series</span>
             </p>
-            <div class="vienna-panel__copy">
-              <span aria-hidden="true">→</span>
-              <div>
-                <h3 data-i18n="programme.panelTitle">The Algorithmic Boss?</h3>
-                <p data-i18n="programme.panelCopy">
-                  How AI and automation are reshaping youth employment, job
-                  quality, and workers' rights.
-                </p>
-                <p class="vienna-panel__format" data-i18n="programme.panelFormat">
-                  30-minute expert keynote followed by a high-level panel discussion.
-                </p>
-              </div>
-            </div>
-            <div class="vienna-panelists">
-              <p data-i18n="programme.panelistsLabel">Confirmed panelists:</p>
-              <article>
-                <span data-i18n="programme.panelistTea">Tea Jarc</span>
-                <small data-i18n="programme.panelistTeaRole">ETUC</small>
-              </article>
-              <article>
-                <span data-i18n="programme.panelistKnut">Martin Gruber-Risak</span>
-                <small data-i18n="programme.panelistKnutRole">Head of Section VIII Labour Law and Employee Protection in the Ministry of Social Affairs</small>
-              </article>
-              <article>
-                <span data-i18n="programme.panelistAmelie">Amelie Muthsam</span>
-                <small data-i18n="programme.panelistAmelieRole">Bundesrat / SPÖ Lower Austria</small>
-              </article>
-              <article>
-                <span data-i18n="programme.panelistTba">TBA</span>
-                <small data-i18n="programme.panelistTbaRole">Fourth panelist &amp; moderator</small>
-              </article>
-              <article>
-                <span data-i18n="programme.panelistGwendolin">Gwendolin Barnard</span>
-                <small data-i18n="programme.panelistGwendolinRole">Moderation, University of Graz</small>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="sarajevo-section section" id="sarajevo" data-section="sarajevo">
-        <div class="sarajevo-corner sarajevo-corner--top-left" aria-hidden="true"></div>
-        <div class="sarajevo-corner sarajevo-corner--top-right" aria-hidden="true"></div>
-        <div class="sarajevo-corner sarajevo-corner--bottom-right" aria-hidden="true"></div>
-        <div class="shell sarajevo-layout">
-          <div class="sarajevo-copy">
-            <div class="sarajevo-ribbon">
-              <span>05</span>
-              <span data-i18n="sarajevo.eyebrow">Looking Ahead</span>
-            </div>
-            <p class="sarajevo-series" data-i18n="sarajevo.series">
-              Part 2 Spotlight
-            </p>
-            <h2 class="sarajevo-title">
-              <span data-i18n="sarajevo.city">Sarajevo</span>
-              <span data-i18n="sarajevo.title">"Migration &amp; Mobility"</span>
+            <h2>
+              <span data-en="Vienna → Sarajevo" data-bhs="Beč → Sarajevo" data-de="Wien → Sarajevo">Vienna → Sarajevo</span>
             </h2>
-            <div class="sarajevo-meta">
-              <article>
-                <span class="sarajevo-meta__icon sarajevo-meta__icon--date" aria-hidden="true"></span>
-                <p data-i18n="sarajevo.date">October 22-23, 2026</p>
-              </article>
-              <article>
-                <span class="sarajevo-meta__icon sarajevo-meta__icon--place" aria-hidden="true"></span>
-                <p data-i18n="sarajevo.location">Sarajevo, Bosnia and Herzegovina</p>
-              </article>
-            </div>
-            <div class="sarajevo-intro">
-              <p data-i18n="sarajevo.introA">
-                The conversation continues in the autumn! Following our
-                foundational work in Vienna, Part 2 will shift focus to the
-                direct intersection of digitalization and migration.
-              </p>
-              <p data-i18n="sarajevo.introB">
-                We will explore how digital labour markets influence migration
-                trends and strategize on how to regulate algorithmic management
-                to provide viable, local economic alternatives to leaving.
-              </p>
-            </div>
-          </div>
-
-          <figure class="sarajevo-visual" aria-label="Sarajevo mobility visual">
-            <span class="sarajevo-visual__plus sarajevo-visual__plus--top" aria-hidden="true">+</span>
-            <span class="sarajevo-visual__rail" aria-hidden="true">Powering local futures</span>
-            <img
-              class="sarajevo-visual__image"
-              src="./assets/part-sarajevo.avif"
-              alt=""
-              loading="lazy"
-              decoding="async"
-            />
-          </figure>
-
-          <div class="sarajevo-focus">
-            <div class="sarajevo-focus__label">
-              <span data-i18n="sarajevo.focusLabel">Focus:</span>
-              <span aria-hidden="true">→</span>
-            </div>
-            <p data-i18n="sarajevo.focus">Migration &amp; Mobility</p>
-          </div>
-
-          <div class="sarajevo-agenda">
-            <article class="sarajevo-agenda-card">
-              <span class="sarajevo-agenda-card__number">01</span>
-              <div class="sarajevo-agenda-card__copy">
-                <h3 data-i18n="sarajevo.tileOneTitle">Digital Labour Markets</h3>
-                <p data-i18n="sarajevo.tileOneCopy">
-                  How remote work changes mobility choices.
-                </p>
-              </div>
-            </article>
-            <article class="sarajevo-agenda-card">
-              <span class="sarajevo-agenda-card__number">02</span>
-              <div class="sarajevo-agenda-card__copy">
-                <h3 data-i18n="sarajevo.tileTwoTitle">Migration Trends</h3>
-                <p data-i18n="sarajevo.tileTwoCopy">Remote work vs. emigration.</p>
-              </div>
-            </article>
-            <article class="sarajevo-agenda-card">
-              <span class="sarajevo-agenda-card__number">03</span>
-              <div class="sarajevo-agenda-card__copy">
-                <h3 data-i18n="sarajevo.tileThreeTitle">Algorithmic Management</h3>
-                <p data-i18n="sarajevo.tileThreeCopy">
-                  Regulation that keeps work fair.
-                </p>
-              </div>
-            </article>
-            <article class="sarajevo-agenda-card">
-              <span class="sarajevo-agenda-card__number">04</span>
-              <div class="sarajevo-agenda-card__copy">
-                <h3 data-i18n="sarajevo.tileFourTitle">Local Alternatives</h3>
-                <p data-i18n="sarajevo.tileFourCopy">
-                  Viable economic reasons to stay.
-                </p>
-              </div>
-            </article>
-            <aside class="sarajevo-stamp" aria-label="Sarajevo motto">
-              <span data-i18n="sarajevo.stamp">Action through solidarity</span>
-            </aside>
-          </div>
-
-          <div class="sarajevo-panel">
-            <p class="sarajevo-panel__rail" data-i18n="sarajevo.panelRail">
-              Part 2
+            <p class="recap-date">
+              <span data-en="Vienna · 18–19 June 2026" data-bhs="Beč · 18–19. juni 2026." data-de="Wien · 18.–19. Juni 2026">Vienna · 18–19 June 2026</span>
             </p>
-            <div class="sarajevo-panel__copy">
-              <span aria-hidden="true">→</span>
-              <div>
-                <h3 data-i18n="sarajevo.panelTitle">The Future Is Local</h3>
-                <p data-i18n="sarajevo.panelCopy">
-                  Youth, unions, and partners developing strategies for mobility
-                  without forced departure.
-                </p>
-              </div>
-            </div>
-            <div class="sarajevo-panel__tag">
-              <span data-i18n="sarajevo.panelTag">Stronger unions. Fairer futures.</span>
-            </div>
+            <h3>Power &amp; Participation</h3>
+            <p data-en="The Vienna programme focused on young workers, strong institutions and digital rights, with workshops on the Austrian model, organising, and the future labour market." data-bhs="Program u Beču bio je posvećen mladim radnicima, snažnim institucijama i digitalnim pravima, uz radionice o austrijskom modelu, sindikalnom organiziranju i tržištu rada budućnosti." data-de="Das Wiener Programm widmete sich jungen Beschäftigten, starken Institutionen und digitalen Rechten — mit Workshops zum österreichischen Modell, zu gewerkschaftlicher Organisierung und zum Arbeitsmarkt der Zukunft.">The Vienna programme focused on young workers, strong institutions and digital rights, with workshops on the Austrian model, organising, and the future labour market.</p>
+            <p data-en="Sarajevo continues the conversation, bringing migration, technology and the future of work in the Balkans into focus." data-bhs="Sarajevo nastavlja razgovor, stavljajući migracije, tehnologiju i budućnost rada na Balkanu u fokus." data-de="Sarajevo führt den Austausch fort und rückt Migration, Technologie und die Zukunft der Arbeit auf dem Balkan in den Mittelpunkt.">Sarajevo continues the conversation, bringing migration, technology and the future of work in the Balkans into focus.</p>
+            <a class="text-link" href="#programme">
+              <span data-en="Discover the next chapter" data-bhs="Otkrijte sljedeće poglavlje" data-de="Das nächste Kapitel entdecken">Discover the next chapter</span>
+              <span aria-hidden="true">↑</span>
+            </a>
           </div>
         </div>
       </section>
-
-      <section class="register-section section" id="register">
-        <div class="register-corner register-corner--top-left" aria-hidden="true"></div>
-        <div class="register-corner register-corner--bottom-right" aria-hidden="true"></div>
-        <div class="shell register-layout">
-          <div class="register-layout__copy">
-            <div class="register-ribbon">
-              <span>06</span>
-              <span data-i18n="register.eyebrow">Registration</span>
-            </div>
-            <h2 data-i18n="register.title">Register your interest for Vienna</h2>
-            <p class="register-lead" data-i18n="register.copy">
-              Share your details to receive a confirmation email and future
-              updates about the Vienna event. Registrations are stored securely
-              for this event only.
+      <section class="registration section" id="register">
+        <div class="shell registration-inner">
+          <div>
+            <p class="eyebrow">05 / <span data-en="Join the conversation" data-bhs="Pridružite se razgovoru" data-de="Seien Sie dabei">Join the conversation</span>
             </p>
-            <div class="register-notes" id="register-notes" aria-label="Registration notes"></div>
+            <h2>
+              <span data-en="Help shape" data-bhs="Oblikujmo" data-de="Gestalten Sie">Help shape</span>
+              <br>
+              <span data-en="what comes next." data-bhs="budućnost zajedno." data-de="die Zukunft mit.">what comes next.</span>
+            </h2>
+            <p>
+              <span data-en="Sarajevo · 22–23 October 2026" data-bhs="Sarajevo · 22–23. oktobar 2026." data-de="Sarajevo · 22.–23. Oktober 2026">Sarajevo · 22–23 October 2026</span>
+            </p>
           </div>
-
-          <div class="register-layout__panel">
-            <div class="register-form-header" aria-hidden="true">
-              <span data-i18n="register.formLabel">Vienna intake</span>
-              <span>→</span>
-            </div>
-            <form class="registration-form" id="registration-form" novalidate>
-              <div class="field">
-                <label for="name" data-i18n="form.nameLabel">Full name</label>
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  autocomplete="name"
-                  required
-                  data-i18n-placeholder="form.namePlaceholder"
-                  placeholder="Your full name"
-                />
-                <p class="field__error" id="name-error" aria-live="polite"></p>
-              </div>
-
-              <div class="field">
-                <label for="email" data-i18n="form.emailLabel">Email address</label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  autocomplete="email"
-                  required
-                  data-i18n-placeholder="form.emailPlaceholder"
-                  placeholder="you@example.org"
-                />
-                <p class="field__error" id="email-error" aria-live="polite"></p>
-              </div>
-
-              <div class="field">
-                <label for="organisation" data-i18n="form.organisationLabel">
-                  Organisation
-                </label>
-                <input
-                  id="organisation"
-                  name="organisation"
-                  type="text"
-                  autocomplete="organization"
-                  data-i18n-placeholder="form.organisationPlaceholder"
-                  placeholder="Your organisation (optional)"
-                />
-              </div>
-
-              <div class="field field--hidden" aria-hidden="true">
-                <label for="website">Website</label>
-                <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
-              </div>
-
-              <div class="field field--checkbox">
-                <label class="checkbox">
-                  <input id="consent" name="consent" type="checkbox" required />
-                  <span data-i18n="form.consentLabel">
-                    I agree that my registration details may be stored for
-                    conference registration and related updates about this event.
-                  </span>
-                </label>
-                <p class="field__hint" data-i18n="form.consentHint">
-                  Your data is used only for organising this event and related
-                  communication.
-                </p>
-                <p class="field__error" id="consent-error" aria-live="polite"></p>
-              </div>
-
-              <button class="button button--primary button--block" type="submit" id="submit-button">
-                <span data-i18n="form.submit">Submit registration</span>
-              </button>
-
-              <div class="form-status" id="form-status" aria-live="polite"></div>
-            </form>
+          <div class="registration-action">
+            <a class="button button-large" href="https://futureofwork.fes.de/event-registration-work-migration-and-technology-sarajevo-22-23-oct-2026.html">
+              <span data-en="Register for Sarajevo" data-bhs="Prijavite se za Sarajevo" data-de="Für Sarajevo anmelden">Register for Sarajevo</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+            <p data-en="Registration is hosted by Friedrich-Ebert-Stiftung. You will continue to the FES website to enter your details and select your attendance days." data-bhs="Prijava se vrši putem stranice Friedrich-Ebert-Stiftung. Na FES-ovoj stranici unesite svoje podatke i odaberite dane učešća. Obrazac za prijavu je na engleskom jeziku." data-de="Die Anmeldung erfolgt über die Friedrich-Ebert-Stiftung. Auf der FES-Website geben Sie Ihre Daten ein und wählen Ihre Teilnahmetage.">Registration is hosted by Friedrich-Ebert-Stiftung. You will continue to the FES website to enter your details and select your attendance days.</p>
+            <a class="registration-contact" href="mailto:futureofwork@fes.de">futureofwork@fes.de</a>
           </div>
         </div>
       </section>
     </main>
-
     <footer class="site-footer">
-      <div class="footer-corner footer-corner--top-left" aria-hidden="true"></div>
-      <div class="footer-corner footer-corner--bottom-right" aria-hidden="true"></div>
-      <div class="shell footer-poster">
-        <div class="footer-poster__stage">
-          <div class="footer-poster__copy">
-            <p class="footer-eyebrow" data-i18n="footer.eyebrow">
-              Stay &amp; Shape Conference Series 2026
-            </p>
-            <h2>
-              <span data-i18n="footer.titleLineA">Stronger unions.</span>
-              <span data-i18n="footer.titleLineB">Fairer futures.</span>
-            </h2>
-            <p data-i18n="footer.copy">
-              Uniting young workers, trade unions, and partners across Southeast
-              Europe and the EU to build power, shape systems, and create
-              reasons to stay.
-            </p>
-          </div>
-
-          <div class="footer-poster__visual" aria-hidden="true">
-            <canvas class="footer-three" data-footer-three></canvas>
-            <p class="footer-side-text" data-i18n="footer.sideText">
-              Together, we shape a future worth staying for.
-            </p>
-          </div>
+      <div class="shell">
+        <div class="footer-heading">
+          <a class="brand" href="#top">Stay &amp; Shape<span class="brand-dot" aria-hidden="true">.</span>
+          </a>
+          <p>
+            <span data-en="Conference series 2026" data-bhs="Ciklus konferencija 2026." data-de="Konferenzreihe 2026">Conference series 2026</span>
+            <br>
+            <span data-en="Stronger unions. Fairer futures." data-bhs="Snažniji sindikati. Pravednija budućnost." data-de="Stärkere Gewerkschaften. Gerechtere Zukunft.">Stronger unions. Fairer futures.</span>
+          </p>
         </div>
-
-        <div class="footer-poster__movement">
-          <span></span>
-          <p data-i18n="footer.join">Join the movement</p>
-          <span></span>
+        <p class="eyebrow">
+          <span data-en="Series partners" data-bhs="Partneri ciklusa konferencija" data-de="Partner der Konferenzreihe">Series partners</span>
+        </p>
+        <div class="partner-logos">
+          <img src="./assets/logo-internationales-referat.svg" alt="ÖGB Internationales Referat" loading="lazy">
+          <img src="./assets/logo-fes.png" alt="Friedrich-Ebert-Stiftung" loading="lazy">
+          <img src="./assets/logo-lrdr.png" alt="Labor Relations in the Danube Region" loading="lazy">
+          <img src="./assets/logo-bmasgpk.png" alt="Bundesministerium Arbeit, Soziales, Gesundheit, Pflege und Konsumentenschutz" loading="lazy">
         </div>
-
-        <div class="footer-poster__bottom">
-          <div class="footer-action">
-            <p data-i18n="footer.action">
-              Stay informed. Get involved. Shape the future of work.
-            </p>
-            <a href="#register" data-i18n="footer.actionLink">Register for updates</a>
-          </div>
-
-          <div class="footer-layout__logos" aria-label="Partner logos">
-            <p class="footer-logo-intro" data-i18n="footer.logoIntro">Partner logos</p>
-            <div class="footer-logo-grid">
-              <div class="footer-logo-placeholder">
-                <img src="./assets/logo-internationales-referat.svg" alt="ÖGB Internationales Referat" />
-              </div>
-              <div class="footer-logo-placeholder">
-                <img src="./assets/logo-fes.png" alt="Friedrich Ebert Stiftung" />
-              </div>
-              <div class="footer-logo-placeholder">
-                <img src="./assets/logo-lrdr.png" alt="Labor Relations in the Danube Region" />
-              </div>
-              <div class="footer-logo-placeholder">
-                <img src="./assets/logo-bmasgpk.png" alt="Bundesministerium Arbeit, Soziales, Gesundheit, Pflege und Konsumentenschutz" />
+        <div class="footer-bottom">
+          <span>Stay &amp; Shape © 2026</span>
+          <div>
+            <a href="https://www.oegb.at/impressum">
+              <span data-en="Legal notice" data-bhs="Pravne informacije" data-de="Impressum">Legal notice</span>
+            </a>
+            <a href="https://www.oegb.at/datenschutz">
+              <span data-en="Privacy policy" data-bhs="Politika privatnosti" data-de="Datenschutz">Privacy policy</span>
+            </a>
+            <a href="#top">
+              <span data-en="Back to top" data-bhs="Na vrh stranice" data-de="Nach oben">Back to top</span> ↑</a>
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="footer-poster__meta">
-          <span data-i18n="footer.metaLeft">Stay &amp; Shape Conference Series 2026</span>
-          <span data-i18n="footer.metaCenter">Power. Participation. Opportunity.</span>
-          <span class="footer-legal-links">
-            <a href="https://www.oegb.at/impressum" data-i18n="footer.imprint">Legal notice</a>
-            <a href="https://www.oegb.at/datenschutz" data-i18n="footer.privacy">Privacy policy</a>
-          </span>
-        </div>
-      </div>
-    </footer>
-  </body>
-</html>
+        </footer>
+      </body>
+    </html>
