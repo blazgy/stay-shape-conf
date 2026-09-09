@@ -3,7 +3,7 @@
   --color-red: #ef3028; --color-yellow: #ffd21a; --color-line: #d0cbc1;
   --font-display: 'Bebas Neue', 'Arial Narrow', Impact, sans-serif;
   --font-mono: 'IBM Plex Mono', monospace; --font-sans: 'Outfit', system-ui, sans-serif;
-  --page-gutter: clamp(1.25rem, 5vw, 6rem); --header-height: 88px;
+  --page-gutter: clamp(2.5rem, 10vw, 12rem); --header-height: 88px;
 }
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-height) + 24px); }
@@ -213,6 +213,7 @@ h1 { font-size: clamp(4.5rem, 7.9vw, 8.3rem); letter-spacing: -.015em; line-heig
  .practical-visual img { object-position: center 48%; }
 }
 @media (max-width: 720px) {
+ :root { --page-gutter: clamp(1.25rem, 5vw, 6rem); }
  :root { --header-height: 108px; }
  .header-inner { flex-wrap: wrap; gap: 0; justify-content: space-between; padding-top: .9rem; }
  .brand { font-size: 1.8rem; } .language-toggle { border: 0; padding: 0; order: 1; }
