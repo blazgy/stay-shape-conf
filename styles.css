@@ -62,7 +62,7 @@ h1 { font-size: clamp(4.5rem, 7.9vw, 8.3rem); letter-spacing: -.015em; line-heig
 .host-note { font: 400 .65rem/1.6 var(--font-mono); color: #e5eaff; margin-top: 1rem; }
 .hero-art { position: relative; min-width: 0; align-self: stretch; }
 .hero-photo { position: absolute; height: 100%; width: 118%; max-width: none; bottom: 0; right: -8%; object-fit: cover; object-position: right bottom; z-index: 1; }
-.hero-globe { position: absolute; width: 76%; bottom: 4%; right: -16%; opacity: .9; }
+.hero-globe { position: absolute; width: 76%; bottom: 4%; right: -16%; opacity: .9; transform: translate3d(0, var(--globe-shift, 0px), 0); }
 .art-caption { position: absolute; top: 8%; right: 0; max-width: 130px; font: 500 .75rem/1.4 var(--font-mono); text-transform: uppercase; color: var(--color-yellow); z-index: 2; }
 .edition-mark { position: absolute; bottom: 2rem; right: 0; padding: .35rem .7rem; background: var(--color-ink); font: 500 .65rem var(--font-mono); z-index: 2; }
 .hero-facts { position: relative; background: var(--color-ink); }
@@ -151,7 +151,8 @@ h1 { font-size: clamp(4.5rem, 7.9vw, 8.3rem); letter-spacing: -.015em; line-heig
 .practical-grid::after { right: -1px; border-right: 6px solid var(--color-ink); }
 .practical-copy { grid-area: copy; padding: clamp(1.5rem, 3vw, 3rem); padding-bottom: 0; }
 .practical-copy .eyebrow { margin-bottom: 1.5rem; font-weight: 700; }
-.practical h2 { margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 4px solid white; font-size: clamp(3rem, 4.8vw, 5rem); }
+.practical h2 { position: relative; margin-bottom: 1.5rem; padding-bottom: calc(1rem + 4px); font-size: clamp(3rem, 4.8vw, 5rem); }
+.practical h2::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: white; transform-origin: left center; }
 .practical h2 > span:last-child { color: white; }
 .practical-copy > p:not(.eyebrow) { font: 500 .9rem/1.6 var(--font-mono); }
 .practical .text-link { margin-top: 1.2rem; font-weight: 600; }
@@ -188,11 +189,6 @@ h1 { font-size: clamp(4.5rem, 7.9vw, 8.3rem); letter-spacing: -.015em; line-heig
 .footer-bottom { border-top: 1px solid var(--color-line); padding-block: 1.4rem; display: flex; justify-content: space-between; gap: 1rem; font: 400 .65rem/1.6 var(--font-mono); }
 .footer-bottom > div { display: flex; gap: 1.5rem; }
 .footer-bottom a:hover { text-decoration: underline; }
-@media (min-width: 1000px) and (prefers-reduced-motion: no-preference) {
- .hero-copy { animation: enter .7s ease-out both; }
- .hero-art { animation: enter 1s ease-out both; }
- @keyframes enter { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
-}
 @media (max-width: 1000px) {
  .header-inner { gap: 1.2rem; } .site-nav { gap: 1.2rem; font-size: .68rem; }
  .language-toggle { padding-left: .6rem; }
@@ -283,4 +279,28 @@ h1 { font-size: clamp(4.5rem, 7.9vw, 8.3rem); letter-spacing: -.015em; line-heig
 }
 @media (prefers-reduced-motion: reduce) {
   .site-header { transition: none; }
+}
+
+/* Small interaction cues; entrance motion is progressively enhanced in script.js. */
+@media (prefers-reduced-motion: no-preference) {
+  .practical h2.is-rule-drawing::after { animation: draw-practical-rule .55s cubic-bezier(.22, 1, .36, 1) both; }
+  .session-toggle::after { transition: transform .22s ease; }
+  .button > [aria-hidden], .nav-register > [aria-hidden], .text-link > [aria-hidden] {
+    transition: transform .2s ease;
+  }
+  .button:focus-visible > [aria-hidden], .nav-register:focus-visible > [aria-hidden], .text-link:focus-visible > [aria-hidden] {
+    transform: translateX(3px);
+  }
+}
+@keyframes draw-practical-rule {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+.session[data-expanded="false"] .session-toggle::after { transform: rotate(90deg); }
+.session[data-expanded="true"] .session-toggle::after { transform: rotate(0); }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .button:hover > [aria-hidden], .nav-register:hover > [aria-hidden], .text-link:hover > [aria-hidden] {
+    transform: translateX(3px);
+  }
+  .button:active { transform: translate(1px, 1px); box-shadow: 3px 3px 0 var(--color-ink); }
 }

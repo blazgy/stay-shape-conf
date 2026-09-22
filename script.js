@@ -3,6 +3,7 @@
   const languageButtons = [...document.querySelectorAll('[data-lang-button]')];
   const sessions = [...document.querySelectorAll('details.session')];
   const expandButton = document.querySelector('.expand-all');
+  const sessionMotion = createSessionMotion(sessions, syncExpandButton);
   let language = 'en';
   const languageTags = { en: 'en', de: 'de', bhs: 'bs-Latn' };
   const supportedLanguages = Object.keys(languageTags);
@@ -26,12 +27,13 @@
   };
 
   function syncExpandButton() {
-    const allOpen = sessions.every(session => session.open);
+    const allOpen = sessions.every(session => sessionMotion.isOpen(session));
     expandButton.textContent = metadata[language][allOpen ? 'collapse' : 'expand'];
     expandButton.setAttribute('aria-expanded', String(allOpen));
   }
 
   function setLanguage(nextLanguage) {
+    sessionMotion.finishAll();
     language = supportedLanguages.includes(nextLanguage) ? nextLanguage : 'en';
     document.documentElement.lang = languageTags[language];
     document.title = metadata[language].title;
@@ -56,13 +58,15 @@
   languageButtons.forEach(button => button.addEventListener('click', () => setLanguage(button.dataset.langButton)));
   expandButton.hidden = false;
   expandButton.addEventListener('click', () => {
-    const shouldOpen = !sessions.every(session => session.open);
-    sessions.forEach(session => { session.open = shouldOpen; });
+    const shouldOpen = !sessions.every(session => sessionMotion.isOpen(session));
+    sessions.forEach(session => sessionMotion.setOpen(session, shouldOpen));
     syncExpandButton();
   });
   sessions.forEach(session => session.addEventListener('toggle', syncExpandButton));
   setLanguage(language);
   initBrandEnigma();
+  initPageMotion();
+  initHeroDepth();
 })();
 
 function initBrandEnigma() {
@@ -140,3 +144,148 @@ function initBrandEnigma() {
   window.addEventListener('pageshow', updateHeader);
   updateHeader();
 })();
+
+// Preserve native details semantics while animating both opening and closing.
+function createSessionMotion(sessions, onChange) {
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const states = new Map(sessions.map(session => [session, { target: session.open, animation: null }]));
+  const isOpen = session => states.get(session).animation ? states.get(session).target : session.open;
+
+  function finish(session) {
+    const state = states.get(session);
+    if (!state.animation) return;
+    state.animation.cancel();
+    state.animation = null;
+    session.open = state.target;
+    session.style.removeProperty('height');
+    session.style.removeProperty('overflow');
+    delete session.dataset.expanded;
+  }
+
+  function setOpen(session, open) {
+    const state = states.get(session);
+    const startHeight = session.getBoundingClientRect().height;
+    if (state.animation) state.animation.cancel();
+    state.animation = null;
+    state.target = open;
+    session.style.removeProperty('height');
+    session.style.removeProperty('overflow');
+    delete session.dataset.expanded;
+    if (reducedMotion.matches || !session.animate) {
+      session.open = open;
+      return;
+    }
+
+    const summary = session.querySelector('summary');
+    session.open = true;
+    const borderHeight = session.offsetHeight - session.clientHeight;
+    const endHeight = open ? session.getBoundingClientRect().height : summary.getBoundingClientRect().height + borderHeight;
+    session.dataset.expanded = String(open);
+    session.style.overflow = 'hidden';
+    session.style.height = `${startHeight}px`;
+    const animation = session.animate(
+      [{ height: `${startHeight}px` }, { height: `${endHeight}px` }],
+      { duration: 260, easing: 'cubic-bezier(.22, 1, .36, 1)', fill: 'forwards' }
+    );
+    state.animation = animation;
+    animation.onfinish = () => {
+      if (state.animation !== animation) return;
+      finish(session);
+      onChange();
+    };
+  }
+
+  sessions.forEach(session => {
+    session.querySelector('summary').addEventListener('click', event => {
+      event.preventDefault();
+      setOpen(session, !isOpen(session));
+      onChange();
+    });
+  });
+  const finishAll = () => sessions.forEach(finish);
+  window.addEventListener('resize', finishAll, { passive: true });
+  window.addEventListener('beforeprint', finishAll);
+  reducedMotion.addEventListener('change', finishAll);
+  return { setOpen, isOpen, finishAll };
+}
+
+function initPageMotion() {
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (reducedMotion.matches || !Element.prototype.animate) return;
+  const mobile = window.matchMedia('(max-width: 720px)');
+  const active = new Set();
+  function reveal(element, delay = 0, startingOpacity = .35, distance = mobile.matches ? 6 : 14, duration = mobile.matches ? 320 : 520) {
+    const animation = element.animate([
+      { opacity: startingOpacity, transform: `translateY(${distance}px)` },
+      { opacity: 1, transform: 'translateY(0)' },
+    ], { duration, delay, easing: 'cubic-bezier(.22, 1, .36, 1)', fill: 'backwards' });
+    active.add(animation);
+    animation.finished.then(() => active.delete(animation), () => active.delete(animation));
+  }
+
+  // Controls stay immediately available; only the heading and supporting copy enter in sequence.
+  document.querySelectorAll('.hero h1, .hero-subtitle, .hero-description, .hero-art').forEach((element, index) => {
+    if (element.getBoundingClientRect().bottom > 0) reveal(element, index * (mobile.matches ? 45 : 80));
+  });
+
+  const heroActions = document.querySelector('.hero-actions');
+  if (heroActions && heroActions.getBoundingClientRect().bottom > 0) reveal(heroActions, mobile.matches ? 120 : 220, 1);
+
+  let observer;
+  if ('IntersectionObserver' in window) {
+    const rowDelays = new Map();
+    document.querySelectorAll('.day .schedule').forEach(schedule => {
+      schedule.querySelectorAll('.session').forEach((row, index) => {
+        rowDelays.set(row, Math.min(index, 3) * 45);
+      });
+    });
+    observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        observer.unobserve(entry.target);
+        // Content remains visible until it enters view, including direct anchor navigation.
+        if (rowDelays.has(entry.target)) {
+          reveal(entry.target, rowDelays.get(entry.target), .82, mobile.matches ? 4 : 8, mobile.matches ? 260 : 360);
+        } else {
+          if (entry.target.matches('.practical h2')) entry.target.classList.add('is-rule-drawing');
+          reveal(entry.target);
+        }
+      });
+    }, { threshold: .12 });
+    document.querySelectorAll('.intro h2, .section-heading, .day-header, .practical-copy h2, .practical-visual, .recap-image, .recap-copy h2, .registration h2, .day .session').forEach(element => observer.observe(element));
+  }
+  const finishMotion = () => {
+    observer?.disconnect();
+    active.forEach(animation => animation.cancel());
+    active.clear();
+  };
+  reducedMotion.addEventListener('change', event => { if (event.matches) finishMotion(); });
+  window.addEventListener('beforeprint', finishMotion);
+}
+
+function initHeroDepth() {
+  const hero = document.querySelector('.hero');
+  const globe = hero?.querySelector('.hero-globe');
+  if (!globe) return;
+
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const desktop = window.matchMedia('(min-width: 721px)');
+  let frame = 0;
+  const update = () => {
+    frame = 0;
+    const bounds = hero.getBoundingClientRect();
+    const shift = !reducedMotion.matches && desktop.matches && bounds.bottom > 0
+      ? Math.max(-18, Math.min(0, bounds.top * .05))
+      : 0;
+    globe.style.setProperty('--globe-shift', `${shift.toFixed(1)}px`);
+  };
+  const scheduleUpdate = () => {
+    if (!frame) frame = window.requestAnimationFrame(update);
+  };
+
+  window.addEventListener('scroll', scheduleUpdate, { passive: true });
+  window.addEventListener('resize', scheduleUpdate, { passive: true });
+  reducedMotion.addEventListener('change', scheduleUpdate);
+  desktop.addEventListener('change', scheduleUpdate);
+  update();
+}
