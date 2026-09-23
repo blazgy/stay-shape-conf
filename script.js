@@ -164,7 +164,7 @@ function createSessionMotion(sessions, onChange) {
 
   function setOpen(session, open) {
     const state = states.get(session);
-    const startHeight = session.getBoundingClientRect().height;
+    const startHeight = session.offsetHeight;
     if (state.animation) state.animation.cancel();
     state.animation = null;
     state.target = open;
@@ -179,7 +179,7 @@ function createSessionMotion(sessions, onChange) {
     const summary = session.querySelector('summary');
     session.open = true;
     const borderHeight = session.offsetHeight - session.clientHeight;
-    const endHeight = open ? session.getBoundingClientRect().height : summary.getBoundingClientRect().height + borderHeight;
+    const endHeight = open ? session.offsetHeight : summary.offsetHeight + borderHeight;
     session.dataset.expanded = String(open);
     session.style.overflow = 'hidden';
     session.style.height = `${startHeight}px`;
@@ -219,11 +219,14 @@ function initPageMotion() {
     startingOpacity = .12,
     distance = mobile.matches ? 16 : 30,
     duration = mobile.matches ? 850 : 1050,
+    fromTransform = `translateY(${distance}px)`,
+    toTransform = 'translateY(0)',
+    easing = 'cubic-bezier(.42, 0, .58, 1)',
   } = {}) {
     const animation = element.animate([
-      { opacity: startingOpacity, transform: `translateY(${distance}px)` },
-      { opacity: 1, transform: 'translateY(0)' },
-    ], { duration, delay, easing: 'cubic-bezier(.42, 0, .58, 1)', fill: 'backwards' });
+      { opacity: startingOpacity, transform: fromTransform },
+      { opacity: 1, transform: toTransform },
+    ], { duration, delay, easing, fill: 'backwards' });
     active.add(animation);
     animation.finished.then(() => active.delete(animation), () => active.delete(animation));
   }
@@ -254,11 +257,11 @@ function initPageMotion() {
   let refreshObserver;
   if ('IntersectionObserver' in window) {
     const rowDelays = new Map();
-    const pending = new Set(document.querySelectorAll('.intro h2, .section-heading, .day-header, .practical-copy h2, .practical-visual, .recap-image, .recap-copy h2, .registration h2, .day .session'));
+    const pending = new Set(document.querySelectorAll('.intro h2, .section-heading, .day-header, .practical-copy h2, .practical-visual, .recap-image, .recap-copy h2, .registration h2, .day .session, .day .schedule-break'));
     pending.forEach(element => element.classList.add('motion-pending'));
     document.querySelectorAll('.day .schedule').forEach(schedule => {
-      schedule.querySelectorAll('.session').forEach((row, index) => {
-        rowDelays.set(row, Math.min(index, 3) * (mobile.matches ? 70 : 110));
+      schedule.querySelectorAll('.session, .schedule-break').forEach((row, index) => {
+        rowDelays.set(row, Math.min(index, 3) * (mobile.matches ? 55 : 75));
       });
     });
     refreshObserver = () => {
@@ -274,9 +277,15 @@ function initPageMotion() {
           if (rowDelays.has(entry.target)) {
             reveal(entry.target, {
               delay: rowDelays.get(entry.target),
-              startingOpacity: mobile.matches ? .5 : .4,
-              distance: mobile.matches ? 14 : 24,
-              duration: mobile.matches ? 750 : 900,
+              startingOpacity: 0,
+              duration: mobile.matches ? 550 : 600,
+              fromTransform: mobile.matches
+                ? 'perspective(800px) rotateX(72deg)'
+                : 'perspective(1100px) rotateX(80deg)',
+              toTransform: mobile.matches
+                ? 'perspective(800px) rotateX(0deg)'
+                : 'perspective(1100px) rotateX(0deg)',
+              easing: 'cubic-bezier(.2, .7, .2, 1)',
             });
           } else {
             if (entry.target.matches('.practical h2')) entry.target.classList.add('is-rule-drawing');
