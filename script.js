@@ -185,7 +185,7 @@ function createSessionMotion(sessions, onChange) {
     session.style.height = `${startHeight}px`;
     const animation = session.animate(
       [{ height: `${startHeight}px` }, { height: `${endHeight}px` }],
-      { duration: 260, easing: 'cubic-bezier(.22, 1, .36, 1)', fill: 'forwards' }
+      { duration: 520, easing: 'cubic-bezier(.42, 0, .58, 1)', fill: 'forwards' }
     );
     state.animation = animation;
     animation.onfinish = () => {
@@ -214,48 +214,85 @@ function initPageMotion() {
   if (reducedMotion.matches || !Element.prototype.animate) return;
   const mobile = window.matchMedia('(max-width: 720px)');
   const active = new Set();
-  function reveal(element, delay = 0, startingOpacity = .35, distance = mobile.matches ? 6 : 14, duration = mobile.matches ? 320 : 520) {
+  function reveal(element, {
+    delay = 0,
+    startingOpacity = .12,
+    distance = mobile.matches ? 16 : 30,
+    duration = mobile.matches ? 850 : 1050,
+  } = {}) {
     const animation = element.animate([
       { opacity: startingOpacity, transform: `translateY(${distance}px)` },
       { opacity: 1, transform: 'translateY(0)' },
-    ], { duration, delay, easing: 'cubic-bezier(.22, 1, .36, 1)', fill: 'backwards' });
+    ], { duration, delay, easing: 'cubic-bezier(.42, 0, .58, 1)', fill: 'backwards' });
     active.add(animation);
     animation.finished.then(() => active.delete(animation), () => active.delete(animation));
   }
 
-  // Controls stay immediately available; only the heading and supporting copy enter in sequence.
-  document.querySelectorAll('.hero h1, .hero-subtitle, .hero-description, .hero-art').forEach((element, index) => {
-    if (element.getBoundingClientRect().bottom > 0) reveal(element, index * (mobile.matches ? 45 : 80));
+  // Let the artwork arrive early, then give the title and supporting copy room to appear.
+  const heroEntries = [
+    ['.hero h1', 0],
+    ['.hero-art', mobile.matches ? 100 : 160],
+    ['.hero-subtitle', mobile.matches ? 130 : 220],
+    ['.hero-description', mobile.matches ? 240 : 400],
+  ];
+  heroEntries.forEach(([selector, delay]) => {
+    const element = document.querySelector(selector);
+    if (element?.getBoundingClientRect().bottom > 0) reveal(element, { delay });
   });
 
   const heroActions = document.querySelector('.hero-actions');
-  if (heroActions && heroActions.getBoundingClientRect().bottom > 0) reveal(heroActions, mobile.matches ? 120 : 220, 1);
+  if (heroActions && heroActions.getBoundingClientRect().bottom > 0) {
+    reveal(heroActions, {
+      delay: mobile.matches ? 320 : 500,
+      startingOpacity: .6,
+      distance: mobile.matches ? 10 : 18,
+      duration: mobile.matches ? 750 : 900,
+    });
+  }
 
   let observer;
+  let refreshObserver;
   if ('IntersectionObserver' in window) {
     const rowDelays = new Map();
+    const pending = new Set(document.querySelectorAll('.intro h2, .section-heading, .day-header, .practical-copy h2, .practical-visual, .recap-image, .recap-copy h2, .registration h2, .day .session'));
+    pending.forEach(element => element.classList.add('motion-pending'));
     document.querySelectorAll('.day .schedule').forEach(schedule => {
       schedule.querySelectorAll('.session').forEach((row, index) => {
-        rowDelays.set(row, Math.min(index, 3) * 45);
+        rowDelays.set(row, Math.min(index, 3) * (mobile.matches ? 70 : 110));
       });
     });
-    observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        observer.unobserve(entry.target);
-        // Content remains visible until it enters view, including direct anchor navigation.
-        if (rowDelays.has(entry.target)) {
-          reveal(entry.target, rowDelays.get(entry.target), .82, mobile.matches ? 4 : 8, mobile.matches ? 260 : 360);
-        } else {
-          if (entry.target.matches('.practical h2')) entry.target.classList.add('is-rule-drawing');
-          reveal(entry.target);
-        }
-      });
-    }, { threshold: .12 });
-    document.querySelectorAll('.intro h2, .section-heading, .day-header, .practical-copy h2, .practical-visual, .recap-image, .recap-copy h2, .registration h2, .day .session').forEach(element => observer.observe(element));
+    refreshObserver = () => {
+      observer?.disconnect();
+      // Pixels keep the trigger at 30% of viewport height on wide and narrow screens.
+      const triggerDepth = Math.round(window.innerHeight * .3);
+      observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          pending.delete(entry.target);
+          observer.unobserve(entry.target);
+          entry.target.classList.remove('motion-pending');
+          if (rowDelays.has(entry.target)) {
+            reveal(entry.target, {
+              delay: rowDelays.get(entry.target),
+              startingOpacity: mobile.matches ? .5 : .4,
+              distance: mobile.matches ? 14 : 24,
+              duration: mobile.matches ? 750 : 900,
+            });
+          } else {
+            if (entry.target.matches('.practical h2')) entry.target.classList.add('is-rule-drawing');
+            reveal(entry.target);
+          }
+        });
+      }, { rootMargin: `0px 0px -${triggerDepth}px 0px`, threshold: 0 });
+      pending.forEach(element => observer.observe(element));
+    };
+    window.addEventListener('resize', refreshObserver, { passive: true });
+    refreshObserver();
   }
   const finishMotion = () => {
     observer?.disconnect();
+    if (refreshObserver) window.removeEventListener('resize', refreshObserver);
+    document.querySelectorAll('.motion-pending').forEach(element => element.classList.remove('motion-pending'));
     active.forEach(animation => animation.cancel());
     active.clear();
   };
@@ -271,20 +308,27 @@ function initHeroDepth() {
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const desktop = window.matchMedia('(min-width: 721px)');
   let frame = 0;
+  let settleTimer = 0;
   const update = () => {
     frame = 0;
     const bounds = hero.getBoundingClientRect();
     const shift = !reducedMotion.matches && desktop.matches && bounds.bottom > 0
-      ? Math.max(-18, Math.min(0, bounds.top * .05))
+      ? Math.max(-96, Math.min(0, bounds.top * .22))
       : 0;
     globe.style.setProperty('--globe-shift', `${shift.toFixed(1)}px`);
   };
   const scheduleUpdate = () => {
     if (!frame) frame = window.requestAnimationFrame(update);
+    window.clearTimeout(settleTimer);
+    settleTimer = window.setTimeout(() => {
+      if (frame) window.cancelAnimationFrame(frame);
+      update();
+    }, 120);
   };
 
   window.addEventListener('scroll', scheduleUpdate, { passive: true });
   window.addEventListener('resize', scheduleUpdate, { passive: true });
+  window.addEventListener('pageshow', scheduleUpdate);
   reducedMotion.addEventListener('change', scheduleUpdate);
   desktop.addEventListener('change', scheduleUpdate);
   update();
