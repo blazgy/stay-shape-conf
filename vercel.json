@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {
+      "source": "/planner",
+      "destination": "https://stay-shape-conference-planner.blazgyoha.workers.dev/planner"
+    },
+    {
+      "source": "/planner/:path*",
+      "destination": "https://stay-shape-conference-planner.blazgyoha.workers.dev/planner/:path*"
+    }
+  ]
+}
