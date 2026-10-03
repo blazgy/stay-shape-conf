@@ -6,6 +6,10 @@
       "destination": "https://stay-shape-conference-planner.blazgyoha.workers.dev/planner"
     },
     {
+      "source": "/planner/",
+      "destination": "https://stay-shape-conference-planner.blazgyoha.workers.dev/planner/"
+    },
+    {
       "source": "/planner/:path*",
       "destination": "https://stay-shape-conference-planner.blazgyoha.workers.dev/planner/:path*"
     }
