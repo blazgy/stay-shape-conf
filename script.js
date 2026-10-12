@@ -10,18 +10,18 @@
 
   const metadata = {
     en: {
-      title: 'Stay & Shape | Sarajevo · 22–23 October 2026',
-      description: 'Work, Migration and Technology: Who Shapes the Future of Work in the Balkans? Join Stay & Shape in Sarajevo, 22–23 October 2026. Explore the draft programme and register with FES.',
+      title: 'Who Shapes the Future of Work | Sarajevo · October 2026',
+      description: 'Who Shapes the Future of Work? Join Stay & Shape in Sarajevo, 22–23 October 2026, to explore work, migration and technology in the Balkans.',
       expand: 'Expand all sessions', collapse: 'Collapse all sessions',
     },
     de: {
-      title: 'Stay & Shape | Sarajevo · 22.–23. Oktober 2026',
-      description: 'Arbeit, Migration und Technologie: Wer gestaltet die Zukunft der Arbeit auf dem Balkan? Stay & Shape in Sarajevo, 22.–23. Oktober 2026. Programmentwurf ansehen und bei FES anmelden.',
+      title: 'Wer gestaltet die Zukunft der Arbeit | Sarajevo · Oktober 2026',
+      description: 'Wer gestaltet die Zukunft der Arbeit? Stay & Shape in Sarajevo, 22.–23. Oktober 2026: Arbeit, Migration und Technologie auf dem Balkan.',
       expand: 'Alle Sessions ausklappen', collapse: 'Alle Sessions einklappen',
     },
     bhs: {
-      title: 'Stay & Shape | Sarajevo · 22–23. oktobar 2026.',
-      description: 'Rad, migracije i tehnologija: Ko oblikuje budućnost rada na Balkanu? Stay & Shape u Sarajevu, 22–23. oktobra 2026. Pogledajte nacrt programa i prijavite se putem FES-a.',
+      title: 'Ko oblikuje budućnost rada | Sarajevo · oktobar 2026.',
+      description: 'Ko oblikuje budućnost rada? Stay & Shape u Sarajevu, 22–23. oktobra 2026: rad, migracije i tehnologija na Balkanu.',
       expand: 'Prikaži sve detalje', collapse: 'Sakrij sve detalje',
     },
   };
