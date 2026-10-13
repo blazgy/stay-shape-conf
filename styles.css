@@ -83,7 +83,7 @@ h1 { font-size: clamp(4.5rem, 7.9vw, 8.3rem); letter-spacing: -.015em; line-heig
 .theme-number { font: 500 .75rem var(--font-mono); color: var(--color-blue); }
 .themes h3 { font-size: 1.95rem; margin-block: 1.1rem .7rem; }
 .themes p { font-size: .95rem; color: #464440; }
-.programme { background: #fff; }
+.programme { background: #fff; overflow-x: clip; }
 .section-heading { display: flex; justify-content: space-between; gap: 2rem; align-items: flex-end; }
 .draft-note { max-width: 240px; font-size: .85rem; color: #565656; display: flex; align-items: flex-start; flex-direction: column; gap: .6rem; }
 .draft-badge { font: 600 .65rem var(--font-mono); text-transform: uppercase; padding: .5rem .75rem; background: var(--color-yellow); color: var(--color-ink); }

@@ -18,6 +18,7 @@ const MIME_TYPES = {
   ".txt": "text/plain; charset=utf-8",
   ".svg": "image/svg+xml",
   ".avif": "image/avif",
+  ".webp": "image/webp",
   ".png": "image/png",
   ".jpg": "image/jpeg",
   ".jpeg": "image/jpeg",

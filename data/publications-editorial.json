@@ -1,0 +1,250 @@
+{
+  "featured": [
+    {
+      "id": "p16",
+      "labels": {
+        "en": "Women & automation",
+        "de": "Frauen & Automatisierung",
+        "bhs": "Žene i automatizacija"
+      }
+    },
+    {
+      "id": "p01",
+      "labels": {
+        "en": "Social rights in the Balkans",
+        "de": "Soziale Rechte im Balkan",
+        "bhs": "Socijalna prava na Balkanu"
+      }
+    },
+    {
+      "id": "p02",
+      "labels": {
+        "en": "Balkan labour markets",
+        "de": "Arbeitsmärkte im Balkan",
+        "bhs": "Tržišta rada na Balkanu"
+      }
+    },
+    {
+      "id": "p03",
+      "labels": {
+        "en": "Ethical recruitment",
+        "de": "Faire Personalgewinnung",
+        "bhs": "Etičko zapošljavanje"
+      }
+    },
+    {
+      "id": "p04",
+      "labels": {
+        "en": "People-centred AI",
+        "de": "KI im Dienst der Menschen",
+        "bhs": "AI u službi ljudi"
+      }
+    },
+    {
+      "id": "p36",
+      "labels": {
+        "en": "Skills & migration",
+        "de": "Kompetenzen & Migration",
+        "bhs": "Vještine i migracije"
+      }
+    },
+    {
+      "id": "p39",
+      "labels": {
+        "en": "Tackling skills shortages",
+        "de": "Fachkräftemangel angehen",
+        "bhs": "Rješavanje manjka vještina"
+      }
+    },
+    {
+      "id": "p40",
+      "labels": {
+        "en": "Platforms & young workers",
+        "de": "Plattformen & junge Menschen",
+        "bhs": "Platforme i mladi radnici"
+      }
+    },
+    {
+      "id": "p41",
+      "labels": {
+        "en": "Pathways to Industry 5.0",
+        "de": "Wege zur Industrie 5.0",
+        "bhs": "Putevi ka industriji 5.0"
+      }
+    }
+  ],
+  "summaries": {
+    "p01": {
+      "de": "Soziale Rechte, Beschäftigung, Bildung und soziale Sicherung im Westbalkan.",
+      "bhs": "Socijalna prava, zapošljavanje, obrazovanje i socijalna zaštita na Zapadnom Balkanu."
+    },
+    "p02": {
+      "de": "Arbeitskräftemangel, Abwanderung, Löhne und Qualifikationen im Westbalkan.",
+      "bhs": "Nedostatak radne snage, iseljavanje, plate i vještine na Zapadnom Balkanu."
+    },
+    "p03": {
+      "de": "Ethische Rekrutierung und der Schutz von Beschäftigten in der grenzüberschreitenden Arbeitsmigration.",
+      "bhs": "Etičko zapošljavanje i zaštita radnika u prekograničnoj migraciji radne snage."
+    },
+    "p04": {
+      "de": "Menschenzentrierte Antworten auf KI, Arbeitnehmerrechte und Veränderungen am Arbeitsplatz.",
+      "bhs": "Odgovori na AI usmjereni na ljude, radnička prava i promjene na radnom mjestu."
+    },
+    "p05": {
+      "de": "Rechte, Pflichten und die Rolle der Sozialpartner bei der Digitalisierung der Arbeit in Albanien.",
+      "bhs": "Prava, obaveze i uloga socijalnih partnera u digitalizaciji rada u Albaniji."
+    },
+    "p06": {
+      "de": "Faire Rekrutierung und Schutz vor Ausbeutung für Arbeitsmigrant*innen in Deutschland.",
+      "bhs": "Pravedno zapošljavanje i zaštita radnika migranata od eksploatacije u Njemačkoj."
+    },
+    "p07": {
+      "de": "Wie generative KI Berufe und Aufgaben verändert: Grundlagen für die Diskussion über Automatisierung.",
+      "bhs": "Kako generativni AI mijenja zanimanja i zadatke: osnova za razgovor o automatizaciji."
+    },
+    "p08": {
+      "de": "Digitale Ungleichheit und Unterschiede zwischen Tätigkeiten prägen die weltweiten Auswirkungen generativer KI.",
+      "bhs": "Digitalne nejednakosti i razlike među zadacima oblikuju globalni uticaj generativnog AI-ja."
+    },
+    "p09": {
+      "de": "Transparenz von Algorithmen, Arbeitnehmerrechte und Tarifverhandlungen in Spanien.",
+      "bhs": "Transparentnost algoritama, radnička prava i kolektivno pregovaranje u Španiji."
+    },
+    "p10": {
+      "de": "Beschäftigung, soziale Sicherung, öffentliche Investitionen und gute Arbeitsplätze in Europa.",
+      "bhs": "Zapošljavanje, socijalna zaštita, javna ulaganja i kvalitetna radna mjesta u Evropi."
+    },
+    "p11": {
+      "de": "Gute Arbeitsplätze und Mitsprache der Beschäftigten bei KI am Arbeitsplatz.",
+      "bhs": "Kvalitetna radna mjesta i učešće radnika u primjeni AI-ja na radnom mjestu."
+    },
+    "p12": {
+      "de": "Faire Arbeitsmobilität, die Europäische Arbeitsbehörde und der Europäische Sozialversicherungspass.",
+      "bhs": "Pravedna mobilnost radne snage, Evropsko tijelo za rad i Evropski pasoš socijalnog osiguranja."
+    },
+    "p13": {
+      "de": "Beratung und praktische Unterstützung für mobile Beschäftigte und Arbeitsmigrant*innen.",
+      "bhs": "Savjetovanje i praktična podrška mobilnim radnicima i radnicima migrantima."
+    },
+    "p14": {
+      "de": "Wie Algorithmen entwickelt werden und was ihre Gestaltung für Beschäftigte bedeutet.",
+      "bhs": "Kako se razvijaju algoritmi i šta njihov dizajn znači za radnike."
+    },
+    "p15": {
+      "de": "Europas Cloud-Infrastruktur, KI-Souveränität und die Risiken der Auslagerung.",
+      "bhs": "Evropska cloud infrastruktura, AI suverenitet i rizici prenošenja odgovornosti."
+    },
+    "p16": {
+      "de": "Geschlechterunterschiede bei den Auswirkungen der Automatisierung auf Beschäftigung und Arbeitsleben.",
+      "bhs": "Rodne razlike u uticaju automatizacije na zapošljavanje i radni život."
+    },
+    "p17": {
+      "de": "Durchsetzung von Datenrechten am Arbeitsplatz in der EU – innerhalb und außerhalb der DSGVO.",
+      "bhs": "Primjena prava na podatke na radnom mjestu u EU-u, u okviru GDPR-a i šire."
+    },
+    "p18": {
+      "de": "Datenentscheidungen und geschlechtsspezifische Ungleichheiten in KI-Systemen.",
+      "bhs": "Izbor podataka i rodne nejednakosti u AI sistemima."
+    },
+    "p19": {
+      "de": "Eine Einführung in feministische Ansätze zur Entwicklung und Steuerung von KI.",
+      "bhs": "Uvod u feminističke pristupe razvoju i upravljanju AI-jem."
+    },
+    "p20": {
+      "de": "Geschlechtergleichstellung und Diskriminierung im Kontext der KI-Regulierung.",
+      "bhs": "Rodna ravnopravnost i diskriminacija u kontekstu regulacije AI-ja."
+    },
+    "p21": {
+      "de": "Praktische Ansätze zur Erkennung und Bekämpfung geschlechtsspezifischer Verzerrungen in KI.",
+      "bhs": "Praktični pristupi prepoznavanju i suzbijanju rodne pristranosti u AI-ju."
+    },
+    "p22": {
+      "de": "Verbreitung und Funktionen von KI und algorithmischem Management in europäischen Dienstleistungssektoren.",
+      "bhs": "Rasprostranjenost i funkcije AI-ja i algoritamskog upravljanja u evropskim uslužnim sektorima."
+    },
+    "p23": {
+      "de": "Gewerkschaftliche Positionen und Tarifvereinbarungen zu KI am Arbeitsplatz.",
+      "bhs": "Stavovi sindikata i kolektivni sporazumi o AI-ju na radnom mjestu."
+    },
+    "p24": {
+      "de": "Wie Gewerkschaften und Betriebsräte Datenrechte durch Tarifverhandlungen stärken können.",
+      "bhs": "Kako sindikati i radnička vijeća mogu jačati prava na podatke kroz kolektivno pregovaranje."
+    },
+    "p25": {
+      "de": "Datenschutz am Arbeitsplatz und die Rolle des sozialen Dialogs.",
+      "bhs": "Zaštita podataka na radnom mjestu i uloga socijalnog dijaloga."
+    },
+    "p26": {
+      "de": "Arbeitsvermittler, faire Rekrutierung und die Steuerung der Arbeitsmigration in der EU.",
+      "bhs": "Posrednici u zapošljavanju, pravedno zapošljavanje i upravljanje migracijom radne snage u EU-u."
+    },
+    "p27": {
+      "de": "Möglichkeiten zur Stärkung der Europäischen Arbeitsbehörde.",
+      "bhs": "Mogućnosti za jačanje Evropskog tijela za rad."
+    },
+    "p28": {
+      "de": "Migration, Sorgearbeit und der Schutz von Hausangestellten durch das ILO-Übereinkommen Nr. 189.",
+      "bhs": "Migracija, rad u domaćinstvu i zaštita radnika kroz Konvenciju ILO-a br. 189."
+    },
+    "p29": {
+      "de": "Digitale Plattformen in der Sorgearbeit aus gewerkschaftlicher Sicht.",
+      "bhs": "Digitalne platforme u sektoru brige i njege iz sindikalne perspektive."
+    },
+    "p30": {
+      "de": "Empfehlungen für Europas digitale Infrastruktur und digitale Industriepolitik.",
+      "bhs": "Preporuke za evropsku digitalnu infrastrukturu i digitalnu industrijsku politiku."
+    },
+    "p31": {
+      "de": "Wie KI Beschäftigung, Qualifikationen und Arbeitsqualität verändert.",
+      "bhs": "Kako AI mijenja zapošljavanje, vještine i kvalitet rada."
+    },
+    "p32": {
+      "de": "Forschung zu Plattformkapitalismus und Plattformarbeit.",
+      "bhs": "Istraživanja platformskog kapitalizma i platformskog rada."
+    },
+    "p33": {
+      "de": "Büroarbeit, hybride Arbeitsformen und Veränderungen nach der Pandemie.",
+      "bhs": "Kancelarijski rad, hibridni oblici rada i promjene nakon pandemije."
+    },
+    "p34": {
+      "de": "Ländervergleiche zu digitalen Arbeitsplattformen und Plattformarbeit.",
+      "bhs": "Poređenja zemalja u oblasti digitalnih radnih platformi i platformskog rada."
+    },
+    "p35": {
+      "de": "Soziale Rechte, Beschäftigung und die europäische Annäherung Bosnien und Herzegowinas.",
+      "bhs": "Socijalna prava, zapošljavanje i evropsko približavanje Bosne i Hercegovine."
+    },
+    "p36": {
+      "de": "Migrationswünsche, Qualifikationen und Arbeitskräfteengpässe im Westbalkan und in Zielländern.",
+      "bhs": "Migracijske težnje, vještine i nedostatak radne snage na Zapadnom Balkanu i u zemljama odredišta."
+    },
+    "p37": {
+      "de": "Wissenschaftliche Diaspora, Rückkehr und Zusammenarbeit im Kosovo.",
+      "bhs": "Naučna dijaspora, povratak i saradnja na Kosovu."
+    },
+    "p38": {
+      "de": "Wie österreichische Unternehmen Robotereinsatz und die Beschäftigung von Migrant*innen verbinden.",
+      "bhs": "Kako austrijske firme povezuju upotrebu robota i zapošljavanje radnika migranata."
+    },
+    "p39": {
+      "de": "Zwanzig Empfehlungen zum Fachkräftemangel an der Schnittstelle von Migration, Bildung und Entwicklung.",
+      "bhs": "Dvadeset preporuka za nedostatak vještina na spoju migracija, obrazovanja i razvoja."
+    },
+    "p40": {
+      "de": "Plattformen, KI am Arbeitsplatz, Jugendbeschäftigung und Wohlbefinden.",
+      "bhs": "Platforme, AI na radnom mjestu, zapošljavanje mladih i dobrobit."
+    },
+    "p41": {
+      "de": "Gemeinsam gestaltete Kompetenzpfade für Nachwuchsforschende im Kontext von Industrie 5.0.",
+      "bhs": "Zajednički oblikovani putevi razvoja kompetencija mladih istraživača u kontekstu Industrije 5.0."
+    },
+    "p42": {
+      "de": "Länderstudien zu Tarifverhandlungen über KI und algorithmisches Management. PDF für Ende Oktober 2026 angekündigt.",
+      "bhs": "Studije zemalja o kolektivnom pregovaranju o AI-ju i algoritamskom upravljanju. PDF je najavljen za kraj oktobra 2026."
+    }
+  },
+  "english_overrides": {
+    "p40": "Platforms, workplace AI, youth employment and wellbeing, coedited by conference speaker Jelena Šapić.",
+    "p41": "Co-designed competency pathways for early-stage researchers in Industry 5.0."
+  }
+}

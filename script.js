@@ -48,6 +48,7 @@
       button.setAttribute('aria-pressed', String(button.dataset.langButton === language));
     });
     syncExpandButton();
+    document.dispatchEvent(new CustomEvent('stay-shape:language-change', { detail: { language } }));
     try { localStorage.setItem(storageKey, language); } catch { /* Language switching also works without storage. */ }
   }
 
