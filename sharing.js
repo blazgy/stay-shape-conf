@@ -121,8 +121,9 @@
   const ui = {
     en: {
       imageLoading: 'Loading your background…', imageFailed: 'The background could not load. Choose another background or reload the page.',
-      download: 'Download for {platform}', open: 'Open {platform} ↗',
-      native: 'Share image opens your device’s share menu. Choose {platform} if it appears, or use the steps below.',
+      download: 'Download image', open: 'Open {platform} ↗',
+      native: 'Choose {platform} in your device’s sharing menu. Some apps accept only the image; use Copy caption if needed. You review and finish the post in your app.',
+      nativeSteps: ['Tap Share image & caption and choose {platform}, if available.', 'Check the caption in your app. If it is missing, use Copy caption here and paste it in.', 'Review the image, caption and audience, then finish sharing in your app.'],
       manual: 'Your download includes the image and your edits. Upload it in {platform} using the steps below.',
       feed: 'Square or portrait works well for a feed image. Choose landscape for a wider layout.',
       instagram: 'Use square 1:1 or portrait 4:5 for your Instagram feed. Choose Story / status 9:16 for a story.',
@@ -145,8 +146,9 @@
     },
     de: {
       imageLoading: 'Hintergrund wird geladen…', imageFailed: 'Der Hintergrund konnte nicht geladen werden. Wählen Sie einen anderen oder laden Sie die Seite neu.',
-      download: 'Bild für {platform}', open: '{platform} öffnen ↗',
-      native: '„Bild teilen“ öffnet das Teilen-Menü Ihres Geräts. Wählen Sie dort {platform}, falls verfügbar, oder folgen Sie den Schritten unten.',
+      download: 'Bild herunterladen', open: '{platform} öffnen ↗',
+      native: 'Wählen Sie {platform} im Teilen-Menü Ihres Geräts. Manche Apps übernehmen nur das Bild; nutzen Sie dann „Text kopieren“. Prüfen und veröffentlichen Sie den Beitrag in Ihrer App.',
+      nativeSteps: ['Tippen Sie auf „Bild & Text teilen“ und wählen Sie {platform}, falls verfügbar.', 'Prüfen Sie den Text in Ihrer App. Falls er fehlt, nutzen Sie hier „Text kopieren“ und fügen Sie ihn ein.', 'Prüfen Sie Bild, Text und Zielgruppe und schließen Sie das Teilen in Ihrer App ab.'],
       manual: 'Der Download enthält Ihr Bild mit allen Änderungen. Laden Sie es mit den Schritten unten bei {platform} hoch.',
       feed: 'Quadrat und Hochformat eignen sich für Bildbeiträge im Feed. Für ein breiteres Layout wählen Sie Querformat.',
       instagram: 'Quadrat 1:1 oder Hochformat 4:5 für den Instagram-Feed. Für eine Story wählen Sie Story / Status 9:16.',
@@ -169,8 +171,9 @@
     },
     bhs: {
       imageLoading: 'Učitavamo pozadinu…', imageFailed: 'Pozadina se nije mogla učitati. Odaberite drugu ili ponovo učitajte stranicu.',
-      download: 'Slika za {platform}', open: 'Otvorite {platform} ↗',
-      native: '„Podijelite sliku“ otvara meni za dijeljenje na vašem uređaju. Odaberite {platform} ako je dostupan ili pratite korake ispod.',
+      download: 'Preuzmite sliku', open: 'Otvorite {platform} ↗',
+      native: 'Odaberite {platform} u meniju za dijeljenje na svom uređaju. Neke aplikacije prihvataju samo sliku; po potrebi koristite „Kopirajte tekst“. Pregledajte i dovršite objavu u svojoj aplikaciji.',
+      nativeSteps: ['Dodirnite „Podijelite sliku i tekst“ i odaberite {platform}, ako je dostupan.', 'Provjerite tekst u svojoj aplikaciji. Ako nedostaje, ovdje ga kopirajte i zalijepite u aplikaciju.', 'Pregledajte sliku, tekst i publiku, pa dovršite dijeljenje u svojoj aplikaciji.'],
       manual: 'Preuzeta slika sadrži sve vaše izmjene. Objavite je na platformi {platform} prateći korake ispod.',
       feed: 'Kvadrat i portret odgovaraju slikama u objavama. Za širi prikaz odaberite pejzaž.',
       instagram: 'Kvadrat 1:1 ili portret 4:5 za Instagram objavu. Za story odaberite Story / status 9:16.',
@@ -261,7 +264,7 @@
   let supportsImageShare = false;
   try {
     const probe = new File([''], 'stay-shape.png', { type: 'image/png' });
-    supportsImageShare = typeof navigator.share === 'function' && typeof navigator.canShare === 'function' && navigator.canShare({ files: [probe] });
+    supportsImageShare = typeof navigator.share === 'function' && typeof navigator.canShare === 'function' && navigator.canShare({ files: [probe], title: text().title, text: draft().caption });
   } catch { /* File downloads remain available on browsers without file sharing. */ }
   function shareURL() {
     const url = new URL(baseURL);
@@ -477,6 +480,7 @@
     }
     root.querySelector('[data-share-dimensions]').textContent = `${formats[format].width} × ${formats[format].height}`;
     root.querySelector('[data-share-download-label]').textContent = localized('download');
+    downloadButton.classList.toggle('share-action-primary', !supportsImageShare);
     root.querySelector('[data-share-image-help]').textContent = localized(supportsImageShare ? 'native' : 'manual');
     const instagramMode = format === 'story' ? 'instagramStory' : 'instagram';
     const formatHelp = platform === 'instagram' ? instagramMode : platform === 'linkedin' && format === 'story' ? 'crop' : platform === 'whatsapp' || platform === 'tiktok' ? platform : 'feed';
@@ -485,7 +489,8 @@
     open.href = platforms[platform].url; open.textContent = localized('open');
     const steps = root.querySelector('[data-share-post-steps]');
     const stepsKey = platform === 'instagram' ? instagramMode : platform;
-    steps.replaceChildren(...ui[language].steps[stepsKey].map(value => { const li = document.createElement('li'); li.textContent = value; return li; }));
+    const instructions = supportsImageShare ? ui[language].nativeSteps : ui[language].steps[stepsKey];
+    steps.replaceChildren(...instructions.map(value => { const li = document.createElement('li'); li.textContent = value.replaceAll('{platform}', platforms[platform].label); return li; }));
     root.querySelector('[data-share-link]').value = shareURL();
     root.querySelector('[data-share-link-fallback]').hidden = true;
     status.textContent = '';
@@ -542,6 +547,7 @@
     status.textContent = localized('saved');
   });
   nativeButton.hidden = !supportsImageShare;
+  if (!supportsImageShare) nativeButton.after(downloadButton);
   nativeButton.addEventListener('click', async () => {
     if (!currentFile || sharing) return;
     sharing = true; nativeButton.disabled = true;

@@ -54,8 +54,9 @@
 .share-platforms input { accent-color: var(--color-blue); margin: 0; flex-shrink: 0; }
 .share-platforms label:hover { border-color: var(--color-blue); }
 .share-platforms label:has(input:checked) { border-color: var(--color-blue); color: var(--color-blue); background: #f4f1ea; }
-.share-image-button { min-height: 48px; padding: .8rem 1rem; border: 1px solid var(--color-blue); background: transparent; color: var(--color-blue); font: 500 .72rem/1.5 var(--font-mono); }
+.share-image-button { min-height: 48px; padding: .8rem 1rem; border: 1px solid var(--color-blue); background: transparent; color: var(--color-blue); font: 500 .72rem/1.5 var(--font-mono); transition: background .2s, color .2s, transform .2s; }
 .share-image-button:hover { background: #f4f1ea; }
+.share-image-button:active { transform: translateY(2px); }
 .share-image-button:disabled { opacity: .55; cursor: wait; }
 .share-post-steps { margin: .9rem 0 0; padding-left: 1.3rem; color: #37332c; font-size: .83rem; line-height: 1.65; }
 .share-output-links { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem 1.3rem; margin-top: .5rem; }
@@ -64,9 +65,12 @@
 .share-caption-heading { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 1.2rem; }
 .share-caption { display: block; resize: vertical; width: 100%; min-height: 146px; margin-top: .45rem; padding: .9rem 1rem; border: 1px solid #b9b3a8; border-radius: 0; background: #f8f5ee; color: var(--color-ink); font: 400 .84rem/1.6 var(--font-sans); }
 .share-caption:hover { border-color: #777166; }
-.share-actions { display: flex; flex-wrap: wrap; align-items: center; column-gap: 1.4rem; row-gap: .3rem; margin-top: 1rem; }
-.share-download { display: inline-flex; align-items: center; justify-content: space-between; gap: 1.7rem; min-height: 48px; border: 1px solid var(--color-blue); padding: .8rem 1rem; background: var(--color-blue); color: white; font: 500 .72rem/1.5 var(--font-mono); transition: background .2s, transform .2s; }
-.share-download:hover { background: #0434ae; }
+.share-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; margin-top: 1rem; }
+.share-download { display: inline-flex; align-items: center; justify-content: space-between; gap: 1.7rem; min-height: 48px; border: 1px solid var(--color-blue); padding: .8rem 1rem; background: transparent; color: var(--color-blue); font: 500 .72rem/1.5 var(--font-mono); transition: background .2s, transform .2s; }
+.share-download:hover { background: #f4f1ea; }
+.share-action-primary { background: var(--color-blue); color: white; }
+.share-action-primary:hover { background: #0434ae; }
+.share-actions > button:focus-visible { outline: 3px solid var(--color-blue); outline-offset: 4px; }
 .share-download:active { transform: translateY(2px); }
 .share-download:disabled { cursor: wait; opacity: .65; }
 .share-text-button { border: 0; min-height: 44px; padding: .5rem 0; color: var(--color-blue); background: transparent; font: 500 .67rem/1.5 var(--font-mono); text-decoration: underline; text-underline-offset: 4px; }
