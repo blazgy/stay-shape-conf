@@ -71,7 +71,9 @@
 .share-caption-heading { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 1.2rem; }
 .share-caption { display: block; resize: vertical; width: 100%; min-height: 146px; margin-top: .45rem; padding: .9rem 1rem; border: 1px solid #b9b3a8; border-radius: 0; background: #f8f5ee; color: var(--color-ink); font: 400 .84rem/1.6 var(--font-sans); }
 .share-caption:hover { border-color: #777166; }
-.share-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; margin-top: 1rem; }
+.share-actions { display: flex; flex-wrap: wrap; align-items: stretch; gap: .6rem; margin-top: 1rem; }
+.share-actions > button { flex: 1 1 120px; padding-inline: .6rem; }
+.share-actions .share-download { gap: .5rem; }
 .share-download { display: inline-flex; align-items: center; justify-content: space-between; gap: 1.7rem; min-height: 48px; border: 1px solid var(--color-blue); padding: .8rem 1rem; background: transparent; color: var(--color-blue); font: 500 .72rem/1.5 var(--font-mono); transition: background .2s, transform .2s; }
 .share-download:hover { background: #f4f1ea; }
 .share-action-primary { background: var(--color-blue); color: white; }
