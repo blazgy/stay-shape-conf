@@ -38,7 +38,8 @@ const server = http.createServer(async (req, res) => {
       return;
     }
 
-    const requestedPath = req.url === "/" ? "/index.html" : req.url;
+    const pathname = new URL(req.url, `http://${HOST}:${PORT}`).pathname;
+    const requestedPath = pathname === "/" ? "/index.html" : pathname;
     const safePath = path.normalize(requestedPath).replace(/^(\.\.[/\\])+/, "");
     const filePath = path.join(ROOT, safePath);
 

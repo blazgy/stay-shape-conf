@@ -13,9 +13,11 @@
     <link rel="icon" type="image/svg+xml" sizes="any" href="./assets/favicon.svg">
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./publications.css">
+    <link rel="stylesheet" href="./sharing.css">
     <script defer src="./script.js">
     </script>
     <script defer src="./publications.js"></script>
+    <script defer src="./sharing.js"></script>
     <script>
       window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>
@@ -24,6 +26,10 @@
   <body>
     <a class="skip-link" href="#main">
       <span data-en="Skip to content" data-bhs="Pređi na sadržaj" data-de="Zum Inhalt">Skip to content</span>
+    </a>
+    <a class="share-glass-pill" href="#share">
+      <span class="share-glass-pill__copy"><span>SPREAD THE WORD,</span> <span>SHARE YOUR THOUGHTS</span></span>
+      <span class="share-glass-pill__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
     </a>
     <header class="site-header">
       <div class="shell header-inner">
@@ -347,10 +353,10 @@
                     <h4 data-en="Moderator · Jelena Šapić" data-bhs="Moderatorica · Jelena Šapić" data-de="Moderation · Jelena Šapić">Moderator · Jelena Šapić</h4>
                     <p data-en="Jelena Šapić focuses on the social impact of human-computer interactions and digital disruptions. Her research interests lie in the intersection of technological development and socio-economic changes, particularly how digital technologies and AI applications are shifting labour divisions and altering power dynamics. Jelena created Fusing Futures, an audio podcast that makes a leapfrog to the digital economy and society. The podcast got awarded as one of the three most innovative media content in the Western Balkans in 2019." data-bhs="Jelena Šapić bavi se društvenim uticajem interakcije čovjeka i računara te digitalnih promjena. Njena istraživačka interesovanja nalaze se na spoju tehnološkog razvoja i društveno-ekonomskih promjena, posebno načina na koje digitalne tehnologije i primjene vještačke inteligencije mijenjaju podjelu rada i odnose moći. Jelena je pokrenula audio-podcast Fusing Futures, koji istražuje digitalnu ekonomiju i društvo. Podcast je 2019. godine nagrađen kao jedan od tri najinovativnija medijska sadržaja na Zapadnom Balkanu." data-de="Jelena Šapić befasst sich mit den gesellschaftlichen Auswirkungen der Mensch-Computer-Interaktion und digitaler Umbrüche. Ihre Forschung liegt an der Schnittstelle von technologischer Entwicklung und sozioökonomischem Wandel, insbesondere bei der Frage, wie digitale Technologien und KI-Anwendungen die Arbeitsteilung und Machtverhältnisse verändern. Jelena entwickelte den Audio-Podcast Fusing Futures über die digitale Wirtschaft und Gesellschaft. Der Podcast wurde 2019 als einer der drei innovativsten Medienbeiträge im Westbalkan ausgezeichnet.">Jelena Šapić focuses on the social impact of human-computer interactions and digital disruptions. Her research interests lie in the intersection of technological development and socio-economic changes, particularly how digital technologies and AI applications are shifting labour divisions and altering power dynamics. Jelena created Fusing Futures, an audio podcast that makes a leapfrog to the digital economy and society. The podcast got awarded as one of the three most innovative media content in the Western Balkans in 2019.</p>
                   </div>
-            </div>
-          </div>
                 </div>
               </details>
+            </div>
+          </div>
           <div class="day" id="day-2">
             <div class="day-header">
               <span class="day-number">02</span>
@@ -1172,6 +1178,173 @@
         </div>
       </section>
       <!-- /PUBLICATIONS -->
+      <section class="conference-share section" id="share" aria-labelledby="share-title" data-component="conference-share">
+        <div class="shell share-layout">
+          <div class="share-editor">
+            <p class="eyebrow">05 / <span data-en="Spread the word" data-de="Weitersagen" data-bhs="Podijelite dalje">Spread the word</span></p>
+            <h2 id="share-title" data-en="Bring your network along." data-de="Bringen Sie Ihr Netzwerk mit." data-bhs="Pozovite svoju mrežu kontakata.">Bring your network along.</h2>
+            <p class="share-intro" data-en="Work is changing. Get your network talking about what comes next. Choose a message and make it your next post." data-de="Die Arbeitswelt verändert sich. Bringen Sie Ihr Netzwerk ins Gespräch über das, was kommt. Wählen Sie eine Botschaft für Ihren nächsten Beitrag." data-bhs="Svijet rada se mijenja. Pokrenite razgovor o onome što slijedi. Odaberite poruku za svoju sljedeću objavu.">Work is changing. Get your network talking about what comes next. Choose a message and make it your next post.</p>
+            <div data-share-controls hidden>
+              <fieldset class="share-options">
+                <legend class="share-message-heading">
+                  <span class="share-label" data-en="01 / Choose your message" data-de="01 / Botschaft wählen" data-bhs="01 / Odaberite poruku">01 / Choose your message</span>
+                  <button class="share-randomize" type="button" data-share-randomize aria-controls="share-headline share-subtitle share-caption share-preview">
+                    <span data-en="Surprise me" data-de="Überraschen Sie mich" data-bhs="Iznenadite me">Surprise me</span>
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M4 7h3c4 0 6 10 10 10h3m-4-4 4 4-4 4M4 17h3c1.5 0 2.7-1.4 3.9-3.2M13.1 10.2C14.3 8.4 15.5 7 17 7h3m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </button>
+                </legend>
+                <label class="share-option share-programme-option" data-share-programme-option hidden>
+                  <input type="radio" name="share-message" value="programme">
+                  <span><strong data-en="Programme inspiration" data-de="Inspiration aus dem Programm" data-bhs="Inspiracija iz programa">Programme inspiration</strong><small data-share-programme-title></small></span>
+                  <span class="share-option-mark" aria-hidden="true">↗</span>
+                </label>
+                <label class="share-option">
+                  <input type="radio" name="share-message" value="attending" checked>
+                  <span><strong data-en="I’m attending" data-de="Ich bin dabei" data-bhs="Dolazim">I’m attending</strong><small data-en="Let your network know you’ll be there." data-de="Zeigen Sie Ihrem Netzwerk, dass Sie dabei sind." data-bhs="Javite svojim kontaktima da ćete biti tamo.">Let your network know you’ll be there.</small></span>
+                  <span class="share-option-mark" aria-hidden="true">↗</span>
+                </label>
+                <label class="share-option">
+                  <input type="radio" name="share-message" value="speaking">
+                  <span><strong data-en="I’m speaking" data-de="Ich bin als Speaker dabei" data-bhs="Govorim na konferenciji">I’m speaking</strong><small data-en="Invite people to the conversation you’re part of." data-de="Laden Sie zu dem Gespräch ein, das Sie mitgestalten." data-bhs="Pozovite druge na razgovor u kojem učestvujete.">Invite people to the conversation you’re part of.</small></span>
+                  <span class="share-option-mark" aria-hidden="true">↗</span>
+                </label>
+                <label class="share-option">
+                  <input type="radio" name="share-message" value="join">
+                  <span><strong data-en="Join the conversation" data-de="Diskutieren Sie mit" data-bhs="Pridružite se razgovoru">Join the conversation</strong><small data-en="Help the conference reach a little further." data-de="Machen Sie die Konferenz in Ihrem Netzwerk bekannt." data-bhs="Pomozite da se za konferenciju čuje dalje.">Help the conference reach a little further.</small></span>
+                  <span class="share-option-mark" aria-hidden="true">↗</span>
+                </label>
+              </fieldset>
+              <p class="share-help share-randomize-note" data-share-randomize-note role="status" aria-live="polite" aria-atomic="true" hidden></p>
+              <a class="text-link share-mobile-preview-link" href="#share-preview"><span data-en="See your image ↓" data-de="Bild ansehen ↓" data-bhs="Pogledajte sliku ↓">See your image ↓</span></a>
+              <p class="share-language-note" data-en="Your card and caption follow the website language: EN / DE / BHS." data-de="Karte und Beitragstext folgen der Sprache der Website: EN / DE / BHS." data-bhs="Kartica i tekst objave prate jezik stranice: EN / DE / BHS.">Your card and caption follow the website language: EN / DE / BHS.</p>
+<fieldset class="share-backgrounds">
+              <legend class="share-label">
+              <span  data-en="02 / Choose a background" data-de="02 / Hintergrund wählen" data-bhs="02 / Odaberite pozadinu">02 / Choose a background</span>
+              </legend>
+              <div class="share-background-grid">
+              <label class="share-background">
+              <input type="radio" name="share-background" value="blue" checked>
+              <canvas width="240" height="150" data-share-swatch="blue" aria-hidden="true">
+              </canvas>
+              <span  data-en="Blue globe" data-de="Blauer Globus" data-bhs="Plavi globus">Blue globe</span>
+              </label>
+              <label class="share-background">
+              <input type="radio" name="share-background" value="paper">
+              <canvas width="240" height="150" data-share-swatch="paper" aria-hidden="true">
+              </canvas>
+              <span  data-en="Paper &amp; ink" data-de="Papier &amp; Tinte" data-bhs="Papir i tinta">Paper &amp; ink</span>
+              </label>
+              <label class="share-background">
+              <input type="radio" name="share-background" value="signal">
+              <canvas width="240" height="150" data-share-swatch="signal" aria-hidden="true">
+              </canvas>
+              <span  data-en="Signal red" data-de="Signalrot" data-bhs="Signalno crvena">Signal red</span>
+              </label>
+              <label class="share-background">
+              <input type="radio" name="share-background" value="night">
+              <canvas width="240" height="150" data-share-swatch="night" aria-hidden="true">
+              </canvas>
+              <span  data-en="After hours" data-de="Nachts" data-bhs="Noćni tonovi">After hours</span>
+              </label>
+              <label class="share-background">
+              <input type="radio" name="share-background" value="hero">
+              <canvas width="240" height="150" data-share-swatch="hero" aria-hidden="true"></canvas>
+              <span data-en="Hero portrait" data-de="Hero-Porträt" data-bhs="Portret s naslovnice">Hero portrait</span>
+              </label>
+              <label class="share-background">
+              <input type="radio" name="share-background" value="sarajevo">
+              <canvas width="240" height="150" data-share-swatch="sarajevo" aria-hidden="true"></canvas>
+              <span data-en="Sarajevo collage" data-de="Sarajevo-Collage" data-bhs="Sarajevski kolaž">Sarajevo collage</span>
+              </label>
+              </div>
+              </fieldset>
+              <fieldset class="share-copy-fields">
+              <legend class="share-label">
+              <span  data-en="03 / Make it yours" data-de="03 / Persönlich gestalten" data-bhs="03 / Prilagodite tekst">03 / Make it yours</span>
+              </legend>
+              <label class="share-field">
+              <span  data-en="Badge" data-de="Label" data-bhs="Oznaka">Badge</span>
+              <input id="share-badge" data-share-edit="badge" maxlength="60" type="text" spellcheck="true">
+              </label>
+              <label class="share-field">
+              <span  data-en="Headline" data-de="Überschrift" data-bhs="Naslov">Headline</span>
+              <textarea id="share-headline" data-share-edit="headline" maxlength="180" rows="3" spellcheck="true">
+              </textarea>
+              </label>
+              <label class="share-field">
+              <span  data-en="Supporting text" data-de="Begleittext" data-bhs="Prateći tekst">Supporting text</span>
+              <textarea id="share-subtitle" data-share-edit="subtitle" maxlength="160" rows="3" spellcheck="true">
+              </textarea>
+              </label>
+              <p class="share-help" data-en="Text fits automatically. Line breaks are welcome. Event details stay on every image." data-de="Der Text wird automatisch eingepasst. Zeilenumbrüche sind möglich. Die Veranstaltungsdaten bleiben auf jedem Bild." data-bhs="Tekst se automatski prilagođava. Možete dodati prijelome reda. Podaci o događaju ostaju na svakoj slici.">Text fits automatically. Line breaks are welcome. Event details stay on every image.</p>
+              <a class="text-link share-mobile-preview-link" href="#share-preview"><span data-en="See your image ↓" data-de="Bild ansehen ↓" data-bhs="Pogledajte sliku ↓">See your image ↓</span></a>
+              <button class="share-text-button" type="button" data-share-reset data-en="Restore message text" data-de="Botschaft zurücksetzen" data-bhs="Vratite početni tekst">Restore message text</button>
+              </fieldset>
+              <fieldset class="share-destination">
+              <legend class="share-label">
+              <span  data-en="04 / Where will you post?" data-de="04 / Wo möchten Sie posten?" data-bhs="04 / Gdje ćete objaviti?">04 / Where will you post?</span>
+              </legend>
+              <div class="share-platforms">
+              <label>
+              <input type="radio" name="share-platform" value="facebook" checked>
+              <span>Facebook</span>
+              </label>
+              <label>
+              <input type="radio" name="share-platform" value="instagram">
+              <span>Instagram</span>
+              </label>
+              <label>
+              <input type="radio" name="share-platform" value="linkedin">
+              <span>LinkedIn</span>
+              </label>
+              <label>
+              <input type="radio" name="share-platform" value="whatsapp">
+              <span>WhatsApp</span>
+              </label>
+              <label>
+              <input type="radio" name="share-platform" value="tiktok">
+              <span>TikTok</span>
+              </label>
+              </div>
+              <label class="share-field">
+              <span  data-en="Image format" data-de="Bildformat" data-bhs="Format slike">Image format</span>
+              <select id="share-format" data-share-format>
+              <option value="square" data-en="Square · 1:1 · 1200 × 1200" data-de="Quadrat · 1:1 · 1200 × 1200" data-bhs="Kvadrat · 1:1 · 1200 × 1200">Square · 1:1 · 1200 × 1200</option>
+              <option value="portrait" data-en="Portrait feed · 4:5 · 1080 × 1350" data-de="Hochformat · 4:5 · 1080 × 1350" data-bhs="Portret · 4:5 · 1080 × 1350">Portrait feed · 4:5 · 1080 × 1350</option>
+              <option value="story" data-en="Story / status · 9:16 · 1080 × 1920" data-de="Story / Status · 9:16 · 1080 × 1920" data-bhs="Story / status · 9:16 · 1080 × 1920">Story / status · 9:16 · 1080 × 1920</option>
+              <option value="landscape" data-en="Landscape · 1.91:1 · 1200 × 630" data-de="Querformat · 1,91:1 · 1200 × 630" data-bhs="Pejzaž · 1,91:1 · 1200 × 630">Landscape · 1.91:1 · 1200 × 630</option>
+              </select>
+              </label>
+              <p class="share-help" data-share-format-help>
+              </p>
+              </fieldset>
+              <div class="share-caption-heading">
+              <label class="share-label" for="share-caption">
+              <span  data-en="05 / Your post caption" data-de="05 / Ihr Beitragstext" data-bhs="05 / Tekst vaše objave">05 / Your post caption</span>
+              </label>
+              <button class="share-text-button" type="button" data-share-copy="caption" data-en="Copy caption" data-de="Text kopieren" data-bhs="Kopirajte tekst">Copy caption</button>
+              </div>
+              <textarea class="share-caption" id="share-caption" rows="5" maxlength="3000" spellcheck="true">
+              </textarea>
+            </div>
+            <noscript><p class="share-intro">Share the conference: <a class="text-link" href="https://www.stayandshape.com/">www.stayandshape.com</a>. Enable JavaScript to choose a message and download a card.</p></noscript>
+          </div>
+          <div class="share-preview" id="share-preview" data-share-controls hidden>
+            <p class="share-label share-preview-label"><span  data-en="Your image" data-de="Ihr Bild" data-bhs="Vaša slika">Your image</span><span data-share-dimensions>1200 × 1200</span></p>
+            <div class="share-preview-stage"><canvas class="share-card" width="1200" height="1200" role="img" data-share-card aria-label="Stay &amp; Shape share image">Stay &amp; Shape · Sarajevo · 22–23.10.2026</canvas></div>
+            <div class="share-actions">
+              <button class="share-download" type="button" data-share-download><span data-share-download-label>Download for Facebook</span><span aria-hidden="true">↓</span></button>
+              <button class="share-image-button" type="button" data-share-native hidden data-en="Share image…" data-de="Bild teilen…" data-bhs="Podijelite sliku…">Share image…</button>
+            </div>
+            <p class="share-help" data-share-image-help></p>
+            <ol class="share-post-steps" data-share-post-steps></ol>
+            <div class="share-output-links"><a class="share-text-button" data-share-open target="_blank" rel="noopener noreferrer">Open Facebook ↗</a><button class="share-text-button" type="button" data-share-copy="link" data-en="Copy design link" data-de="Design-Link kopieren" data-bhs="Kopirajte link dizajna">Copy design link</button></div>
+            <p class="share-help" data-en="Your design link includes the edited image text, background and format." data-de="Ihr Design-Link enthält den bearbeiteten Bildtext, Hintergrund und das Format." data-bhs="Link dizajna sadrži uređeni tekst slike, pozadinu i format.">Your design link includes the edited image text, background and format.</p>
+            <label class="share-link-fallback" data-share-link-fallback hidden><span class="share-label" data-en="Select and copy this link" data-de="Diesen Link auswählen und kopieren" data-bhs="Odaberite i kopirajte ovaj link">Select and copy this link</span><input type="url" readonly data-share-link></label>
+            <p class="share-status" role="status" aria-live="polite" aria-atomic="true" data-share-status></p>
+          </div>
+        </div>
+      </section>
       <section class="vienna-recap section" id="vienna">
         <div class="shell recap-grid">
           <div class="recap-image">
@@ -1181,7 +1354,7 @@
             </span>
           </div>
           <div class="recap-copy">
-            <p class="eyebrow">05 / <span data-en="Previously in the series" data-bhs="Prethodno u ciklusu" data-de="Zuvor in der Reihe">Previously in the series</span>
+            <p class="eyebrow">06 / <span data-en="Previously in the series" data-bhs="Prethodno u ciklusu" data-de="Zuvor in der Reihe">Previously in the series</span>
             </p>
             <h2>
               <span data-en="Vienna → Sarajevo" data-bhs="Beč → Sarajevo" data-de="Wien → Sarajevo">Vienna → Sarajevo</span>
@@ -1202,7 +1375,7 @@
       <section class="registration section" id="register">
         <div class="shell registration-inner">
           <div>
-            <p class="eyebrow">06 / <span data-en="Join the conversation" data-bhs="Pridružite se razgovoru" data-de="Seien Sie dabei">Join the conversation</span>
+            <p class="eyebrow">07 / <span data-en="Join the conversation" data-bhs="Pridružite se razgovoru" data-de="Seien Sie dabei">Join the conversation</span>
             </p>
             <h2>
               <span data-en="Help shape" data-bhs="Oblikujmo" data-de="Gestalten Sie">Help shape</span>

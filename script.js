@@ -56,6 +56,8 @@
     const savedLanguage = localStorage.getItem(storageKey);
     language = supportedLanguages.includes(savedLanguage) ? savedLanguage : 'en';
   } catch { /* English is the default when storage is unavailable. */ }
+  const linkedLanguage = new URLSearchParams(window.location.search).get('lang');
+  if (supportedLanguages.includes(linkedLanguage)) language = linkedLanguage;
   languageButtons.forEach(button => button.addEventListener('click', () => setLanguage(button.dataset.langButton)));
   expandButton.hidden = false;
   expandButton.addEventListener('click', () => {
@@ -68,7 +70,44 @@
   initBrandEnigma();
   initPageMotion();
   initHeroDepth();
+  initSharePill();
 })();
+
+function initSharePill() {
+  const pill = document.querySelector('.share-glass-pill');
+  const section = document.querySelector('#share');
+  const header = document.querySelector('.site-header');
+  if (!pill || !section || !('IntersectionObserver' in window)) return;
+
+  const setHidden = (hidden) => {
+    if (hidden && pill.contains(document.activeElement)) {
+      const heading = section.querySelector('h2');
+      if (heading) {
+        heading.setAttribute('tabindex', '-1');
+        heading.focus({ preventScroll: true });
+      }
+    }
+    pill.classList.toggle('is-hidden', hidden);
+    pill.inert = hidden;
+    pill.setAttribute('aria-hidden', String(hidden));
+  };
+
+  let observer;
+  const observeSection = () => {
+    observer?.disconnect();
+    const headerHeight = header?.getBoundingClientRect().height || 0;
+    const bounds = section.getBoundingClientRect();
+    setHidden(bounds.bottom > headerHeight && bounds.top < window.innerHeight);
+    observer = new IntersectionObserver(([entry]) => setHidden(entry.isIntersecting), {
+      rootMargin: `-${headerHeight}px 0px 0px 0px`,
+      threshold: 0,
+    });
+    observer.observe(section);
+  };
+
+  observeSection();
+  window.addEventListener('resize', observeSection, { passive: true });
+}
 
 function initBrandEnigma() {
   const brand = document.querySelector("[data-enigma-brand]");
