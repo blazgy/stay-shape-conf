@@ -9,5 +9,8 @@
   },
   "devDependencies": {
     "vercel": "^49.0.1"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "^1.0.12"
   }
 }

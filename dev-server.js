@@ -3,6 +3,8 @@ const fs = require("node:fs");
 const path = require("node:path");
 
 const registerHandler = require("./api/register.js");
+const shareHandler = require("./api/share.js");
+const shareImageHandler = require("./api/share-image.js");
 
 const PORT = Number(process.env.PORT || 3000);
 const HOST = process.env.HOST || "127.0.0.1";
@@ -23,10 +25,20 @@ const MIME_TYPES = {
   ".jpg": "image/jpeg",
   ".jpeg": "image/jpeg",
   ".ico": "image/x-icon",
+  ".ttf": "font/ttf",
 };
 
 const server = http.createServer(async (req, res) => {
   try {
+    const pathname = new URL(req.url, `http://${HOST}:${PORT}`).pathname;
+    if (pathname === "/share" || pathname === "/api/share") {
+      await shareHandler(req, res);
+      return;
+    }
+    if (pathname === "/api/share-image") {
+      await shareImageHandler(req, res);
+      return;
+    }
     if (req.url === "/api/register") {
       await handleApi(req, res);
       return;
@@ -38,7 +50,6 @@ const server = http.createServer(async (req, res) => {
       return;
     }
 
-    const pathname = new URL(req.url, `http://${HOST}:${PORT}`).pathname;
     const requestedPath = pathname === "/" ? "/index.html" : pathname;
     const safePath = path.normalize(requestedPath).replace(/^(\.\.[/\\])+/, "");
     const filePath = path.join(ROOT, safePath);

@@ -6,6 +6,18 @@
     <title>Who Shapes the Future of Work | Sarajevo · October 2026</title>
     <meta name="description" content="Who Shapes the Future of Work? Join Stay &amp; Shape in Sarajevo, 22–23 October 2026, to explore work, migration and technology in the Balkans.">
     <link rel="canonical" href="https://www.stayandshape.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Stay &amp; Shape">
+    <meta property="og:title" content="Who Shapes the Future of Work | Sarajevo · October 2026">
+    <meta property="og:description" content="Work, migration and technology. Join the conversation in Sarajevo, 22–23 October 2026.">
+    <meta property="og:url" content="https://www.stayandshape.com/">
+    <meta property="og:image" content="https://www.stayandshape.com/api/share-image?share=join&amp;format=landscape&amp;v=1">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Stay &amp; Shape · The future of work includes you · Sarajevo, 22–23 October 2026">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://www.stayandshape.com/api/share-image?share=join&amp;format=landscape&amp;v=1">
     <meta name="theme-color" content="#0642d9">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,6 +29,8 @@
     <script defer src="./script.js">
     </script>
     <script defer src="./publications.js"></script>
+    <script defer src="./sharing-design.js"></script>
+    <script defer src="./sharing-renderer.js"></script>
     <script defer src="./sharing.js"></script>
     <script>
       window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
@@ -1187,11 +1201,13 @@
             <div data-share-controls hidden>
               <fieldset class="share-options">
                 <legend class="share-message-heading">
-                  <span class="share-label" data-en="01 / Choose your message" data-de="01 / Botschaft wählen" data-bhs="01 / Odaberite poruku">01 / Choose your message</span>
-                  <button class="share-randomize" type="button" data-share-randomize aria-controls="share-headline share-subtitle share-caption share-preview">
-                    <span data-en="Surprise me" data-de="Überraschen Sie mich" data-bhs="Iznenadite me">Surprise me</span>
-                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M4 7h3c4 0 6 10 10 10h3m-4-4 4 4-4 4M4 17h3c1.5 0 2.7-1.4 3.9-3.2M13.1 10.2C14.3 8.4 15.5 7 17 7h3m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  </button>
+                  <span class="share-message-toolbar">
+                    <span class="share-label" data-en="01 / Choose your message" data-de="01 / Botschaft wählen" data-bhs="01 / Odaberite poruku">01 / Choose your message</span>
+                    <button class="share-randomize" type="button" data-share-randomize aria-controls="share-headline share-subtitle share-caption share-preview">
+                      <span data-en="Surprise me" data-de="Überraschen Sie mich" data-bhs="Iznenadite me">Surprise me</span>
+                      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M4 7h3c4 0 6 10 10 10h3m-4-4 4 4-4 4M4 17h3c1.5 0 2.7-1.4 3.9-3.2M13.1 10.2C14.3 8.4 15.5 7 17 7h3m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                  </span>
                 </legend>
                 <label class="share-option share-programme-option" data-share-programme-option hidden>
                   <input type="radio" name="share-message" value="programme">
@@ -1339,8 +1355,8 @@
             </div>
             <p class="share-help" data-share-image-help></p>
             <ol class="share-post-steps" data-share-post-steps></ol>
-            <div class="share-output-links"><a class="share-text-button" data-share-open target="_blank" rel="noopener noreferrer">Open Facebook ↗</a><button class="share-text-button" type="button" data-share-copy="link" data-en="Copy design link" data-de="Design-Link kopieren" data-bhs="Kopirajte link dizajna">Copy design link</button></div>
-            <p class="share-help" data-en="Your design link includes the edited image text, background and format." data-de="Ihr Design-Link enthält den bearbeiteten Bildtext, Hintergrund und das Format." data-bhs="Link dizajna sadrži uređeni tekst slike, pozadinu i format.">Your design link includes the edited image text, background and format.</p>
+            <div class="share-output-links"><a class="share-text-button" data-share-open target="_blank" rel="noopener noreferrer">Open Facebook ↗</a><button class="share-image-button" type="button" data-share-copy="link" data-en="Copy design link" data-de="Design-Link kopieren" data-bhs="Kopirajte link dizajna">Copy design link</button></div>
+            <p class="share-help" data-en="Your link includes this design and a matching social preview. Preview layouts can vary by app." data-de="Ihr Link enthält dieses Design und eine passende Social-Media-Vorschau. Die Darstellung kann je nach App variieren." data-bhs="Vaš link uključuje ovaj dizajn i odgovarajući pregled za društvene mreže. Prikaz se može razlikovati među aplikacijama.">Your link includes this design and a matching social preview. Preview layouts can vary by app.</p>
             <label class="share-link-fallback" data-share-link-fallback hidden><span class="share-label" data-en="Select and copy this link" data-de="Diesen Link auswählen und kopieren" data-bhs="Odaberite i kopirajte ovaj link">Select and copy this link</span><input type="url" readonly data-share-link></label>
             <p class="share-status" role="status" aria-live="polite" aria-atomic="true" data-share-status></p>
           </div>

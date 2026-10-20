@@ -1,6 +1,17 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "api/share.js": { "includeFiles": "index.html" },
+    "api/share-image.js": {
+      "includeFiles": "assets/{fonts/**,sh-hero4.avif,part-sarajevo.avif}",
+      "maxDuration": 15
+    }
+  },
   "rewrites": [
+    {
+      "source": "/share",
+      "destination": "/api/share"
+    },
     {
       "source": "/planner",
       "destination": "https://stay-shape-conference-planner.blazgyoha.workers.dev/planner"
