@@ -1,0 +1,55 @@
+/* Speaker slides: the conference's four keynotes, in programme order. */
+.speaker-slides { background: var(--color-paper); }
+.slides-heading { align-items: end; }
+.slides-heading .eyebrow { color: var(--color-blue); }
+.slides-intro { max-width: 360px; font-size: 1.05rem; line-height: 1.5; }
+.slides-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.5rem 2.75rem; margin-top: 2.75rem; }
+.slide-card { min-width: 0; display: flex; flex-direction: column; padding-top: 1.25rem; border-top: 2px solid var(--color-ink); }
+.slide-kicker { color: #58544d; font: 500 .65rem/1.6 var(--font-mono); text-transform: uppercase; letter-spacing: .025em; }
+.slide-kicker > span:first-child { color: var(--color-blue); }
+.slide-card h3 { margin-top: .6rem; font-size: clamp(1.9rem, 2.7vw, 2.5rem); line-height: 1.05; }
+.slide-overview { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.15fr); gap: 1.25rem; align-items: start; margin-top: 1.25rem; margin-bottom: 1.25rem; }
+.slide-preview { margin: 0; border: 1px solid var(--color-line); background: white; }
+.slide-preview img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: contain; }
+.slide-title { min-width: 0; font: 500 1.02rem/1.4 var(--font-sans); overflow-wrap: break-word; }
+.slide-meta { margin-top: auto; color: #58544d; font: 400 .65rem/1.7 var(--font-mono); }
+.slide-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1.5rem; margin-top: .8rem; padding-top: .55rem; border-top: 1px solid var(--color-line); }
+.slide-actions a, .session-slides { display: inline-flex; align-items: center; gap: .6rem; min-height: 44px; color: var(--color-blue); font: 600 .7rem/1.5 var(--font-mono); text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 1px; }
+.slide-actions a:hover, .session-slides:hover { text-decoration-thickness: 2px; }
+.slide-actions a:first-child { margin-right: auto; }
+.slide-actions [aria-hidden], .session-slides [aria-hidden] { font-size: 1rem; }
+.session-slides { margin-top: 1rem; }
+
+@media (max-width: 1100px) and (min-width: 721px) {
+  .header-inner { flex-wrap: wrap; justify-content: space-between; gap: 0; padding-top: .9rem; }
+  .language-toggle { order: 1; }
+  .site-nav { order: 2; width: 100%; margin: .65rem 0 .8rem; justify-content: space-between; gap: .75rem; }
+  :root { --header-height: 140px; }
+}
+@media (max-width: 900px) {
+  .slides-grid { gap: 2.5rem 1.75rem; }
+  .slide-overview { grid-template-columns: minmax(0, 1fr); gap: 1rem; }
+  .slide-preview { max-width: 380px; }
+}
+@media (max-width: 720px) {
+  .slides-heading { align-items: start; }
+  .slides-intro { max-width: 450px; font-size: 1rem; }
+  .slides-grid { grid-template-columns: minmax(0, 1fr); gap: 2.5rem; margin-top: 2rem; }
+  .slide-card h3 { font-size: 2.25rem; }
+  .slide-overview { grid-template-columns: minmax(0, .9fr) minmax(0, 1.15fr); }
+  .slide-title { font-size: 1rem; }
+  .site-nav { flex-wrap: wrap; justify-content: flex-start; column-gap: 1rem; row-gap: .15rem; }
+  .site-nav > a { min-height: 44px; display: inline-flex; align-items: center; }
+  .site-nav .nav-register { margin-left: auto; }
+  :root { --header-height: 168px; }
+}
+@media (max-width: 440px) {
+  .slide-overview { grid-template-columns: minmax(0, 1fr); }
+  .site-nav { column-gap: .75rem; }
+}
+@media print {
+  .speaker-slides { background: white; }
+  .slides-grid { gap: 1.5rem; }
+  .slide-card { break-inside: avoid; }
+  .slide-preview { max-width: 220px; }
+}

@@ -25,6 +25,7 @@ const MIME_TYPES = {
   ".jpg": "image/jpeg",
   ".jpeg": "image/jpeg",
   ".ico": "image/x-icon",
+  ".pdf": "application/pdf",
   ".ttf": "font/ttf",
 };
 
