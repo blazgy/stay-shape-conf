@@ -32,6 +32,11 @@ const MIME_TYPES = {
 const server = http.createServer(async (req, res) => {
   try {
     const pathname = new URL(req.url, `http://${HOST}:${PORT}`).pathname;
+    if (pathname === '/gallery/') {
+      res.writeHead(308, { Location: '/gallery' + new URL(req.url, `http://${HOST}:${PORT}`).search });
+      res.end();
+      return;
+    }
     if (pathname === "/share" || pathname === "/api/share") {
       await shareHandler(req, res);
       return;
@@ -51,7 +56,7 @@ const server = http.createServer(async (req, res) => {
       return;
     }
 
-    const requestedPath = pathname === "/" ? "/index.html" : pathname;
+    const requestedPath = pathname === "/" ? "/index.html" : pathname === '/gallery' ? '/gallery.html' : pathname;
     const safePath = path.normalize(requestedPath).replace(/^(\.\.[/\\])+/, "");
     const filePath = path.join(ROOT, safePath);
 

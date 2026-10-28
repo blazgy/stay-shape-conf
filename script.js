@@ -27,6 +27,7 @@
   };
 
   function syncExpandButton() {
+    if (!expandButton) return;
     const allOpen = sessions.every(session => sessionMotion.isOpen(session));
     expandButton.textContent = metadata[language][allOpen ? 'collapse' : 'expand'];
     expandButton.setAttribute('aria-expanded', String(allOpen));
@@ -36,8 +37,11 @@
     sessionMotion.finishAll();
     language = supportedLanguages.includes(nextLanguage) ? nextLanguage : 'en';
     document.documentElement.lang = languageTags[language];
-    document.title = metadata[language].title;
-    document.querySelector('meta[name="description"]').content = metadata[language].description;
+    const galleryPage = document.body.classList.contains('gallery-page');
+    const galleryTitles = { en: 'Conference photos | Stay & Shape · Sarajevo 2026', de: 'Konferenzfotos | Stay & Shape · Sarajevo 2026', bhs: 'Fotografije s konferencije | Stay & Shape · Sarajevo 2026' };
+    const galleryDescriptions = { en: 'Photographs from Stay & Shape in Sarajevo, 22–23 October 2026. Photography © FES.', de: 'Fotos von Stay & Shape in Sarajevo, 22.–23. Oktober 2026. Fotografie © FES.', bhs: 'Fotografije s konferencije Stay & Shape u Sarajevu, 22–23. oktobra 2026. Fotografije © FES.' };
+    document.title = galleryPage ? galleryTitles[language] : metadata[language].title;
+    document.querySelector('meta[name="description"]').content = galleryPage ? galleryDescriptions[language] : metadata[language].description;
     document.querySelectorAll('[data-en][data-de][data-bhs]').forEach(node => {
       node.textContent = node.dataset[language];
     });
@@ -59,8 +63,8 @@
   const linkedLanguage = new URLSearchParams(window.location.search).get('lang');
   if (supportedLanguages.includes(linkedLanguage)) language = linkedLanguage;
   languageButtons.forEach(button => button.addEventListener('click', () => setLanguage(button.dataset.langButton)));
-  expandButton.hidden = false;
-  expandButton.addEventListener('click', () => {
+  if (expandButton) expandButton.hidden = false;
+  expandButton?.addEventListener('click', () => {
     const shouldOpen = !sessions.every(session => sessionMotion.isOpen(session));
     sessions.forEach(session => sessionMotion.setOpen(session, shouldOpen));
     syncExpandButton();
@@ -76,12 +80,17 @@
 function initSharePill() {
   const pill = document.querySelector('.share-glass-pill');
   const section = document.querySelector('#share');
+  const sections = [...document.querySelectorAll('#share, #photos')];
   const header = document.querySelector('.site-header');
   if (!pill || !section || !('IntersectionObserver' in window)) return;
 
   const setHidden = (hidden) => {
     if (hidden && pill.contains(document.activeElement)) {
-      const heading = section.querySelector('h2');
+      const visibleSection = sections.find(item => {
+        const bounds = item.getBoundingClientRect();
+        return bounds.bottom > 0 && bounds.top < window.innerHeight;
+      });
+      const heading = (visibleSection || section).querySelector('h2');
       if (heading) {
         heading.setAttribute('tabindex', '-1');
         heading.focus({ preventScroll: true });
@@ -96,13 +105,16 @@ function initSharePill() {
   const observeSection = () => {
     observer?.disconnect();
     const headerHeight = header?.getBoundingClientRect().height || 0;
-    const bounds = section.getBoundingClientRect();
-    setHidden(bounds.bottom > headerHeight && bounds.top < window.innerHeight);
-    observer = new IntersectionObserver(([entry]) => setHidden(entry.isIntersecting), {
+    const syncVisibility = () => setHidden(sections.some(item => {
+      const bounds = item.getBoundingClientRect();
+      return bounds.bottom > headerHeight && bounds.top < window.innerHeight;
+    }));
+    syncVisibility();
+    observer = new IntersectionObserver(syncVisibility, {
       rootMargin: `-${headerHeight}px 0px 0px 0px`,
       threshold: 0,
     });
-    observer.observe(section);
+    sections.forEach(item => observer.observe(item));
   };
 
   observeSection();
