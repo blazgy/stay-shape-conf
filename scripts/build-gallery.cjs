@@ -34,7 +34,7 @@ async function main() {
   function tile(photo, featured = false, index = 0) {
     const captions = Object.values(photo.caption);
     const full = photo.variants.at(-1).src;
-    const sizes = featured ? (index === 0 ? '(max-width: 720px) 90vw, 45vw' : '(max-width: 720px) 45vw, 25vw') : '(max-width: 520px) 90vw, (max-width: 900px) 44vw, 28vw';
+    const sizes = featured ? (index % 8 === 0 ? '(max-width: 720px) 90vw, 45vw' : '(max-width: 720px) 45vw, 25vw') : '(max-width: 520px) 90vw, (max-width: 900px) 44vw, 28vw';
     const crops = { 'FES-85': '50% 56%', 'FES-122': '50% 48%', 'FES-147': '50% 52%', 'FES-69': '60% 48%' };
     return `<a class="photo-tile${featured ? ` bento-tile bento-tile-${index + 1}` : ''}" href="${full}" data-photo-id="${photo.id}" data-category="${photo.category}"${featured ? ` style="--photo-position:${crops[photo.id] || 'center'}"` : ''}>
       <img src="${photo.variants.find(v => v.width === 800)?.src || full}" srcset="${photo.variants.map(v => `${v.src} ${v.width}w`).join(', ')}" sizes="${sizes}" width="${photo.width}" height="${photo.height}" alt="${escape(captions[0])}" data-photo-alt="${photo.id}" loading="lazy" decoding="async">
